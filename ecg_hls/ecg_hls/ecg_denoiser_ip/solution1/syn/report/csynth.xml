@@ -1,0 +1,1452 @@
+<profile>
+    <ReportVersion>
+        <Version>2022.2</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z030-sbg485-2</Part>
+        <TopModelName>ecg_denoiser</TopModelName>
+        <TargetClockPeriod>13.00</TargetClockPeriod>
+        <ClockUncertainty>3.51</ClockUncertainty>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>no</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>9.154</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>19755865</Best-caseLatency>
+            <Average-caseLatency>19755865</Average-caseLatency>
+            <Worst-caseLatency>19755865</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.257 sec</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.257 sec</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.257 sec</Worst-caseRealTimeLatency>
+            <Interval-min>19755866</Interval-min>
+            <Interval-max>19755866</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <BRAM_18K>84</BRAM_18K>
+            <DSP>27</DSP>
+            <FF>11618</FF>
+            <LUT>33068</LUT>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>530</BRAM_18K>
+            <DSP>400</DSP>
+            <FF>157200</FF>
+            <LUT>78600</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>ecg_denoiser</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst_n</name>
+            <Object>ecg_denoiser</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>ecg_denoiser</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>ecg_denoiser</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>ecg_denoiser</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>ecg_denoiser</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_stream_TDATA</name>
+            <Object>in_stream_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_stream_TVALID</name>
+            <Object>in_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_stream_TREADY</name>
+            <Object>in_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_stream_TDEST</name>
+            <Object>in_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_stream_TKEEP</name>
+            <Object>in_stream_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_stream_TSTRB</name>
+            <Object>in_stream_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_stream_TUSER</name>
+            <Object>in_stream_V_user_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_stream_TLAST</name>
+            <Object>in_stream_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_stream_TID</name>
+            <Object>in_stream_V_id_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_TDATA</name>
+            <Object>out_stream_V_data_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>32</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_TVALID</name>
+            <Object>out_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_TREADY</name>
+            <Object>out_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_TDEST</name>
+            <Object>out_stream_V_dest_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_TKEEP</name>
+            <Object>out_stream_V_keep_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_TSTRB</name>
+            <Object>out_stream_V_strb_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>4</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_TUSER</name>
+            <Object>out_stream_V_user_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_TLAST</name>
+            <Object>out_stream_V_last_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_TID</name>
+            <Object>out_stream_V_id_V</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>axis</IOProtocol>
+            <IOConfig>register, both mode</IOConfig>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>data</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="4">
+            <ModuleName>ecg_denoiser</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_ecg_denoiser_Pipeline_READ_INPUT_fu_228</InstName>
+                    <ModuleName>ecg_denoiser_Pipeline_READ_INPUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>228</ID>
+                    <BindInstances>add_ln243_fu_130_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_ecg_denoiser_Pipeline_ZNORM_MEAN_fu_248</InstName>
+                    <ModuleName>ecg_denoiser_Pipeline_ZNORM_MEAN</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>248</ID>
+                    <BindInstances>add_ln252_fu_112_p2 mean_acc_V_1_fu_167_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_ecg_denoiser_Pipeline_ZNORM_VAR_fu_255</InstName>
+                    <ModuleName>ecg_denoiser_Pipeline_ZNORM_VAR</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>255</ID>
+                    <BindInstances>add_ln260_fu_132_p2 d_fu_172_p2 mul_40s_40s_72_1_1_U16 ret_V_fu_205_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_ecg_denoiser_Pipeline_ZNORM_APPLY_fu_263</InstName>
+                    <ModuleName>ecg_denoiser_Pipeline_ZNORM_APPLY</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>263</ID>
+                    <BindInstances>add_ln272_fu_146_p2 ret_V_fu_192_p2 mul_33s_32s_48_1_1_U23</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_conv_layer01234_fused_fu_273</InstName>
+                    <ModuleName>conv_layer01234_fused</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>273</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_conv_layer01234_fused_Pipeline_L0_K_fu_11063</InstName>
+                            <ModuleName>conv_layer01234_fused_Pipeline_L0_K</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>11063</ID>
+                            <BindInstances>add_ln79_fu_210_p2 add_ln837_fu_250_p2 add_ln81_1_fu_220_p2 add_ln82_fu_263_p2 mul_24s_40s_63_1_1_U32 ret_V_fu_355_p2 add_ln1347_1_fu_361_p2 denoiser_w_L0_W_V_U</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_conv_layer01234_fused_Pipeline_L1_IC_L1_K_fu_11080</InstName>
+                            <ModuleName>conv_layer01234_fused_Pipeline_L1_IC_L1_K</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>11080</ID>
+                            <BindInstances>add_ln110_1_fu_326_p2 add_ln110_fu_338_p2 add_ln837_1_fu_439_p2 mul_23s_40s_62_1_1_U44 add_ln112_1_fu_607_p2 add_ln1347_fu_613_p2 mul_23s_40s_62_1_1_U45 add_ln112_2_fu_655_p2 add_ln1347_2_fu_661_p2 add_ln112_fu_366_p2 denoiser_w_L1_W_V_U</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_conv_layer01234_fused_Pipeline_L2_IC_L2_K_fu_11097</InstName>
+                            <ModuleName>conv_layer01234_fused_Pipeline_L2_IC_L2_K</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>11097</ID>
+                            <BindInstances>add_ln145_1_fu_296_p2 add_ln145_fu_308_p2 add_ln837_3_fu_412_p2 mul_23s_40s_62_1_1_U61 add_ln147_1_fu_566_p2 add_ln1347_fu_572_p2 mul_23s_40s_62_1_1_U62 add_ln147_2_fu_614_p2 add_ln1347_2_fu_620_p2 add_ln147_fu_343_p2 denoiser_w_L2_W_V_U</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_conv_layer01234_fused_Pipeline_L3_IC_L3_K_fu_11112</InstName>
+                            <ModuleName>conv_layer01234_fused_Pipeline_L3_IC_L3_K</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>11112</ID>
+                            <BindInstances>add_ln180_1_fu_388_p2 add_ln180_fu_397_p2 add_ln837_fu_533_p2 mul_23s_39ns_62_1_1_U81 add_ln182_1_fu_723_p2 add_ln1347_fu_729_p2 mul_23s_39ns_62_1_1_U82 add_ln182_2_fu_771_p2 add_ln1347_1_fu_777_p2 add_ln182_fu_447_p2 denoiser_w_L3_W_V_U</BindInstances>
+                        </Instance>
+                        <Instance>
+                            <InstName>grp_conv_layer01234_fused_Pipeline_L4_IC_L4_K_fu_11128</InstName>
+                            <ModuleName>conv_layer01234_fused_Pipeline_L4_IC_L4_K</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>11128</ID>
+                            <BindInstances>add_ln212_1_fu_463_p2 add_ln212_fu_472_p2 mul_23s_40s_62_1_1_U112 add_ln214_1_fu_861_p2 add_ln1347_fu_867_p2 add_ln214_fu_560_p2 denoiser_w_L4_W_V_U</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>win01_V_U win01_V_1_U win01_V_2_U win01_V_3_U win01_V_4_U win12_V_U win12_V_1_U win12_V_2_U win23_V_U win23_V_1_U win23_V_2_U win23_V_3_U win34_V_U win34_V_1_U win34_V_2_U win34_V_3_U win34_V_4_U win34_V_5_U win34_V_6_U win34_V_7_U win34_V_8_U win34_V_9_U l0_out_V_U l0_out_V_1_U l1_out_V_U l1_out_V_1_U l2_out_V_U l2_out_V_1_U l3_out_V_U l3_out_V_1_U add_ln70_fu_11239_p2 add_ln81_fu_11257_p2 add_ln82_fu_11263_p2 add_ln76_1_fu_11269_p2 add_ln76_fu_11281_p2 add_ln106_fu_11381_p2 add_ln141_fu_11500_p2 add_ln176_fu_11619_p2 denoiser_w_L0_b_V_U denoiser_w_L1_b_V_U denoiser_w_L2_b_V_U denoiser_w_L3_b_V_U</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_ecg_denoiser_Pipeline_WRITE_OUTPUT_fu_298</InstName>
+                    <ModuleName>ecg_denoiser_Pipeline_WRITE_OUTPUT</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>298</ID>
+                    <BindInstances>add_ln280_fu_122_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+            <BindInstances>input_buf_V_U input_buf_V_1_U norm_buf_V_U norm_buf_V_1_U buf41210_U mul_48s_9ns_56_1_1_U152 mul_48s_9ns_56_1_1_U153 tmp_V_fu_390_p2 sub_ln1099_fu_419_p2 lsb_index_fu_425_p2 sub_ln1102_fu_451_p2 add_ln1113_fu_540_p2 sub_ln1114_fu_555_p2 m_3_fu_580_p2 fsqrt_32ns_32ns_32_10_no_dsp_1_U151 man_V_1_fu_755_p2 F2_fu_775_p2 add_ln570_fu_787_p2 sub_ln570_fu_793_p2 add_ln813_fu_933_p2</BindInstances>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>ecg_denoiser_Pipeline_READ_INPUT</Name>
+            <Loops>
+                <READ_INPUT/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>13.00</TargetClockPeriod>
+                    <ClockUncertainty>3.51</ClockUncertainty>
+                    <EstimatedClockPeriod>3.383</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>362</Best-caseLatency>
+                    <Average-caseLatency>362</Average-caseLatency>
+                    <Worst-caseLatency>362</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>4.706 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>4.706 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>4.706 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>362</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <READ_INPUT>
+                        <Name>READ_INPUT</Name>
+                        <Slack>9.49</Slack>
+                        <TripCount>360</TripCount>
+                        <Latency>360</Latency>
+                        <AbsoluteTimeLatency>4.680 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>1</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </READ_INPUT>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>11</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>51</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="READ_INPUT" OPTYPE="add" PRAGMA="" RTLNAME="add_ln243_fu_130_p2" SOURCE="src/ecg_denoiser.cpp:243" URAM="0" VARIABLE="add_ln243"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>ecg_denoiser_Pipeline_ZNORM_MEAN</Name>
+            <Loops>
+                <ZNORM_MEAN/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>13.00</TargetClockPeriod>
+                    <ClockUncertainty>3.51</ClockUncertainty>
+                    <EstimatedClockPeriod>6.648</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>362</Best-caseLatency>
+                    <Average-caseLatency>362</Average-caseLatency>
+                    <Worst-caseLatency>362</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>4.706 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>4.706 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>4.706 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>362</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <ZNORM_MEAN>
+                        <Name>ZNORM_MEAN</Name>
+                        <Slack>9.49</Slack>
+                        <TripCount>360</TripCount>
+                        <Latency>360</Latency>
+                        <AbsoluteTimeLatency>4.680 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </ZNORM_MEAN>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>61</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>117</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ZNORM_MEAN" OPTYPE="add" PRAGMA="" RTLNAME="add_ln252_fu_112_p2" SOURCE="src/ecg_denoiser.cpp:252" URAM="0" VARIABLE="add_ln252"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ZNORM_MEAN" OPTYPE="add" PRAGMA="" RTLNAME="mean_acc_V_1_fu_167_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:813" URAM="0" VARIABLE="mean_acc_V_1"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>ecg_denoiser_Pipeline_ZNORM_VAR</Name>
+            <Loops>
+                <ZNORM_VAR/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>13.00</TargetClockPeriod>
+                    <ClockUncertainty>3.51</ClockUncertainty>
+                    <EstimatedClockPeriod>7.360</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>364</Best-caseLatency>
+                    <Average-caseLatency>364</Average-caseLatency>
+                    <Worst-caseLatency>364</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>4.732 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>4.732 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>4.732 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>364</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <ZNORM_VAR>
+                        <Name>ZNORM_VAR</Name>
+                        <Slack>9.49</Slack>
+                        <TripCount>360</TripCount>
+                        <Latency>362</Latency>
+                        <AbsoluteTimeLatency>4.706 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </ZNORM_VAR>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>4</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>171</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>202</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ZNORM_VAR" OPTYPE="add" PRAGMA="" RTLNAME="add_ln260_fu_132_p2" SOURCE="src/ecg_denoiser.cpp:260" URAM="0" VARIABLE="add_ln260"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ZNORM_VAR" OPTYPE="sub" PRAGMA="" RTLNAME="d_fu_172_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:813" URAM="0" VARIABLE="d"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="0" LOOP="ZNORM_VAR" OPTYPE="mul" PRAGMA="" RTLNAME="mul_40s_40s_72_1_1_U16" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ZNORM_VAR" OPTYPE="add" PRAGMA="" RTLNAME="ret_V_fu_205_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1347" URAM="0" VARIABLE="ret_V"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>ecg_denoiser_Pipeline_ZNORM_APPLY</Name>
+            <Loops>
+                <ZNORM_APPLY/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>13.00</TargetClockPeriod>
+                    <ClockUncertainty>3.51</ClockUncertainty>
+                    <EstimatedClockPeriod>8.802</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>363</Best-caseLatency>
+                    <Average-caseLatency>363</Average-caseLatency>
+                    <Worst-caseLatency>363</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>4.719 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>4.719 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>4.719 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>363</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <ZNORM_APPLY>
+                        <Name>ZNORM_APPLY</Name>
+                        <Slack>9.49</Slack>
+                        <TripCount>360</TripCount>
+                        <Latency>361</Latency>
+                        <AbsoluteTimeLatency>4.693 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>3</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </ZNORM_APPLY>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>3</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>162</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>114</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ZNORM_APPLY" OPTYPE="add" PRAGMA="" RTLNAME="add_ln272_fu_146_p2" SOURCE="src/ecg_denoiser.cpp:272" URAM="0" VARIABLE="add_ln272"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="ZNORM_APPLY" OPTYPE="sub" PRAGMA="" RTLNAME="ret_V_fu_192_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1348" URAM="0" VARIABLE="ret_V"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="3" ID="" IMPL="auto" LATENCY="0" LOOP="ZNORM_APPLY" OPTYPE="mul" PRAGMA="" RTLNAME="mul_33s_32s_48_1_1_U23" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_2"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv_layer01234_fused_Pipeline_L0_K</Name>
+            <Loops>
+                <L0_K/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>13.00</TargetClockPeriod>
+                    <ClockUncertainty>3.51</ClockUncertainty>
+                    <EstimatedClockPeriod>9.115</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>15</Best-caseLatency>
+                    <Average-caseLatency>15</Average-caseLatency>
+                    <Worst-caseLatency>15</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.195 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.195 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.195 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>15</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <L0_K>
+                        <Name>L0_K</Name>
+                        <Slack>9.49</Slack>
+                        <TripCount>11</TripCount>
+                        <Latency>13</Latency>
+                        <AbsoluteTimeLatency>0.169 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </L0_K>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>2</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>208</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>481</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L0_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln79_fu_210_p2" SOURCE="src/ecg_denoiser.cpp:79" URAM="0" VARIABLE="add_ln79"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L0_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln837_fu_250_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:837" URAM="0" VARIABLE="add_ln837"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L0_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln81_1_fu_220_p2" SOURCE="src/ecg_denoiser.cpp:81" URAM="0" VARIABLE="add_ln81_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L0_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_fu_263_p2" SOURCE="src/ecg_denoiser.cpp:82" URAM="0" VARIABLE="add_ln82"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="0" LOOP="L0_K" OPTYPE="mul" PRAGMA="" RTLNAME="mul_24s_40s_63_1_1_U32" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L0_K" OPTYPE="add" PRAGMA="" RTLNAME="ret_V_fu_355_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1347" URAM="0" VARIABLE="ret_V"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L0_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln1347_1_fu_361_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="pragma" RTLNAME="denoiser_w_L0_W_V_U" SOURCE=":0" URAM="0" VARIABLE="denoiser_w_L0_W_V"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv_layer01234_fused_Pipeline_L1_IC_L1_K</Name>
+            <Loops>
+                <L1_IC_L1_K/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>13.00</TargetClockPeriod>
+                    <ClockUncertainty>3.51</ClockUncertainty>
+                    <EstimatedClockPeriod>7.494</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>453</Best-caseLatency>
+                    <Average-caseLatency>453</Average-caseLatency>
+                    <Worst-caseLatency>453</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>5.889 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>5.889 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>5.889 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>453</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <L1_IC_L1_K>
+                        <Name>L1_IC_L1_K</Name>
+                        <Slack>9.49</Slack>
+                        <TripCount>448</TripCount>
+                        <Latency>451</Latency>
+                        <AbsoluteTimeLatency>5.863 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>5</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </L1_IC_L1_K>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>60</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>11</UTIL_BRAM>
+                    <DSP>4</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>465</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>615</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L1_IC_L1_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln110_1_fu_326_p2" SOURCE="src/ecg_denoiser.cpp:110" URAM="0" VARIABLE="add_ln110_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L1_IC_L1_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln110_fu_338_p2" SOURCE="src/ecg_denoiser.cpp:110" URAM="0" VARIABLE="add_ln110"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L1_IC_L1_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln837_1_fu_439_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:837" URAM="0" VARIABLE="add_ln837_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="0" LOOP="L1_IC_L1_K" OPTYPE="mul" PRAGMA="" RTLNAME="mul_23s_40s_62_1_1_U44" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L1_IC_L1_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln112_1_fu_607_p2" SOURCE="src/ecg_denoiser.cpp:112" URAM="0" VARIABLE="add_ln112_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L1_IC_L1_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln1347_fu_613_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="0" LOOP="L1_IC_L1_K" OPTYPE="mul" PRAGMA="" RTLNAME="mul_23s_40s_62_1_1_U45" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L1_IC_L1_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln112_2_fu_655_p2" SOURCE="src/ecg_denoiser.cpp:112" URAM="0" VARIABLE="add_ln112_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L1_IC_L1_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln1347_2_fu_661_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L1_IC_L1_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln112_fu_366_p2" SOURCE="src/ecg_denoiser.cpp:112" URAM="0" VARIABLE="add_ln112"/>
+                <BindNode BINDTYPE="storage" BRAM="60" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="bram" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="pragma" RTLNAME="denoiser_w_L1_W_V_U" SOURCE=":0" URAM="0" VARIABLE="denoiser_w_L1_W_V"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv_layer01234_fused_Pipeline_L2_IC_L2_K</Name>
+            <Loops>
+                <L2_IC_L2_K/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>13.00</TargetClockPeriod>
+                    <ClockUncertainty>3.51</ClockUncertainty>
+                    <EstimatedClockPeriod>9.115</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>644</Best-caseLatency>
+                    <Average-caseLatency>644</Average-caseLatency>
+                    <Worst-caseLatency>644</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>8.372 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>8.372 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>8.372 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>644</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <L2_IC_L2_K>
+                        <Name>L2_IC_L2_K</Name>
+                        <Slack>9.49</Slack>
+                        <TripCount>640</TripCount>
+                        <Latency>642</Latency>
+                        <AbsoluteTimeLatency>8.346 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </L2_IC_L2_K>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>4</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>400</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>10179</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>12</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L2_IC_L2_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln145_1_fu_296_p2" SOURCE="src/ecg_denoiser.cpp:145" URAM="0" VARIABLE="add_ln145_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L2_IC_L2_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln145_fu_308_p2" SOURCE="src/ecg_denoiser.cpp:145" URAM="0" VARIABLE="add_ln145"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L2_IC_L2_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln837_3_fu_412_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:837" URAM="0" VARIABLE="add_ln837_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="0" LOOP="L2_IC_L2_K" OPTYPE="mul" PRAGMA="" RTLNAME="mul_23s_40s_62_1_1_U61" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L2_IC_L2_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln147_1_fu_566_p2" SOURCE="src/ecg_denoiser.cpp:147" URAM="0" VARIABLE="add_ln147_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L2_IC_L2_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln1347_fu_572_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="0" LOOP="L2_IC_L2_K" OPTYPE="mul" PRAGMA="" RTLNAME="mul_23s_40s_62_1_1_U62" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L2_IC_L2_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln147_2_fu_614_p2" SOURCE="src/ecg_denoiser.cpp:147" URAM="0" VARIABLE="add_ln147_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L2_IC_L2_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln1347_2_fu_620_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L2_IC_L2_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln147_fu_343_p2" SOURCE="src/ecg_denoiser.cpp:147" URAM="0" VARIABLE="add_ln147"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="pragma" RTLNAME="denoiser_w_L2_W_V_U" SOURCE=":0" URAM="0" VARIABLE="denoiser_w_L2_W_V"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv_layer01234_fused_Pipeline_L3_IC_L3_K</Name>
+            <Loops>
+                <L3_IC_L3_K/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>13.00</TargetClockPeriod>
+                    <ClockUncertainty>3.51</ClockUncertainty>
+                    <EstimatedClockPeriod>9.090</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>196</Best-caseLatency>
+                    <Average-caseLatency>196</Average-caseLatency>
+                    <Worst-caseLatency>196</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>2.548 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>2.548 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>2.548 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>196</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <L3_IC_L3_K>
+                        <Name>L3_IC_L3_K</Name>
+                        <Slack>9.49</Slack>
+                        <TripCount>192</TripCount>
+                        <Latency>194</Latency>
+                        <AbsoluteTimeLatency>2.522 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </L3_IC_L3_K>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>4</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>394</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>2134</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>2</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L3_IC_L3_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln180_1_fu_388_p2" SOURCE="src/ecg_denoiser.cpp:180" URAM="0" VARIABLE="add_ln180_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L3_IC_L3_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln180_fu_397_p2" SOURCE="src/ecg_denoiser.cpp:180" URAM="0" VARIABLE="add_ln180"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L3_IC_L3_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln837_fu_533_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:837" URAM="0" VARIABLE="add_ln837"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="0" LOOP="L3_IC_L3_K" OPTYPE="mul" PRAGMA="" RTLNAME="mul_23s_39ns_62_1_1_U81" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L3_IC_L3_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln182_1_fu_723_p2" SOURCE="src/ecg_denoiser.cpp:182" URAM="0" VARIABLE="add_ln182_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L3_IC_L3_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln1347_fu_729_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="0" LOOP="L3_IC_L3_K" OPTYPE="mul" PRAGMA="" RTLNAME="mul_23s_39ns_62_1_1_U82" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L3_IC_L3_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln182_2_fu_771_p2" SOURCE="src/ecg_denoiser.cpp:182" URAM="0" VARIABLE="add_ln182_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L3_IC_L3_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln1347_1_fu_777_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L3_IC_L3_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln182_fu_447_p2" SOURCE="src/ecg_denoiser.cpp:182" URAM="0" VARIABLE="add_ln182"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="pragma" RTLNAME="denoiser_w_L3_W_V_U" SOURCE=":0" URAM="0" VARIABLE="denoiser_w_L3_W_V"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv_layer01234_fused_Pipeline_L4_IC_L4_K</Name>
+            <Loops>
+                <L4_IC_L4_K/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>13.00</TargetClockPeriod>
+                    <ClockUncertainty>3.51</ClockUncertainty>
+                    <EstimatedClockPeriod>9.115</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>228</Best-caseLatency>
+                    <Average-caseLatency>228</Average-caseLatency>
+                    <Worst-caseLatency>228</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>2.964 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>2.964 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>2.964 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>228</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <L4_IC_L4_K>
+                        <Name>L4_IC_L4_K</Name>
+                        <Slack>9.49</Slack>
+                        <TripCount>224</TripCount>
+                        <Latency>226</Latency>
+                        <AbsoluteTimeLatency>2.938 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>4</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </L4_IC_L4_K>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>2</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>229</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>732</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L4_IC_L4_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln212_1_fu_463_p2" SOURCE="src/ecg_denoiser.cpp:212" URAM="0" VARIABLE="add_ln212_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L4_IC_L4_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln212_fu_472_p2" SOURCE="src/ecg_denoiser.cpp:212" URAM="0" VARIABLE="add_ln212"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="0" LOOP="L4_IC_L4_K" OPTYPE="mul" PRAGMA="" RTLNAME="mul_23s_40s_62_1_1_U112" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L4_IC_L4_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln214_1_fu_861_p2" SOURCE="src/ecg_denoiser.cpp:214" URAM="0" VARIABLE="add_ln214_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L4_IC_L4_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln1347_fu_867_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1347" URAM="0" VARIABLE="add_ln1347"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L4_IC_L4_K" OPTYPE="add" PRAGMA="" RTLNAME="add_ln214_fu_560_p2" SOURCE="src/ecg_denoiser.cpp:214" URAM="0" VARIABLE="add_ln214"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_np" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="rom_np" PRAGMA="pragma" RTLNAME="denoiser_w_L4_W_V_U" SOURCE=":0" URAM="0" VARIABLE="denoiser_w_L4_W_V"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>conv_layer01234_fused</Name>
+            <Loops>
+                <FUSED_T>
+                    <L0_OC/>
+                    <L1_OC_GROUP/>
+                    <L2_OC_GROUP/>
+                    <L3_OC_GROUP/>
+                </FUSED_T>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>13.00</TargetClockPeriod>
+                    <ClockUncertainty>3.51</ClockUncertainty>
+                    <EstimatedClockPeriod>9.115</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>19753984</Best-caseLatency>
+                    <Average-caseLatency>19753984</Average-caseLatency>
+                    <Worst-caseLatency>19753984</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.257 sec</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.257 sec</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.257 sec</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>19753984</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <FUSED_T>
+                        <Name>FUSED_T</Name>
+                        <Slack>9.49</Slack>
+                        <TripCount>360</TripCount>
+                        <Latency>19753920</Latency>
+                        <AbsoluteTimeLatency>0.257 sec</AbsoluteTimeLatency>
+                        <IterationLatency>54872</IterationLatency>
+                        <PipelineDepth>54872</PipelineDepth>
+                        <PipelineType>no</PipelineType>
+                        <InstanceList>
+                            <Instance>grp_conv_layer01234_fused_Pipeline_L4_IC_L4_K_fu_11128</Instance>
+                        </InstanceList>
+                        <L0_OC>
+                            <Name>L0_OC</Name>
+                            <Slack>9.49</Slack>
+                            <TripCount>64</TripCount>
+                            <Latency>1216</Latency>
+                            <AbsoluteTimeLatency>15.808 us</AbsoluteTimeLatency>
+                            <IterationLatency>19</IterationLatency>
+                            <PipelineDepth>19</PipelineDepth>
+                            <PipelineType>no</PipelineType>
+                            <InstanceList>
+                                <Instance>grp_conv_layer01234_fused_Pipeline_L0_K_fu_11063</Instance>
+                            </InstanceList>
+                        </L0_OC>
+                        <L1_OC_GROUP>
+                            <Name>L1_OC_GROUP</Name>
+                            <Slack>9.49</Slack>
+                            <TripCount>64</TripCount>
+                            <Latency>29248</Latency>
+                            <AbsoluteTimeLatency>0.380 ms</AbsoluteTimeLatency>
+                            <IterationLatency>457</IterationLatency>
+                            <PipelineDepth>457</PipelineDepth>
+                            <PipelineType>no</PipelineType>
+                            <InstanceList>
+                                <Instance>grp_conv_layer01234_fused_Pipeline_L1_IC_L1_K_fu_11080</Instance>
+                            </InstanceList>
+                        </L1_OC_GROUP>
+                        <L2_OC_GROUP>
+                            <Name>L2_OC_GROUP</Name>
+                            <Slack>9.49</Slack>
+                            <TripCount>32</TripCount>
+                            <Latency>20736</Latency>
+                            <AbsoluteTimeLatency>0.270 ms</AbsoluteTimeLatency>
+                            <IterationLatency>648</IterationLatency>
+                            <PipelineDepth>648</PipelineDepth>
+                            <PipelineType>no</PipelineType>
+                            <InstanceList>
+                                <Instance>grp_conv_layer01234_fused_Pipeline_L2_IC_L2_K_fu_11097</Instance>
+                            </InstanceList>
+                        </L2_OC_GROUP>
+                        <L3_OC_GROUP>
+                            <Name>L3_OC_GROUP</Name>
+                            <Slack>9.49</Slack>
+                            <TripCount>16</TripCount>
+                            <Latency>3200</Latency>
+                            <AbsoluteTimeLatency>41.600 us</AbsoluteTimeLatency>
+                            <IterationLatency>200</IterationLatency>
+                            <PipelineDepth>200</PipelineDepth>
+                            <PipelineType>no</PipelineType>
+                            <InstanceList>
+                                <Instance>grp_conv_layer01234_fused_Pipeline_L3_IC_L3_K_fu_11112</Instance>
+                            </InstanceList>
+                        </L3_OC_GROUP>
+                    </FUSED_T>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>83</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>15</UTIL_BRAM>
+                    <DSP>16</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>4</UTIL_DSP>
+                    <FF>10177</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>6</UTIL_FF>
+                    <LUT>29736</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>37</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win01_V_U" SOURCE="src/ecg_denoiser.cpp:16" URAM="0" VARIABLE="win01_V"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win01_V_1_U" SOURCE="src/ecg_denoiser.cpp:16" URAM="0" VARIABLE="win01_V_1"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win01_V_2_U" SOURCE="src/ecg_denoiser.cpp:16" URAM="0" VARIABLE="win01_V_2"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win01_V_3_U" SOURCE="src/ecg_denoiser.cpp:16" URAM="0" VARIABLE="win01_V_3"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win01_V_4_U" SOURCE="src/ecg_denoiser.cpp:16" URAM="0" VARIABLE="win01_V_4"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win12_V_U" SOURCE="src/ecg_denoiser.cpp:20" URAM="0" VARIABLE="win12_V"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win12_V_1_U" SOURCE="src/ecg_denoiser.cpp:20" URAM="0" VARIABLE="win12_V_1"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win12_V_2_U" SOURCE="src/ecg_denoiser.cpp:20" URAM="0" VARIABLE="win12_V_2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win23_V_U" SOURCE="src/ecg_denoiser.cpp:24" URAM="0" VARIABLE="win23_V"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win23_V_1_U" SOURCE="src/ecg_denoiser.cpp:24" URAM="0" VARIABLE="win23_V_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win23_V_2_U" SOURCE="src/ecg_denoiser.cpp:24" URAM="0" VARIABLE="win23_V_2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win23_V_3_U" SOURCE="src/ecg_denoiser.cpp:24" URAM="0" VARIABLE="win23_V_3"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win34_V_U" SOURCE="src/ecg_denoiser.cpp:28" URAM="0" VARIABLE="win34_V"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win34_V_1_U" SOURCE="src/ecg_denoiser.cpp:28" URAM="0" VARIABLE="win34_V_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win34_V_2_U" SOURCE="src/ecg_denoiser.cpp:28" URAM="0" VARIABLE="win34_V_2"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win34_V_3_U" SOURCE="src/ecg_denoiser.cpp:28" URAM="0" VARIABLE="win34_V_3"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win34_V_4_U" SOURCE="src/ecg_denoiser.cpp:28" URAM="0" VARIABLE="win34_V_4"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win34_V_5_U" SOURCE="src/ecg_denoiser.cpp:28" URAM="0" VARIABLE="win34_V_5"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win34_V_6_U" SOURCE="src/ecg_denoiser.cpp:28" URAM="0" VARIABLE="win34_V_6"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win34_V_7_U" SOURCE="src/ecg_denoiser.cpp:28" URAM="0" VARIABLE="win34_V_7"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win34_V_8_U" SOURCE="src/ecg_denoiser.cpp:28" URAM="0" VARIABLE="win34_V_8"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="win34_V_9_U" SOURCE="src/ecg_denoiser.cpp:28" URAM="0" VARIABLE="win34_V_9"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="l0_out_V_U" SOURCE="src/ecg_denoiser.cpp:73" URAM="0" VARIABLE="l0_out_V"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="l0_out_V_1_U" SOURCE="src/ecg_denoiser.cpp:73" URAM="0" VARIABLE="l0_out_V_1"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="l1_out_V_U" SOURCE="src/ecg_denoiser.cpp:103" URAM="0" VARIABLE="l1_out_V"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="l1_out_V_1_U" SOURCE="src/ecg_denoiser.cpp:103" URAM="0" VARIABLE="l1_out_V_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="l2_out_V_U" SOURCE="src/ecg_denoiser.cpp:138" URAM="0" VARIABLE="l2_out_V"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="l2_out_V_1_U" SOURCE="src/ecg_denoiser.cpp:138" URAM="0" VARIABLE="l2_out_V_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="l3_out_V_U" SOURCE="src/ecg_denoiser.cpp:173" URAM="0" VARIABLE="l3_out_V"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_s2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_s2p" PRAGMA="" RTLNAME="l3_out_V_1_U" SOURCE="src/ecg_denoiser.cpp:173" URAM="0" VARIABLE="l3_out_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="FUSED_T" OPTYPE="add" PRAGMA="" RTLNAME="add_ln70_fu_11239_p2" SOURCE="src/ecg_denoiser.cpp:70" URAM="0" VARIABLE="add_ln70"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="FUSED_T" OPTYPE="add" PRAGMA="" RTLNAME="add_ln81_fu_11257_p2" SOURCE="src/ecg_denoiser.cpp:81" URAM="0" VARIABLE="add_ln81"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="FUSED_T" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_fu_11263_p2" SOURCE="src/ecg_denoiser.cpp:82" URAM="0" VARIABLE="add_ln82"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L0_OC" OPTYPE="add" PRAGMA="" RTLNAME="add_ln76_1_fu_11269_p2" SOURCE="src/ecg_denoiser.cpp:76" URAM="0" VARIABLE="add_ln76_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L0_OC" OPTYPE="add" PRAGMA="" RTLNAME="add_ln76_fu_11281_p2" SOURCE="src/ecg_denoiser.cpp:76" URAM="0" VARIABLE="add_ln76"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L1_OC_GROUP" OPTYPE="add" PRAGMA="" RTLNAME="add_ln106_fu_11381_p2" SOURCE="src/ecg_denoiser.cpp:106" URAM="0" VARIABLE="add_ln106"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L2_OC_GROUP" OPTYPE="add" PRAGMA="" RTLNAME="add_ln141_fu_11500_p2" SOURCE="src/ecg_denoiser.cpp:141" URAM="0" VARIABLE="add_ln141"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="L3_OC_GROUP" OPTYPE="add" PRAGMA="" RTLNAME="add_ln176_fu_11619_p2" SOURCE="src/ecg_denoiser.cpp:176" URAM="0" VARIABLE="add_ln176"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_1p" PRAGMA="" RTLNAME="denoiser_w_L0_b_V_U" SOURCE="" URAM="0" VARIABLE="denoiser_w_L0_b_V"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="denoiser_w_L1_b_V_U" SOURCE="" URAM="0" VARIABLE="denoiser_w_L1_b_V"/>
+                <BindNode BINDTYPE="storage" BRAM="1" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="denoiser_w_L2_b_V_U" SOURCE="" URAM="0" VARIABLE="denoiser_w_L2_b_V"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage rom_2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="rom_2p" PRAGMA="" RTLNAME="denoiser_w_L3_b_V_U" SOURCE="" URAM="0" VARIABLE="denoiser_w_L3_b_V"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>ecg_denoiser_Pipeline_WRITE_OUTPUT</Name>
+            <Loops>
+                <WRITE_OUTPUT/>
+            </Loops>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>13.00</TargetClockPeriod>
+                    <ClockUncertainty>3.51</ClockUncertainty>
+                    <EstimatedClockPeriod>2.926</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>362</Best-caseLatency>
+                    <Average-caseLatency>362</Average-caseLatency>
+                    <Worst-caseLatency>362</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>4.706 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>4.706 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>4.706 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>362</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+                <SummaryOfLoopLatency>
+                    <WRITE_OUTPUT>
+                        <Name>WRITE_OUTPUT</Name>
+                        <Slack>9.49</Slack>
+                        <TripCount>360</TripCount>
+                        <Latency>360</Latency>
+                        <AbsoluteTimeLatency>4.680 us</AbsoluteTimeLatency>
+                        <PipelineII>1</PipelineII>
+                        <PipelineDepth>2</PipelineDepth>
+                        <PipelineType>yes</PipelineType>
+                        <InstanceList/>
+                    </WRITE_OUTPUT>
+                </SummaryOfLoopLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>13</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>65</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="WRITE_OUTPUT" OPTYPE="add" PRAGMA="" RTLNAME="add_ln280_fu_122_p2" SOURCE="src/ecg_denoiser.cpp:280" URAM="0" VARIABLE="add_ln280"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>ecg_denoiser</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>13.00</TargetClockPeriod>
+                    <ClockUncertainty>3.51</ClockUncertainty>
+                    <EstimatedClockPeriod>9.154</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>19755865</Best-caseLatency>
+                    <Average-caseLatency>19755865</Average-caseLatency>
+                    <Worst-caseLatency>19755865</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.257 sec</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.257 sec</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.257 sec</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>19755866</PipelineInitiationInterval>
+                    <PipelineType>no</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <BRAM_18K>84</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>15</UTIL_BRAM>
+                    <DSP>27</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>6</UTIL_DSP>
+                    <FF>11618</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>7</UTIL_FF>
+                    <LUT>33068</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>42</UTIL_LUT>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="input_buf_V_U" SOURCE="src/ecg_denoiser.cpp:232" URAM="0" VARIABLE="input_buf_V"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="input_buf_V_1_U" SOURCE="src/ecg_denoiser.cpp:232" URAM="0" VARIABLE="input_buf_V_1"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="norm_buf_V_U" SOURCE="src/ecg_denoiser.cpp:233" URAM="0" VARIABLE="norm_buf_V"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="lutram" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="yes" RTLNAME="norm_buf_V_1_U" SOURCE="src/ecg_denoiser.cpp:233" URAM="0" VARIABLE="norm_buf_V_1"/>
+                <BindNode BINDTYPE="storage" BRAM="2" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="buf41210_U" SOURCE="" URAM="0" VARIABLE="buf41210"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_48s_9ns_56_1_1_U152" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="2" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_48s_9ns_56_1_1_U153" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1273" URAM="0" VARIABLE="r_V_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="tmp_V_fu_390_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1094" URAM="0" VARIABLE="tmp_V"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1099_fu_419_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1099" URAM="0" VARIABLE="sub_ln1099"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="lsb_index_fu_425_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1099" URAM="0" VARIABLE="lsb_index"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1102_fu_451_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1102" URAM="0" VARIABLE="sub_ln1102"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln1113_fu_540_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1113" URAM="0" VARIABLE="add_ln1113"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln1114_fu_555_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1114" URAM="0" VARIABLE="sub_ln1114"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="m_3_fu_580_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:1116" URAM="0" VARIABLE="m_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op fsqrt" DSP="0" ID="" IMPL="fabric" LATENCY="9" LOOP="" OPTYPE="fsqrt" PRAGMA="" RTLNAME="fsqrt_32ns_32ns_32_10_no_dsp_1_U151" SOURCE="C:\scratch\2022.2\hls_product\608\2022.2\src\shared\hls\clib\hlsmath\src\c++\sqrtfloat.cpp:8" URAM="0" VARIABLE="d_assign"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="man_V_1_fu_755_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:455" URAM="0" VARIABLE="man_V_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="F2_fu_775_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:564" URAM="0" VARIABLE="F2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln570_fu_787_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:570" URAM="0" VARIABLE="add_ln570"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln570_fu_793_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:570" URAM="0" VARIABLE="sub_ln570"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln813_fu_933_p2" SOURCE="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_fixed_base.h:813" URAM="0" VARIABLE="add_ln813"/>
+            </BindNodes>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands>
+        <config_export description="ECG Denoiser 1D-CNN" display_name="ecg_denoiser" library="ECG" output="C:/ecg_hls/ecg_denoiser_ip" vendor="MyOrg" version="1.0"/>
+    </UserConfigCommands>
+    <Args>
+        <Arg ArgName="in_stream" index="0" direction="in" srcType="stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="96">
+            <hwRefs>
+                <hwRef type="interface" interface="in_stream" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_stream" index="1" direction="out" srcType="stream&lt;hls::axis&lt;ap_uint&lt;32&gt;, 1, 1, 1&gt;, 0&gt;&amp;" srcSize="96">
+            <hwRefs>
+                <hwRef type="interface" interface="out_stream" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_BUSIF">in_stream:out_stream</busParam>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst_n</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst_n" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_LOW</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst_n">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst_n</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="in_stream" type="axi4stream" busTypeName="axis" mode="slave" dataWidth="32" portPrefix="in_stream_">
+            <ports>
+                <port>in_stream_TDATA</port>
+                <port>in_stream_TDEST</port>
+                <port>in_stream_TID</port>
+                <port>in_stream_TKEEP</port>
+                <port>in_stream_TLAST</port>
+                <port>in_stream_TREADY</port>
+                <port>in_stream_TSTRB</port>
+                <port>in_stream_TUSER</port>
+                <port>in_stream_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="in_stream"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="out_stream" type="axi4stream" busTypeName="axis" mode="master" dataWidth="32" portPrefix="out_stream_">
+            <ports>
+                <port>out_stream_TDATA</port>
+                <port>out_stream_TDEST</port>
+                <port>out_stream_TID</port>
+                <port>out_stream_TKEEP</port>
+                <port>out_stream_TLAST</port>
+                <port>out_stream_TREADY</port>
+                <port>out_stream_TSTRB</port>
+                <port>out_stream_TUSER</port>
+                <port>out_stream_TVALID</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="axis" register_option="1" register_mode="both" argName="out_stream"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AXIS">
+                <table isCollapsed="0">
+                    <keys size="11">Interface, Register Mode, TDATA, TDEST, TID, TKEEP, TLAST, TREADY, TSTRB, TUSER, TVALID</keys>
+                    <column name="in_stream">both, 32, 1, 1, 4, 1, 1, 4, 1, 1, </column>
+                    <column name="out_stream">both, 32, 1, 1, 4, 1, 1, 4, 1, 1, </column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table isCollapsed="0">
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk, </column>
+                    <column name="ap_rst_n">reset, ap_rst_n, </column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start, </column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="in_stream">in, stream&lt;hls::axis&lt;ap_uint&lt;32&gt; 1 1 1&gt; 0&gt;&amp;</column>
+                    <column name="out_stream">out, stream&lt;hls::axis&lt;ap_uint&lt;32&gt; 1 1 1&gt; 0&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table isCollapsed="1">
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="in_stream">in_stream, interface, , </column>
+                    <column name="out_stream">out_stream, interface, , </column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <PragmaReport>
+        <Pragma type="inline" location="src/ecg_denoiser.cpp:8" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options="off"/>
+        <Pragma type="bind_storage" location="src/ecg_denoiser.cpp:10" status="valid" parentFunction="conv_layer01234_fused" variable="denoiser_w::L0_W" isDirective="0" options="variable=denoiser_w::L0_W type=rom_np impl=lutram"/>
+        <Pragma type="bind_storage" location="src/ecg_denoiser.cpp:11" status="valid" parentFunction="conv_layer01234_fused" variable="denoiser_w::L1_W" isDirective="0" options="variable=denoiser_w::L1_W type=rom_np impl=bram"/>
+        <Pragma type="bind_storage" location="src/ecg_denoiser.cpp:12" status="valid" parentFunction="conv_layer01234_fused" variable="denoiser_w::L2_W" isDirective="0" options="variable=denoiser_w::L2_W type=rom_np impl=lutram"/>
+        <Pragma type="bind_storage" location="src/ecg_denoiser.cpp:13" status="valid" parentFunction="conv_layer01234_fused" variable="denoiser_w::L3_W" isDirective="0" options="variable=denoiser_w::L3_W type=rom_np impl=lutram"/>
+        <Pragma type="bind_storage" location="src/ecg_denoiser.cpp:14" status="valid" parentFunction="conv_layer01234_fused" variable="denoiser_w::L4_W" isDirective="0" options="variable=denoiser_w::L4_W type=rom_np impl=lutram"/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:17" status="valid" parentFunction="conv_layer01234_fused" variable="win01" isDirective="0" options="variable=win01 dim=1 type=complete"/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:18" status="valid" parentFunction="conv_layer01234_fused" variable="win01" isDirective="0" options="variable=win01 dim=2 type=cyclic factor=1"/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:21" status="valid" parentFunction="conv_layer01234_fused" variable="win12" isDirective="0" options="variable=win12 dim=1 type=complete"/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:22" status="valid" parentFunction="conv_layer01234_fused" variable="win12" isDirective="0" options="variable=win12 dim=2 type=cyclic factor=1"/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:25" status="valid" parentFunction="conv_layer01234_fused" variable="win23" isDirective="0" options="variable=win23 dim=1 type=complete"/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:26" status="valid" parentFunction="conv_layer01234_fused" variable="win23" isDirective="0" options="variable=win23 dim=2 type=cyclic factor=2"/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:29" status="valid" parentFunction="conv_layer01234_fused" variable="win34" isDirective="0" options="variable=win34 dim=1 type=complete"/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:30" status="valid" parentFunction="conv_layer01234_fused" variable="win34" isDirective="0" options="variable=win34 dim=2 type=cyclic factor=2"/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:34" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:37" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:43" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:46" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:52" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:55" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:61" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:64" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:74" status="valid" parentFunction="conv_layer01234_fused" variable="l0_out" isDirective="0" options="variable=l0_out type=cyclic factor=2"/>
+        <Pragma type="pipeline" location="src/ecg_denoiser.cpp:80" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:89" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:92" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:98" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:104" status="valid" parentFunction="conv_layer01234_fused" variable="l1_out" isDirective="0" options="variable=l1_out type=cyclic factor=2"/>
+        <Pragma type="pipeline" location="src/ecg_denoiser.cpp:113" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:124" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:127" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:133" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:139" status="valid" parentFunction="conv_layer01234_fused" variable="l2_out" isDirective="0" options="variable=l2_out type=cyclic factor=2"/>
+        <Pragma type="pipeline" location="src/ecg_denoiser.cpp:148" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:159" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:162" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:168" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:174" status="valid" parentFunction="conv_layer01234_fused" variable="l3_out" isDirective="0" options="variable=l3_out type=cyclic factor=2"/>
+        <Pragma type="pipeline" location="src/ecg_denoiser.cpp:183" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:194" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:197" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="unroll" location="src/ecg_denoiser.cpp:203" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options=""/>
+        <Pragma type="pipeline" location="src/ecg_denoiser.cpp:215" status="valid" parentFunction="conv_layer01234_fused" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="interface" location="src/ecg_denoiser.cpp:228" status="valid" parentFunction="ecg_denoiser" variable="in_stream" isDirective="0" options="axis port=in_stream register"/>
+        <Pragma type="interface" location="src/ecg_denoiser.cpp:229" status="valid" parentFunction="ecg_denoiser" variable="out_stream" isDirective="0" options="axis port=out_stream register"/>
+        <Pragma type="interface" location="src/ecg_denoiser.cpp:230" status="valid" parentFunction="ecg_denoiser" variable="return" isDirective="0" options="ap_ctrl_hs port=return"/>
+        <Pragma type="bind_storage" location="src/ecg_denoiser.cpp:236" status="valid" parentFunction="ecg_denoiser" variable="input_buf" isDirective="0" options="variable=input_buf type=ram_1p impl=lutram"/>
+        <Pragma type="bind_storage" location="src/ecg_denoiser.cpp:237" status="valid" parentFunction="ecg_denoiser" variable="norm_buf" isDirective="0" options="variable=norm_buf type=ram_1p impl=lutram"/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:238" status="valid" parentFunction="ecg_denoiser" variable="input_buf" isDirective="0" options="variable=input_buf dim=1 type=cyclic factor=2"/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:239" status="valid" parentFunction="ecg_denoiser" variable="norm_buf" isDirective="0" options="variable=norm_buf dim=1 type=cyclic factor=2"/>
+        <Pragma type="array_partition" location="src/ecg_denoiser.cpp:240" status="valid" parentFunction="ecg_denoiser" variable="buf4" isDirective="0" options="variable=buf4 dim=2 type=complete"/>
+        <Pragma type="pipeline" location="src/ecg_denoiser.cpp:244" status="valid" parentFunction="ecg_denoiser" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="src/ecg_denoiser.cpp:253" status="valid" parentFunction="ecg_denoiser" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="src/ecg_denoiser.cpp:261" status="valid" parentFunction="ecg_denoiser" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="src/ecg_denoiser.cpp:273" status="valid" parentFunction="ecg_denoiser" variable="" isDirective="0" options="II=1"/>
+        <Pragma type="pipeline" location="src/ecg_denoiser.cpp:281" status="valid" parentFunction="ecg_denoiser" variable="" isDirective="0" options="II=1"/>
+    </PragmaReport>
+</profile>
+

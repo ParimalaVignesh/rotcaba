@@ -1,0 +1,275 @@
+
+
+================================================================
+== Vitis HLS Report for 'ecg_denoiser'
+================================================================
+* Date:           Sat Apr  4 09:59:06 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        ecg_denoiser_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z030-sbg485-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  13.00 ns|  9.154 ns|     3.51 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +----------+----------+-----------+-----------+----------+----------+---------+
+    |   Latency (cycles)  |   Latency (absolute)  |       Interval      | Pipeline|
+    |    min   |    max   |    min    |    max    |    min   |    max   |   Type  |
+    +----------+----------+-----------+-----------+----------+----------+---------+
+    |  19755865|  19755865|  0.257 sec|  0.257 sec|  19755866|  19755866|       no|
+    +----------+----------+-----------+-----------+----------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------+------------------------------------+----------+----------+-----------+-----------+----------+----------+---------+
+        |                                               |                                    |   Latency (cycles)  |   Latency (absolute)  |       Interval      | Pipeline|
+        |                    Instance                   |               Module               |    min   |    max   |    min    |    max    |    min   |    max   |   Type  |
+        +-----------------------------------------------+------------------------------------+----------+----------+-----------+-----------+----------+----------+---------+
+        |grp_ecg_denoiser_Pipeline_READ_INPUT_fu_228    |ecg_denoiser_Pipeline_READ_INPUT    |       362|       362|   4.706 us|   4.706 us|       362|       362|       no|
+        |grp_ecg_denoiser_Pipeline_ZNORM_MEAN_fu_248    |ecg_denoiser_Pipeline_ZNORM_MEAN    |       362|       362|   4.706 us|   4.706 us|       362|       362|       no|
+        |grp_ecg_denoiser_Pipeline_ZNORM_VAR_fu_255     |ecg_denoiser_Pipeline_ZNORM_VAR     |       364|       364|   4.732 us|   4.732 us|       364|       364|       no|
+        |grp_ecg_denoiser_Pipeline_ZNORM_APPLY_fu_263   |ecg_denoiser_Pipeline_ZNORM_APPLY   |       363|       363|   4.719 us|   4.719 us|       363|       363|       no|
+        |grp_conv_layer01234_fused_fu_273               |conv_layer01234_fused               |  19753984|  19753984|  0.257 sec|  0.257 sec|  19753984|  19753984|       no|
+        |grp_ecg_denoiser_Pipeline_WRITE_OUTPUT_fu_298  |ecg_denoiser_Pipeline_WRITE_OUTPUT  |       362|       362|   4.706 us|   4.706 us|       362|       362|       no|
+        +-----------------------------------------------+------------------------------------+----------+----------+-----------+-----------+----------+----------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|   1603|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |       83|   27|   11013|  30577|    0|
+|Memory           |        1|    -|     128|    360|    0|
+|Multiplexer      |        -|    -|       -|    528|    -|
+|Register         |        -|    -|     477|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |       84|   27|   11618|  33068|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      530|  400|  157200|  78600|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |       15|    6|       7|     42|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------+------------------------------------+---------+----+-------+-------+-----+
+    |                    Instance                   |               Module               | BRAM_18K| DSP|   FF  |  LUT  | URAM|
+    +-----------------------------------------------+------------------------------------+---------+----+-------+-------+-----+
+    |grp_conv_layer01234_fused_fu_273               |conv_layer01234_fused               |       83|  16|  10177|  29736|    0|
+    |grp_ecg_denoiser_Pipeline_READ_INPUT_fu_228    |ecg_denoiser_Pipeline_READ_INPUT    |        0|   0|     11|     51|    0|
+    |grp_ecg_denoiser_Pipeline_WRITE_OUTPUT_fu_298  |ecg_denoiser_Pipeline_WRITE_OUTPUT  |        0|   0|     13|     65|    0|
+    |grp_ecg_denoiser_Pipeline_ZNORM_APPLY_fu_263   |ecg_denoiser_Pipeline_ZNORM_APPLY   |        0|   3|    162|    114|    0|
+    |grp_ecg_denoiser_Pipeline_ZNORM_MEAN_fu_248    |ecg_denoiser_Pipeline_ZNORM_MEAN    |        0|   0|     61|    117|    0|
+    |grp_ecg_denoiser_Pipeline_ZNORM_VAR_fu_255     |ecg_denoiser_Pipeline_ZNORM_VAR     |        0|   4|    171|    202|    0|
+    |fcmp_32ns_32ns_1_2_no_dsp_1_U150               |fcmp_32ns_32ns_1_2_no_dsp_1         |        0|   0|      0|      0|    0|
+    |fpext_32ns_64_2_no_dsp_1_U149                  |fpext_32ns_64_2_no_dsp_1            |        0|   0|      0|      0|    0|
+    |fsqrt_32ns_32ns_32_10_no_dsp_1_U151            |fsqrt_32ns_32ns_32_10_no_dsp_1      |        0|   0|      0|      0|    0|
+    |mul_48s_9ns_56_1_1_U152                        |mul_48s_9ns_56_1_1                  |        0|   2|      0|     20|    0|
+    |mul_48s_9ns_56_1_1_U153                        |mul_48s_9ns_56_1_1                  |        0|   2|      0|     20|    0|
+    |sdiv_34ns_32s_32_38_seq_1_U154                 |sdiv_34ns_32s_32_38_seq_1           |        0|   0|    418|    252|    0|
+    +-----------------------------------------------+------------------------------------+---------+----+-------+-------+-----+
+    |Total                                          |                                    |       83|  27|  11013|  30577|    0|
+    +-----------------------------------------------+------------------------------------+---------+----+-------+-------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +-----------------+--------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |      Memory     |             Module             | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-----------------+--------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |buf41210_U       |buf41210_RAM_AUTO_1R1W          |        1|   0|   0|    0|   360|   32|     1|        11520|
+    |input_buf_V_U    |input_buf_V_RAM_1P_LUTRAM_1R1W  |        0|  32|  90|    0|   180|   32|     1|         5760|
+    |input_buf_V_1_U  |input_buf_V_RAM_1P_LUTRAM_1R1W  |        0|  32|  90|    0|   180|   32|     1|         5760|
+    |norm_buf_V_U     |input_buf_V_RAM_1P_LUTRAM_1R1W  |        0|  32|  90|    0|   180|   32|     1|         5760|
+    |norm_buf_V_1_U   |input_buf_V_RAM_1P_LUTRAM_1R1W  |        0|  32|  90|    0|   180|   32|     1|         5760|
+    +-----------------+--------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total            |                                |        1| 128| 360|    0|  1080|  160|     5|        34560|
+    +-----------------+--------------------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------------------------------------+----------+----+---+-----+------------+------------+
+    |                          Variable Name                          | Operation| DSP| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +-----------------------------------------------------------------+----------+----+---+-----+------------+------------+
+    |add_ln1113_fu_540_p2                                             |         +|   0|  0|   32|          32|           6|
+    |add_ln1124_fu_621_p2                                             |         +|   0|  0|    8|           8|           8|
+    |add_ln570_fu_787_p2                                              |         +|   0|  0|   12|          12|           6|
+    |add_ln813_fu_933_p2                                              |         +|   0|  0|   32|          32|           3|
+    |lsb_index_fu_425_p2                                              |         +|   0|  0|   32|          32|           6|
+    |m_3_fu_580_p2                                                    |         +|   0|  0|   64|          64|          64|
+    |F2_fu_775_p2                                                     |         -|   0|  0|   12|          11|          12|
+    |man_V_1_fu_755_p2                                                |         -|   0|  0|   54|           1|          54|
+    |sub_ln1099_fu_419_p2                                             |         -|   0|  0|   32|           6|          32|
+    |sub_ln1102_fu_451_p2                                             |         -|   0|  0|    7|           4|           5|
+    |sub_ln1114_fu_555_p2                                             |         -|   0|  0|   32|           5|          32|
+    |sub_ln1119_fu_616_p2                                             |         -|   0|  0|    8|           5|           8|
+    |sub_ln570_fu_793_p2                                              |         -|   0|  0|   12|           5|          12|
+    |tmp_V_fu_390_p2                                                  |         -|   0|  0|   32|           1|          32|
+    |a_fu_479_p2                                                      |       and|   0|  0|    1|           1|           1|
+    |and_ln1104_fu_507_p2                                             |       and|   0|  0|    1|           1|           1|
+    |and_ln267_fu_696_p2                                              |       and|   0|  0|    1|           1|           1|
+    |and_ln570_fu_920_p2                                              |       and|   0|  0|    1|           1|           1|
+    |and_ln571_fu_898_p2                                              |       and|   0|  0|    1|           1|           1|
+    |grp_ecg_denoiser_Pipeline_WRITE_OUTPUT_fu_298_out_stream_TREADY  |       and|   0|  0|    1|           1|           1|
+    |p_Result_s_fu_467_p2                                             |       and|   0|  0|   32|          32|          32|
+    |ashr_ln575_fu_845_p2                                             |      ashr|   0|  0|  161|          54|          54|
+    |icmp_ln1090_fu_385_p2                                            |      icmp|   0|  0|   12|          32|           1|
+    |icmp_ln1101_fu_441_p2                                            |      icmp|   0|  0|   11|          31|           1|
+    |icmp_ln1102_fu_473_p2                                            |      icmp|   0|  0|   12|          32|           1|
+    |icmp_ln1113_fu_527_p2                                            |      icmp|   0|  0|   12|          32|           1|
+    |icmp_ln267_1_fu_684_p2                                           |      icmp|   0|  0|    8|          23|           1|
+    |icmp_ln267_fu_678_p2                                             |      icmp|   0|  0|    4|           8|           2|
+    |icmp_ln560_fu_769_p2                                             |      icmp|   0|  0|   22|          63|           1|
+    |icmp_ln570_fu_781_p2                                             |      icmp|   0|  0|    5|          12|           5|
+    |icmp_ln571_fu_807_p2                                             |      icmp|   0|  0|    5|          12|           5|
+    |icmp_ln574_fu_836_p2                                             |      icmp|   0|  0|    5|          12|           6|
+    |icmp_ln592_fu_827_p2                                             |      icmp|   0|  0|    3|           7|           1|
+    |lshr_ln1102_fu_461_p2                                            |      lshr|   0|  0|   84|           2|          32|
+    |lshr_ln1113_fu_549_p2                                            |      lshr|   0|  0|  182|          64|          64|
+    |or_ln1104_fu_513_p2                                              |        or|   0|  0|    1|           1|           1|
+    |or_ln267_fu_690_p2                                               |        or|   0|  0|    1|           1|           1|
+    |or_ln571_fu_910_p2                                               |        or|   0|  0|    1|           1|           1|
+    |m_2_fu_570_p3                                                    |    select|   0|  0|   64|           1|          64|
+    |man_V_2_fu_761_p3                                                |    select|   0|  0|   54|           1|          54|
+    |select_ln1098_fu_608_p3                                          |    select|   0|  0|    7|           1|           7|
+    |select_ln570_fu_925_p3                                           |    select|   0|  0|   32|           1|          32|
+    |select_ln571_fu_903_p3                                           |    select|   0|  0|   32|           1|          32|
+    |select_ln574_fu_873_p3                                           |    select|   0|  0|   32|           1|          32|
+    |select_ln577_fu_865_p3                                           |    select|   0|  0|    2|           1|           2|
+    |select_ln592_fu_886_p3                                           |    select|   0|  0|   32|           1|          32|
+    |sh_amt_fu_799_p3                                                 |    select|   0|  0|   12|           1|          12|
+    |std_fx_V_fu_939_p3                                               |    select|   0|  0|   32|           1|           3|
+    |tmp_V_2_fu_395_p3                                                |    select|   0|  0|   32|           1|          32|
+    |var_fx_f_fu_654_p3                                               |    select|   0|  0|   32|           1|           1|
+    |var_safe_fu_702_p3                                               |    select|   0|  0|   32|           1|          32|
+    |shl_ln1114_fu_564_p2                                             |       shl|   0|  0|  182|          64|          64|
+    |shl_ln593_fu_881_p2                                              |       shl|   0|  0|   84|          32|          32|
+    |xor_ln1104_fu_493_p2                                             |       xor|   0|  0|    2|           1|           2|
+    |xor_ln560_fu_893_p2                                              |       xor|   0|  0|    2|           1|           2|
+    |xor_ln571_fu_914_p2                                              |       xor|   0|  0|    2|           1|           2|
+    +-----------------------------------------------------------------+----------+----+---+-----+------------+------------+
+    |Total                                                            |          |   0|  0| 1603|         755|         933|
+    +-----------------------------------------------------------------+----------+----+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+-----+-----------+-----+-----------+
+    |              Name             | LUT | Input Size| Bits| Total Bits|
+    +-------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                      |  312|         70|    1|         70|
+    |buf41210_address0              |   13|          3|    9|         27|
+    |buf41210_ce0                   |   13|          3|    1|          3|
+    |buf41210_we0                   |    9|          2|    1|          2|
+    |in_stream_TREADY_int_regslice  |    9|          2|    1|          2|
+    |input_buf_V_1_address0         |   21|          5|    8|         40|
+    |input_buf_V_1_ce0              |   21|          5|    1|          5|
+    |input_buf_V_1_we0              |    9|          2|    1|          2|
+    |input_buf_V_address0           |   21|          5|    8|         40|
+    |input_buf_V_ce0                |   21|          5|    1|          5|
+    |input_buf_V_we0                |    9|          2|    1|          2|
+    |norm_buf_V_1_address0          |   13|          3|    8|         24|
+    |norm_buf_V_1_ce0               |   13|          3|    1|          3|
+    |norm_buf_V_1_we0               |    9|          2|    1|          2|
+    |norm_buf_V_address0            |   13|          3|    8|         24|
+    |norm_buf_V_ce0                 |   13|          3|    1|          3|
+    |norm_buf_V_we0                 |    9|          2|    1|          2|
+    +-------------------------------+-----+-----------+-----+-----------+
+    |Total                          |  528|        120|   53|        256|
+    +-------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |                            Name                            | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                   |  69|   0|   69|          0|
+    |d_assign_reg_1034                                           |  32|   0|   32|          0|
+    |grp_conv_layer01234_fused_fu_273_ap_start_reg               |   1|   0|    1|          0|
+    |grp_ecg_denoiser_Pipeline_READ_INPUT_fu_228_ap_start_reg    |   1|   0|    1|          0|
+    |grp_ecg_denoiser_Pipeline_WRITE_OUTPUT_fu_298_ap_start_reg  |   1|   0|    1|          0|
+    |grp_ecg_denoiser_Pipeline_ZNORM_APPLY_fu_263_ap_start_reg   |   1|   0|    1|          0|
+    |grp_ecg_denoiser_Pipeline_ZNORM_MEAN_fu_248_ap_start_reg    |   1|   0|    1|          0|
+    |grp_ecg_denoiser_Pipeline_ZNORM_VAR_fu_255_ap_start_reg     |   1|   0|    1|          0|
+    |icmp_ln1090_reg_991                                         |   1|   0|    1|          0|
+    |icmp_ln1113_reg_1012                                        |   1|   0|    1|          0|
+    |icmp_ln560_reg_1045                                         |   1|   0|    1|          0|
+    |icmp_ln570_reg_1052                                         |   1|   0|    1|          0|
+    |icmp_ln571_reg_1063                                         |   1|   0|    1|          0|
+    |icmp_ln592_reg_1075                                         |   1|   0|    1|          0|
+    |inv_std_fx_V_reg_1090                                       |  32|   0|   32|          0|
+    |man_V_2_reg_1040                                            |  54|   0|   54|          0|
+    |mean_fx_V_reg_972                                           |  32|   0|   32|          0|
+    |or_ln_reg_1007                                              |   1|   0|    2|          1|
+    |p_Result_6_reg_985                                          |   1|   0|    1|          0|
+    |sh_amt_reg_1057                                             |  12|   0|   12|          0|
+    |std_fx_V_reg_1080                                           |  32|   0|   32|          0|
+    |sub_ln1099_reg_1001                                         |  32|   0|   32|          0|
+    |tmp_V_2_reg_996                                             |  32|   0|   32|          0|
+    |trunc_ln1098_reg_1017                                       |   8|   0|    8|          0|
+    |trunc_ln572_reg_1069                                        |  32|   0|   32|          0|
+    |var_fx_f_reg_1022                                           |  32|   0|   32|          0|
+    |var_fx_reg_978                                              |  32|   0|   32|          0|
+    |var_safe_reg_1029                                           |  32|   0|   32|          0|
+    +------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                       | 477|   0|  478|          1|
+    +------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+---------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++-------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|         ecg_denoiser|  return value|
+|ap_rst_n           |   in|    1|  ap_ctrl_hs|         ecg_denoiser|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|         ecg_denoiser|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|         ecg_denoiser|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|         ecg_denoiser|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|         ecg_denoiser|  return value|
+|in_stream_TDATA    |   in|   32|        axis|   in_stream_V_data_V|       pointer|
+|in_stream_TVALID   |   in|    1|        axis|   in_stream_V_dest_V|       pointer|
+|in_stream_TREADY   |  out|    1|        axis|   in_stream_V_dest_V|       pointer|
+|in_stream_TDEST    |   in|    1|        axis|   in_stream_V_dest_V|       pointer|
+|in_stream_TKEEP    |   in|    4|        axis|   in_stream_V_keep_V|       pointer|
+|in_stream_TSTRB    |   in|    4|        axis|   in_stream_V_strb_V|       pointer|
+|in_stream_TUSER    |   in|    1|        axis|   in_stream_V_user_V|       pointer|
+|in_stream_TLAST    |   in|    1|        axis|   in_stream_V_last_V|       pointer|
+|in_stream_TID      |   in|    1|        axis|     in_stream_V_id_V|       pointer|
+|out_stream_TDATA   |  out|   32|        axis|  out_stream_V_data_V|       pointer|
+|out_stream_TVALID  |  out|    1|        axis|  out_stream_V_dest_V|       pointer|
+|out_stream_TREADY  |   in|    1|        axis|  out_stream_V_dest_V|       pointer|
+|out_stream_TDEST   |  out|    1|        axis|  out_stream_V_dest_V|       pointer|
+|out_stream_TKEEP   |  out|    4|        axis|  out_stream_V_keep_V|       pointer|
+|out_stream_TSTRB   |  out|    4|        axis|  out_stream_V_strb_V|       pointer|
+|out_stream_TUSER   |  out|    1|        axis|  out_stream_V_user_V|       pointer|
+|out_stream_TLAST   |  out|    1|        axis|  out_stream_V_last_V|       pointer|
+|out_stream_TID     |  out|    1|        axis|    out_stream_V_id_V|       pointer|
++-------------------+-----+-----+------------+---------------------+--------------+
+

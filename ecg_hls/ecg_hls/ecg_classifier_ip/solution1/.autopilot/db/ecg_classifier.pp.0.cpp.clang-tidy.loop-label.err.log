@@ -1,0 +1,3 @@
+30 errors generated.
+Error while processing C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp.
+clang-tidy applied 130 of 130 suggested fixes.

@@ -1,0 +1,1033 @@
+
+
+================================================================
+== Vitis HLS Report for 'ecg_classifier_Pipeline_GAP_NORM'
+================================================================
+* Date:           Sat Apr  4 10:53:53 2026
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        ecg_classifier_ip
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z030-sbg485-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  13.00 ns|  7.050 ns|     3.51 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      387|      387|  5.031 us|  5.031 us|  387|  387|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |            |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- GAP_NORM  |      385|      385|         4|          2|          1|   192|       yes|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     18|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    2|       0|     30|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     84|    -|
+|Register         |        -|    -|     104|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    2|     104|    132|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      530|  400|  157200|  78600|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|   ~0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+---------------------+---------+----+---+----+-----+
+    |         Instance         |        Module       | BRAM_18K| DSP| FF| LUT| URAM|
+    +--------------------------+---------------------+---------+----+---+----+-----+
+    |mul_32s_12ns_44_1_1_U145  |mul_32s_12ns_44_1_1  |        0|   2|  0|  21|    0|
+    |mux_21_32_1_1_U144        |mux_21_32_1_1        |        0|   0|  0|   9|    0|
+    +--------------------------+---------------------+---------+----+---+----+-----+
+    |Total                     |                     |        0|   2|  0|  30|    0|
+    +--------------------------+---------------------+---------+----+---+----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln280_fu_94_p2                 |         +|   0|  0|   8|           8|           1|
+    |ap_enable_state1_pp0_iter0_stage0  |       and|   0|  0|   1|           1|           1|
+    |ap_enable_state2_pp0_iter0_stage1  |       and|   0|  0|   1|           1|           1|
+    |ap_enable_state4_pp0_iter1_stage1  |       and|   0|  0|   1|           1|           1|
+    |icmp_ln280_fu_88_p2                |      icmp|   0|  0|   4|           8|           8|
+    |ap_block_pp0                       |        or|   0|  0|   1|           1|           1|
+    |ap_enable_pp0                      |       xor|   0|  0|   2|           1|           2|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+    |Total                              |          |   0|  0|  18|          21|          15|
+    +-----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  13|          3|    1|          3|
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter0  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_c_1     |   9|          2|    8|         16|
+    |c_fu_50                  |   9|          2|    8|         16|
+    |gap_buf_V_1_address0     |  13|          3|    7|         21|
+    |gap_buf_V_address0       |  13|          3|    7|         21|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  84|         19|   34|         83|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+----+----+-----+-----------+
+    |                  Name                  | FF | LUT| Bits| Const Bits|
+    +----------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                               |   2|   0|    2|          0|
+    |ap_done_reg                             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0_reg             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                 |   1|   0|    1|          0|
+    |c_fu_50                                 |   8|   0|    8|          0|
+    |gap_buf_V_1_addr_reg_174                |   7|   0|    7|          0|
+    |gap_buf_V_1_addr_reg_174_pp0_iter1_reg  |   7|   0|    7|          0|
+    |gap_buf_V_addr_reg_169                  |   7|   0|    7|          0|
+    |gap_buf_V_addr_reg_169_pp0_iter1_reg    |   7|   0|    7|          0|
+    |icmp_ln280_reg_165                      |   1|   0|    1|          0|
+    |trunc_ln283_reg_179                     |   1|   0|    1|          0|
+    |trunc_ln283_reg_179_pp0_iter1_reg       |   1|   0|    1|          0|
+    |trunc_ln818_4_reg_189                   |  28|   0|   28|          0|
+    |val_V_reg_184                           |  32|   0|   32|          0|
+    +----------------------------------------+----+----+-----+-----------+
+    |Total                                   | 104|   0|  104|          0|
+    +----------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+----------------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |           Source Object          |    C Type    |
++----------------------+-----+-----+------------+----------------------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|  ecg_classifier_Pipeline_GAP_NORM|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|  ecg_classifier_Pipeline_GAP_NORM|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|  ecg_classifier_Pipeline_GAP_NORM|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|  ecg_classifier_Pipeline_GAP_NORM|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|  ecg_classifier_Pipeline_GAP_NORM|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|  ecg_classifier_Pipeline_GAP_NORM|  return value|
+|gap_buf_V_1_address0  |  out|    7|   ap_memory|                       gap_buf_V_1|         array|
+|gap_buf_V_1_ce0       |  out|    1|   ap_memory|                       gap_buf_V_1|         array|
+|gap_buf_V_1_we0       |  out|    1|   ap_memory|                       gap_buf_V_1|         array|
+|gap_buf_V_1_d0        |  out|   32|   ap_memory|                       gap_buf_V_1|         array|
+|gap_buf_V_1_q0        |   in|   32|   ap_memory|                       gap_buf_V_1|         array|
+|gap_buf_V_address0    |  out|    7|   ap_memory|                         gap_buf_V|         array|
+|gap_buf_V_ce0         |  out|    1|   ap_memory|                         gap_buf_V|         array|
+|gap_buf_V_we0         |  out|    1|   ap_memory|                         gap_buf_V|         array|
+|gap_buf_V_d0          |  out|   32|   ap_memory|                         gap_buf_V|         array|
+|gap_buf_V_q0          |   in|   32|   ap_memory|                         gap_buf_V|         array|
++----------------------+-----+-----+------------+----------------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.61>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%c = alloca i32 1"   --->   Operation 7 'alloca' 'c' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %gap_buf_V, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 8 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i32 %gap_buf_V_1, i64 666, i64 19, i64 18446744073709551615"   --->   Operation 9 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.29ns)   --->   "%store_ln0 = store i8 0, i8 %c"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 1.29>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body658"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%c_1 = load i8 %c" [src/ecg_classifier.cpp:283]   --->   Operation 12 'load' 'c_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.31ns)   --->   "%icmp_ln280 = icmp_eq  i8 %c_1, i8 192" [src/ecg_classifier.cpp:280]   --->   Operation 13 'icmp' 'icmp_ln280' <Predicate = true> <Delay = 1.31> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.31> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 192, i64 192, i64 192"   --->   Operation 14 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.30ns)   --->   "%add_ln280 = add i8 %c_1, i8 1" [src/ecg_classifier.cpp:280]   --->   Operation 15 'add' 'add_ln280' <Predicate = true> <Delay = 1.30> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.30> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%br_ln280 = br i1 %icmp_ln280, void %for.body658.split, void %for.body673.preheader.exitStub" [src/ecg_classifier.cpp:280]   --->   Operation 16 'br' 'br_ln280' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%lshr_ln5 = partselect i7 @_ssdm_op_PartSelect.i7.i8.i32.i32, i8 %c_1, i32 1, i32 7" [src/ecg_classifier.cpp:283]   --->   Operation 17 'partselect' 'lshr_ln5' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln283 = zext i7 %lshr_ln5" [src/ecg_classifier.cpp:283]   --->   Operation 18 'zext' 'zext_ln283' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%gap_buf_V_addr = getelementptr i32 %gap_buf_V, i64 0, i64 %zext_ln283" [src/ecg_classifier.cpp:283]   --->   Operation 19 'getelementptr' 'gap_buf_V_addr' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%gap_buf_V_1_addr = getelementptr i32 %gap_buf_V_1, i64 0, i64 %zext_ln283" [src/ecg_classifier.cpp:283]   --->   Operation 20 'getelementptr' 'gap_buf_V_1_addr' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%trunc_ln283 = trunc i8 %c_1" [src/ecg_classifier.cpp:283]   --->   Operation 21 'trunc' 'trunc_ln283' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_1 : Operation 22 [2/2] (1.75ns)   --->   "%gap_buf_V_load = load i7 %gap_buf_V_addr" [src/ecg_classifier.cpp:283]   --->   Operation 22 'load' 'gap_buf_V_load' <Predicate = (!icmp_ln280)> <Delay = 1.75> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 96> <RAM>
+ST_1 : Operation 23 [2/2] (1.75ns)   --->   "%gap_buf_V_1_load = load i7 %gap_buf_V_1_addr" [src/ecg_classifier.cpp:283]   --->   Operation 23 'load' 'gap_buf_V_1_load' <Predicate = (!icmp_ln280)> <Delay = 1.75> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 96> <RAM>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln284 = br i1 %trunc_ln283, void %arrayidx660.case.0, void %arrayidx660.case.1" [src/ecg_classifier.cpp:284]   --->   Operation 24 'br' 'br_ln284' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.29ns)   --->   "%store_ln280 = store i8 %add_ln280, i8 %c" [src/ecg_classifier.cpp:280]   --->   Operation 25 'store' 'store_ln280' <Predicate = (!icmp_ln280)> <Delay = 1.29>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln280 = br void %for.body658" [src/ecg_classifier.cpp:280]   --->   Operation 26 'br' 'br_ln280' <Predicate = (!icmp_ln280)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.05>
+ST_2 : Operation 27 [1/2] (1.75ns)   --->   "%gap_buf_V_load = load i7 %gap_buf_V_addr" [src/ecg_classifier.cpp:283]   --->   Operation 27 'load' 'gap_buf_V_load' <Predicate = (!icmp_ln280)> <Delay = 1.75> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 96> <RAM>
+ST_2 : Operation 28 [1/2] (1.75ns)   --->   "%gap_buf_V_1_load = load i7 %gap_buf_V_1_addr" [src/ecg_classifier.cpp:283]   --->   Operation 28 'load' 'gap_buf_V_1_load' <Predicate = (!icmp_ln280)> <Delay = 1.75> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 96> <RAM>
+ST_2 : Operation 29 [1/1] (1.29ns)   --->   "%val_V = mux i32 @_ssdm_op_Mux.ap_auto.2i32.i1, i32 %gap_buf_V_load, i32 %gap_buf_V_1_load, i1 %trunc_ln283" [src/ecg_classifier.cpp:283]   --->   Operation 29 'mux' 'val_V' <Predicate = (!icmp_ln280)> <Delay = 1.29> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 40 'ret' 'ret_ln0' <Predicate = (icmp_ln280)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 7.05>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%sext_ln1270 = sext i32 %val_V"   --->   Operation 30 'sext' 'sext_ln1270' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (7.05ns)   --->   "%r_V_11 = mul i44 %sext_ln1270, i44 1394"   --->   Operation 31 'mul' 'r_V_11' <Predicate = true> <Delay = 7.05> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 7.05> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%trunc_ln818_4 = partselect i28 @_ssdm_op_PartSelect.i28.i44.i32.i32, i44 %r_V_11, i32 16, i32 43"   --->   Operation 32 'partselect' 'trunc_ln818_4' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.75>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%specpipeline_ln281 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_17" [src/ecg_classifier.cpp:281]   --->   Operation 33 'specpipeline' 'specpipeline_ln281' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%specloopname_ln280 = specloopname void @_ssdm_op_SpecLoopName, void @empty_27" [src/ecg_classifier.cpp:280]   --->   Operation 34 'specloopname' 'specloopname_ln280' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%sext_ln818 = sext i28 %trunc_ln818_4"   --->   Operation 35 'sext' 'sext_ln818' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 36 [1/1] (1.75ns)   --->   "%store_ln284 = store i32 %sext_ln818, i7 %gap_buf_V_addr" [src/ecg_classifier.cpp:284]   --->   Operation 36 'store' 'store_ln284' <Predicate = (!trunc_ln283)> <Delay = 1.75> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 96> <RAM>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln284 = br void %arrayidx660.exit" [src/ecg_classifier.cpp:284]   --->   Operation 37 'br' 'br_ln284' <Predicate = (!trunc_ln283)> <Delay = 0.00>
+ST_4 : Operation 38 [1/1] (1.75ns)   --->   "%store_ln284 = store i32 %sext_ln818, i7 %gap_buf_V_1_addr" [src/ecg_classifier.cpp:284]   --->   Operation 38 'store' 'store_ln284' <Predicate = (trunc_ln283)> <Delay = 1.75> <CoreInst = "RAM_1P_LUTRAM">   --->   Core 87 'RAM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 1.75> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 96> <RAM>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%br_ln284 = br void %arrayidx660.exit" [src/ecg_classifier.cpp:284]   --->   Operation 39 'br' 'br_ln284' <Predicate = (trunc_ln283)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ gap_buf_V_1]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[2]; IO mode=ap_memory:ce=0
+Port [ gap_buf_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=2; type=1; pingpong=0; private_global=0; MemPort=[2]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+c                  (alloca           ) [ 01000]
+specmemcore_ln0    (specmemcore      ) [ 00000]
+specmemcore_ln0    (specmemcore      ) [ 00000]
+store_ln0          (store            ) [ 00000]
+br_ln0             (br               ) [ 00000]
+c_1                (load             ) [ 00000]
+icmp_ln280         (icmp             ) [ 01100]
+empty              (speclooptripcount) [ 00000]
+add_ln280          (add              ) [ 00000]
+br_ln280           (br               ) [ 00000]
+lshr_ln5           (partselect       ) [ 00000]
+zext_ln283         (zext             ) [ 00000]
+gap_buf_V_addr     (getelementptr    ) [ 01111]
+gap_buf_V_1_addr   (getelementptr    ) [ 01111]
+trunc_ln283        (trunc            ) [ 01111]
+br_ln284           (br               ) [ 00000]
+store_ln280        (store            ) [ 00000]
+br_ln280           (br               ) [ 00000]
+gap_buf_V_load     (load             ) [ 00000]
+gap_buf_V_1_load   (load             ) [ 00000]
+val_V              (mux              ) [ 01010]
+sext_ln1270        (sext             ) [ 00000]
+r_V_11             (mul              ) [ 00000]
+trunc_ln818_4      (partselect       ) [ 00101]
+specpipeline_ln281 (specpipeline     ) [ 00000]
+specloopname_ln280 (specloopname     ) [ 00000]
+sext_ln818         (sext             ) [ 00000]
+store_ln284        (store            ) [ 00000]
+br_ln284           (br               ) [ 00000]
+store_ln284        (store            ) [ 00000]
+br_ln284           (br               ) [ 00000]
+ret_ln0            (ret              ) [ 00000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="gap_buf_V_1">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="gap_buf_V_1"/><MemPortTyVec>2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="gap_buf_V">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="gap_buf_V"/><MemPortTyVec>2 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecMemCore"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopTripCount"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i7.i8.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Mux.ap_auto.2i32.i1"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i28.i44.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecPipeline"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_17"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopName"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="empty_27"/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1004" name="c_fu_50">
+<pin_list>
+<pin id="51" dir="0" index="0" bw="1" slack="0"/>
+<pin id="52" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="c/1 "/>
+</bind>
+</comp>
+
+<comp id="54" class="1004" name="gap_buf_V_addr_gep_fu_54">
+<pin_list>
+<pin id="55" dir="0" index="0" bw="32" slack="0"/>
+<pin id="56" dir="0" index="1" bw="1" slack="0"/>
+<pin id="57" dir="0" index="2" bw="7" slack="0"/>
+<pin id="58" dir="1" index="3" bw="7" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="gap_buf_V_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="61" class="1004" name="gap_buf_V_1_addr_gep_fu_61">
+<pin_list>
+<pin id="62" dir="0" index="0" bw="32" slack="0"/>
+<pin id="63" dir="0" index="1" bw="1" slack="0"/>
+<pin id="64" dir="0" index="2" bw="7" slack="0"/>
+<pin id="65" dir="1" index="3" bw="7" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="gap_buf_V_1_addr/1 "/>
+</bind>
+</comp>
+
+<comp id="68" class="1004" name="grp_access_fu_68">
+<pin_list>
+<pin id="69" dir="0" index="0" bw="7" slack="0"/>
+<pin id="70" dir="0" index="1" bw="32" slack="0"/>
+<pin id="71" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="72" dir="1" index="3" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) store(28) " fcode="store"/>
+<opset="gap_buf_V_load/1 store_ln284/4 "/>
+</bind>
+</comp>
+
+<comp id="74" class="1004" name="grp_access_fu_74">
+<pin_list>
+<pin id="75" dir="0" index="0" bw="7" slack="0"/>
+<pin id="76" dir="0" index="1" bw="32" slack="0"/>
+<pin id="77" dir="0" index="2" bw="0" slack="2147483647"/>
+<pin id="78" dir="1" index="3" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) store(28) " fcode="store"/>
+<opset="gap_buf_V_1_load/1 store_ln284/4 "/>
+</bind>
+</comp>
+
+<comp id="80" class="1004" name="store_ln0_store_fu_80">
+<pin_list>
+<pin id="81" dir="0" index="0" bw="1" slack="0"/>
+<pin id="82" dir="0" index="1" bw="8" slack="0"/>
+<pin id="83" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln0/1 "/>
+</bind>
+</comp>
+
+<comp id="85" class="1004" name="c_1_load_fu_85">
+<pin_list>
+<pin id="86" dir="0" index="0" bw="8" slack="0"/>
+<pin id="87" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) " fcode="load"/>
+<opset="c_1/1 "/>
+</bind>
+</comp>
+
+<comp id="88" class="1004" name="icmp_ln280_fu_88">
+<pin_list>
+<pin id="89" dir="0" index="0" bw="8" slack="0"/>
+<pin id="90" dir="0" index="1" bw="8" slack="0"/>
+<pin id="91" dir="1" index="2" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln280/1 "/>
+</bind>
+</comp>
+
+<comp id="94" class="1004" name="add_ln280_fu_94">
+<pin_list>
+<pin id="95" dir="0" index="0" bw="8" slack="0"/>
+<pin id="96" dir="0" index="1" bw="1" slack="0"/>
+<pin id="97" dir="1" index="2" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln280/1 "/>
+</bind>
+</comp>
+
+<comp id="100" class="1004" name="lshr_ln5_fu_100">
+<pin_list>
+<pin id="101" dir="0" index="0" bw="7" slack="0"/>
+<pin id="102" dir="0" index="1" bw="8" slack="0"/>
+<pin id="103" dir="0" index="2" bw="1" slack="0"/>
+<pin id="104" dir="0" index="3" bw="4" slack="0"/>
+<pin id="105" dir="1" index="4" bw="7" slack="0"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="lshr_ln5/1 "/>
+</bind>
+</comp>
+
+<comp id="110" class="1004" name="zext_ln283_fu_110">
+<pin_list>
+<pin id="111" dir="0" index="0" bw="7" slack="0"/>
+<pin id="112" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln283/1 "/>
+</bind>
+</comp>
+
+<comp id="116" class="1004" name="trunc_ln283_fu_116">
+<pin_list>
+<pin id="117" dir="0" index="0" bw="8" slack="0"/>
+<pin id="118" dir="1" index="1" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="trunc_ln283/1 "/>
+</bind>
+</comp>
+
+<comp id="120" class="1004" name="store_ln280_store_fu_120">
+<pin_list>
+<pin id="121" dir="0" index="0" bw="8" slack="0"/>
+<pin id="122" dir="0" index="1" bw="8" slack="0"/>
+<pin id="123" dir="1" index="2" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="store(28) " fcode="store"/>
+<opset="store_ln280/1 "/>
+</bind>
+</comp>
+
+<comp id="125" class="1004" name="val_V_fu_125">
+<pin_list>
+<pin id="126" dir="0" index="0" bw="32" slack="0"/>
+<pin id="127" dir="0" index="1" bw="32" slack="0"/>
+<pin id="128" dir="0" index="2" bw="32" slack="0"/>
+<pin id="129" dir="0" index="3" bw="1" slack="1"/>
+<pin id="130" dir="1" index="4" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opcode="mux(1196) " fcode="mux"/>
+<opset="val_V/2 "/>
+</bind>
+</comp>
+
+<comp id="134" class="1004" name="sext_ln1270_fu_134">
+<pin_list>
+<pin id="135" dir="0" index="0" bw="32" slack="1"/>
+<pin id="136" dir="1" index="1" bw="44" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sext(35) " fcode="sext"/>
+<opset="sext_ln1270/3 "/>
+</bind>
+</comp>
+
+<comp id="137" class="1004" name="r_V_11_fu_137">
+<pin_list>
+<pin id="138" dir="0" index="0" bw="32" slack="0"/>
+<pin id="139" dir="0" index="1" bw="12" slack="0"/>
+<pin id="140" dir="1" index="2" bw="44" slack="0"/>
+</pin_list>
+<bind>
+<opcode="mul(12) " fcode="mul"/>
+<opset="r_V_11/3 "/>
+</bind>
+</comp>
+
+<comp id="143" class="1004" name="trunc_ln818_4_fu_143">
+<pin_list>
+<pin id="144" dir="0" index="0" bw="28" slack="0"/>
+<pin id="145" dir="0" index="1" bw="44" slack="0"/>
+<pin id="146" dir="0" index="2" bw="6" slack="0"/>
+<pin id="147" dir="0" index="3" bw="7" slack="0"/>
+<pin id="148" dir="1" index="4" bw="28" slack="1"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="trunc_ln818_4/3 "/>
+</bind>
+</comp>
+
+<comp id="153" class="1004" name="sext_ln818_fu_153">
+<pin_list>
+<pin id="154" dir="0" index="0" bw="28" slack="1"/>
+<pin id="155" dir="1" index="1" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sext(35) " fcode="sext"/>
+<opset="sext_ln818/4 "/>
+</bind>
+</comp>
+
+<comp id="158" class="1005" name="c_reg_158">
+<pin_list>
+<pin id="159" dir="0" index="0" bw="8" slack="0"/>
+<pin id="160" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opset="c "/>
+</bind>
+</comp>
+
+<comp id="165" class="1005" name="icmp_ln280_reg_165">
+<pin_list>
+<pin id="166" dir="0" index="0" bw="1" slack="1"/>
+<pin id="167" dir="1" index="1" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="icmp_ln280 "/>
+</bind>
+</comp>
+
+<comp id="169" class="1005" name="gap_buf_V_addr_reg_169">
+<pin_list>
+<pin id="170" dir="0" index="0" bw="7" slack="1"/>
+<pin id="171" dir="1" index="1" bw="7" slack="1"/>
+</pin_list>
+<bind>
+<opset="gap_buf_V_addr "/>
+</bind>
+</comp>
+
+<comp id="174" class="1005" name="gap_buf_V_1_addr_reg_174">
+<pin_list>
+<pin id="175" dir="0" index="0" bw="7" slack="1"/>
+<pin id="176" dir="1" index="1" bw="7" slack="1"/>
+</pin_list>
+<bind>
+<opset="gap_buf_V_1_addr "/>
+</bind>
+</comp>
+
+<comp id="179" class="1005" name="trunc_ln283_reg_179">
+<pin_list>
+<pin id="180" dir="0" index="0" bw="1" slack="1"/>
+<pin id="181" dir="1" index="1" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<opset="trunc_ln283 "/>
+</bind>
+</comp>
+
+<comp id="184" class="1005" name="val_V_reg_184">
+<pin_list>
+<pin id="185" dir="0" index="0" bw="32" slack="1"/>
+<pin id="186" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="val_V "/>
+</bind>
+</comp>
+
+<comp id="189" class="1005" name="trunc_ln818_4_reg_189">
+<pin_list>
+<pin id="190" dir="0" index="0" bw="28" slack="1"/>
+<pin id="191" dir="1" index="1" bw="28" slack="1"/>
+</pin_list>
+<bind>
+<opset="trunc_ln818_4 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="53"><net_src comp="4" pin="0"/><net_sink comp="50" pin=0"/></net>
+
+<net id="59"><net_src comp="2" pin="0"/><net_sink comp="54" pin=0"/></net>
+
+<net id="60"><net_src comp="28" pin="0"/><net_sink comp="54" pin=1"/></net>
+
+<net id="66"><net_src comp="0" pin="0"/><net_sink comp="61" pin=0"/></net>
+
+<net id="67"><net_src comp="28" pin="0"/><net_sink comp="61" pin=1"/></net>
+
+<net id="73"><net_src comp="54" pin="3"/><net_sink comp="68" pin=0"/></net>
+
+<net id="79"><net_src comp="61" pin="3"/><net_sink comp="74" pin=0"/></net>
+
+<net id="84"><net_src comp="14" pin="0"/><net_sink comp="80" pin=0"/></net>
+
+<net id="92"><net_src comp="85" pin="1"/><net_sink comp="88" pin=0"/></net>
+
+<net id="93"><net_src comp="16" pin="0"/><net_sink comp="88" pin=1"/></net>
+
+<net id="98"><net_src comp="85" pin="1"/><net_sink comp="94" pin=0"/></net>
+
+<net id="99"><net_src comp="22" pin="0"/><net_sink comp="94" pin=1"/></net>
+
+<net id="106"><net_src comp="24" pin="0"/><net_sink comp="100" pin=0"/></net>
+
+<net id="107"><net_src comp="85" pin="1"/><net_sink comp="100" pin=1"/></net>
+
+<net id="108"><net_src comp="4" pin="0"/><net_sink comp="100" pin=2"/></net>
+
+<net id="109"><net_src comp="26" pin="0"/><net_sink comp="100" pin=3"/></net>
+
+<net id="113"><net_src comp="100" pin="4"/><net_sink comp="110" pin=0"/></net>
+
+<net id="114"><net_src comp="110" pin="1"/><net_sink comp="54" pin=2"/></net>
+
+<net id="115"><net_src comp="110" pin="1"/><net_sink comp="61" pin=2"/></net>
+
+<net id="119"><net_src comp="85" pin="1"/><net_sink comp="116" pin=0"/></net>
+
+<net id="124"><net_src comp="94" pin="2"/><net_sink comp="120" pin=0"/></net>
+
+<net id="131"><net_src comp="30" pin="0"/><net_sink comp="125" pin=0"/></net>
+
+<net id="132"><net_src comp="68" pin="3"/><net_sink comp="125" pin=1"/></net>
+
+<net id="133"><net_src comp="74" pin="3"/><net_sink comp="125" pin=2"/></net>
+
+<net id="141"><net_src comp="134" pin="1"/><net_sink comp="137" pin=0"/></net>
+
+<net id="142"><net_src comp="32" pin="0"/><net_sink comp="137" pin=1"/></net>
+
+<net id="149"><net_src comp="34" pin="0"/><net_sink comp="143" pin=0"/></net>
+
+<net id="150"><net_src comp="137" pin="2"/><net_sink comp="143" pin=1"/></net>
+
+<net id="151"><net_src comp="36" pin="0"/><net_sink comp="143" pin=2"/></net>
+
+<net id="152"><net_src comp="38" pin="0"/><net_sink comp="143" pin=3"/></net>
+
+<net id="156"><net_src comp="153" pin="1"/><net_sink comp="68" pin=1"/></net>
+
+<net id="157"><net_src comp="153" pin="1"/><net_sink comp="74" pin=1"/></net>
+
+<net id="161"><net_src comp="50" pin="1"/><net_sink comp="158" pin=0"/></net>
+
+<net id="162"><net_src comp="158" pin="1"/><net_sink comp="80" pin=1"/></net>
+
+<net id="163"><net_src comp="158" pin="1"/><net_sink comp="85" pin=0"/></net>
+
+<net id="164"><net_src comp="158" pin="1"/><net_sink comp="120" pin=1"/></net>
+
+<net id="168"><net_src comp="88" pin="2"/><net_sink comp="165" pin=0"/></net>
+
+<net id="172"><net_src comp="54" pin="3"/><net_sink comp="169" pin=0"/></net>
+
+<net id="173"><net_src comp="169" pin="1"/><net_sink comp="68" pin=0"/></net>
+
+<net id="177"><net_src comp="61" pin="3"/><net_sink comp="174" pin=0"/></net>
+
+<net id="178"><net_src comp="174" pin="1"/><net_sink comp="74" pin=0"/></net>
+
+<net id="182"><net_src comp="116" pin="1"/><net_sink comp="179" pin=0"/></net>
+
+<net id="183"><net_src comp="179" pin="1"/><net_sink comp="125" pin=3"/></net>
+
+<net id="187"><net_src comp="125" pin="4"/><net_sink comp="184" pin=0"/></net>
+
+<net id="188"><net_src comp="184" pin="1"/><net_sink comp="134" pin=0"/></net>
+
+<net id="192"><net_src comp="143" pin="4"/><net_sink comp="189" pin=0"/></net>
+
+<net id="193"><net_src comp="189" pin="1"/><net_sink comp="153" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: gap_buf_V_1 | {4 }
+	Port: gap_buf_V | {4 }
+ - Input state : 
+	Port: ecg_classifier_Pipeline_GAP_NORM : gap_buf_V_1 | {1 2 }
+	Port: ecg_classifier_Pipeline_GAP_NORM : gap_buf_V | {1 2 }
+  - Chain level:
+	State 1
+		store_ln0 : 1
+		c_1 : 1
+		icmp_ln280 : 2
+		add_ln280 : 2
+		br_ln280 : 3
+		lshr_ln5 : 2
+		zext_ln283 : 3
+		gap_buf_V_addr : 4
+		gap_buf_V_1_addr : 4
+		trunc_ln283 : 2
+		gap_buf_V_load : 5
+		gap_buf_V_1_load : 5
+		br_ln284 : 3
+		store_ln280 : 3
+	State 2
+		val_V : 1
+	State 3
+		r_V_11 : 1
+		trunc_ln818_4 : 2
+	State 4
+		store_ln284 : 1
+		store_ln284 : 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|----------------------|---------|---------|---------|
+| Operation|    Functional Unit   |   DSP   |    FF   |   LUT   |
+|----------|----------------------|---------|---------|---------|
+|    mul   |     r_V_11_fu_137    |    2    |    0    |    21   |
+|----------|----------------------|---------|---------|---------|
+|    mux   |     val_V_fu_125     |    0    |    0    |    9    |
+|----------|----------------------|---------|---------|---------|
+|    add   |    add_ln280_fu_94   |    0    |    0    |    8    |
+|----------|----------------------|---------|---------|---------|
+|   icmp   |   icmp_ln280_fu_88   |    0    |    0    |    4    |
+|----------|----------------------|---------|---------|---------|
+|partselect|    lshr_ln5_fu_100   |    0    |    0    |    0    |
+|          | trunc_ln818_4_fu_143 |    0    |    0    |    0    |
+|----------|----------------------|---------|---------|---------|
+|   zext   |   zext_ln283_fu_110  |    0    |    0    |    0    |
+|----------|----------------------|---------|---------|---------|
+|   trunc  |  trunc_ln283_fu_116  |    0    |    0    |    0    |
+|----------|----------------------|---------|---------|---------|
+|   sext   |  sext_ln1270_fu_134  |    0    |    0    |    0    |
+|          |   sext_ln818_fu_153  |    0    |    0    |    0    |
+|----------|----------------------|---------|---------|---------|
+|   Total  |                      |    2    |    0    |    42   |
+|----------|----------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++------------------------+--------+
+|                        |   FF   |
++------------------------+--------+
+|        c_reg_158       |    8   |
+|gap_buf_V_1_addr_reg_174|    7   |
+| gap_buf_V_addr_reg_169 |    7   |
+|   icmp_ln280_reg_165   |    1   |
+|   trunc_ln283_reg_179  |    1   |
+|  trunc_ln818_4_reg_189 |   28   |
+|      val_V_reg_184     |   32   |
++------------------------+--------+
+|          Total         |   84   |
++------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------|------|------|------|--------||---------||---------|
+|       Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------|------|------|------|--------||---------||---------|
+| grp_access_fu_68 |  p0  |   2  |   7  |   14   ||    9    |
+| grp_access_fu_74 |  p0  |   2  |   7  |   14   ||    9    |
+|------------------|------|------|------|--------||---------||---------|
+|       Total      |      |      |      |   28   ||  2.596  ||    18   |
+|------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    2   |    -   |    0   |   42   |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    2   |    -   |   18   |
+|  Register |    -   |    -   |   84   |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    2   |    2   |   84   |   60   |
++-----------+--------+--------+--------+--------+

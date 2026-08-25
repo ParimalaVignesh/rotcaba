@@ -1,0 +1,1068 @@
+{
+  "Top": "ecg_denoiser",
+  "RtlTop": "ecg_denoiser",
+  "RtlPrefix": "",
+  "RtlSubPrefix": "ecg_denoiser_",
+  "SourceLanguage": "cpp",
+  "HostMachineBits": "64",
+  "FunctionProtocol": "ap_ctrl_hs",
+  "ResetStyle": "control",
+  "Target": {
+    "Family": "zynq",
+    "Device": "xc7z030",
+    "Package": "-sbg485",
+    "Speed": "-2",
+    "Triple": "fpga64-xilinx-none"
+  },
+  "Args": {
+    "in_stream": {
+      "index": "0",
+      "direction": "in",
+      "srcType": "stream<hls::axis<ap_uint<32>, 1, 1, 1>, 0>&",
+      "srcSize": "96",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "in_stream",
+          "name": "",
+          "usage": "data",
+          "direction": "in"
+        }]
+    },
+    "out_stream": {
+      "index": "1",
+      "direction": "out",
+      "srcType": "stream<hls::axis<ap_uint<32>, 1, 1, 1>, 0>&",
+      "srcSize": "96",
+      "hwRefs": [{
+          "type": "interface",
+          "interface": "out_stream",
+          "name": "",
+          "usage": "data",
+          "direction": "out"
+        }]
+    }
+  },
+  "HlsSolution": {
+    "FlowTarget": "vivado",
+    "ConfigTcl": [
+      "config_export -description {ECG Denoiser 1D-CNN}",
+      "config_export -display_name=ecg_denoiser",
+      "config_export -format=ip_catalog",
+      "config_export -library=ECG",
+      "config_export -output=C:\/ecg_hls\/ecg_denoiser_ip",
+      "config_export -rtl=verilog",
+      "config_export -vendor=MyOrg",
+      "config_export -version=1.0"
+    ],
+    "DirectiveTcl": ["set_directive_top ecg_denoiser -name ecg_denoiser"],
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "KernelName": "ecg_denoiser"
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "13",
+    "Uncertainty": "3.51",
+    "IsCombinational": "0",
+    "II": "19755866",
+    "Latency": "19755865"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 13.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "MyOrg",
+    "Library": "ECG",
+    "Name": "ecg_denoiser",
+    "Version": "1.0",
+    "DisplayName": "ecg_denoiser",
+    "Revision": "2114550797",
+    "Description": "ECG Denoiser 1D-CNN",
+    "Taxonomy": "\/VITIS_HLS_IP",
+    "AutoFamilySupport": "",
+    "ZipFile": "MyOrg_ECG_ecg_denoiser_1_0.zip"
+  },
+  "Files": {
+    "CSource": [
+      "..\/..\/src\/ecg_denoiser.cpp",
+      "..\/..\/src\/weights_denoiser.cpp"
+    ],
+    "Vhdl": [
+      "impl\/vhdl\/ecg_denoiser_buf41210_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_denoiser_w_L0_b_V_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_denoiser_w_L1_b_V_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_denoiser_w_L2_b_V_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_denoiser_w_L3_b_V_ROM_AUTO_1R.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_l0_out_V_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_l1_out_V_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_l3_out_V_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_Pipeline_L0_K.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_Pipeline_L0_K_denoiser_w_L0_W_V_ROM_NP_LUTRAM_1R.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_Pipeline_L1_IC_L1_K.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_Pipeline_L1_IC_L1_K_denoiser_w_L1_W_V_ROM_NP_BRAM_1R.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_Pipeline_L2_IC_L2_K.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_Pipeline_L2_IC_L2_K_denoiser_w_L2_W_V_ROM_NP_LUTRAM_1R.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_Pipeline_L3_IC_L3_K.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_Pipeline_L3_IC_L3_K_denoiser_w_L3_W_V_ROM_NP_LUTRAM_1R.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_Pipeline_L4_IC_L4_K.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_Pipeline_L4_IC_L4_K_denoiser_w_L4_W_V_ROM_NP_LUTRAM_1R.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_win01_V_1_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_win01_V_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_win12_V_1_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_win12_V_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_win23_V_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/ecg_denoiser_conv_layer01234_fused_win34_V_RAM_AUTO_1R1W.vhd",
+      "impl\/vhdl\/ecg_denoiser_ecg_denoiser_Pipeline_READ_INPUT.vhd",
+      "impl\/vhdl\/ecg_denoiser_ecg_denoiser_Pipeline_WRITE_OUTPUT.vhd",
+      "impl\/vhdl\/ecg_denoiser_ecg_denoiser_Pipeline_ZNORM_APPLY.vhd",
+      "impl\/vhdl\/ecg_denoiser_ecg_denoiser_Pipeline_ZNORM_MEAN.vhd",
+      "impl\/vhdl\/ecg_denoiser_ecg_denoiser_Pipeline_ZNORM_VAR.vhd",
+      "impl\/vhdl\/ecg_denoiser_fcmp_32ns_32ns_1_2_no_dsp_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_flow_control_loop_pipe_sequential_init.vhd",
+      "impl\/vhdl\/ecg_denoiser_fpext_32ns_64_2_no_dsp_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_fsqrt_32ns_32ns_32_10_no_dsp_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_input_buf_V_RAM_1P_LUTRAM_1R1W.vhd",
+      "impl\/vhdl\/ecg_denoiser_mul_23s_39ns_62_1_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_mul_23s_40s_62_1_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_mul_24s_40s_63_1_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_mul_33s_32s_48_1_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_mul_40s_40s_72_1_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_mul_48s_9ns_56_1_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_mux_21_31_1_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_mux_21_32_1_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_mux_32_31_1_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_mux_53_32_1_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_mux_73_32_1_1.vhd",
+      "impl\/vhdl\/ecg_denoiser_regslice_both.vhd",
+      "impl\/vhdl\/ecg_denoiser_sdiv_34ns_32s_32_38_seq_1.vhd",
+      "impl\/vhdl\/ecg_denoiser.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/ecg_denoiser_buf41210_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_denoiser_w_L0_b_V_ROM_AUTO_1R.dat",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_denoiser_w_L0_b_V_ROM_AUTO_1R.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_denoiser_w_L1_b_V_ROM_AUTO_1R.dat",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_denoiser_w_L1_b_V_ROM_AUTO_1R.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_denoiser_w_L2_b_V_ROM_AUTO_1R.dat",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_denoiser_w_L2_b_V_ROM_AUTO_1R.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_denoiser_w_L3_b_V_ROM_AUTO_1R.dat",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_denoiser_w_L3_b_V_ROM_AUTO_1R.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_l0_out_V_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_l1_out_V_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_l3_out_V_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L0_K.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L0_K_denoiser_w_L0_W_V_ROM_NP_LUTRAM_1R.dat",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L0_K_denoiser_w_L0_W_V_ROM_NP_LUTRAM_1R.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L1_IC_L1_K.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L1_IC_L1_K_denoiser_w_L1_W_V_ROM_NP_BRAM_1R.dat",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L1_IC_L1_K_denoiser_w_L1_W_V_ROM_NP_BRAM_1R.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L2_IC_L2_K.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L2_IC_L2_K_denoiser_w_L2_W_V_ROM_NP_LUTRAM_1R.dat",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L2_IC_L2_K_denoiser_w_L2_W_V_ROM_NP_LUTRAM_1R.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L3_IC_L3_K.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L3_IC_L3_K_denoiser_w_L3_W_V_ROM_NP_LUTRAM_1R.dat",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L3_IC_L3_K_denoiser_w_L3_W_V_ROM_NP_LUTRAM_1R.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L4_IC_L4_K.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L4_IC_L4_K_denoiser_w_L4_W_V_ROM_NP_LUTRAM_1R.dat",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_Pipeline_L4_IC_L4_K_denoiser_w_L4_W_V_ROM_NP_LUTRAM_1R.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_win01_V_1_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_win01_V_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_win12_V_1_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_win12_V_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_win23_V_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/ecg_denoiser_conv_layer01234_fused_win34_V_RAM_AUTO_1R1W.v",
+      "impl\/verilog\/ecg_denoiser_ecg_denoiser_Pipeline_READ_INPUT.v",
+      "impl\/verilog\/ecg_denoiser_ecg_denoiser_Pipeline_WRITE_OUTPUT.v",
+      "impl\/verilog\/ecg_denoiser_ecg_denoiser_Pipeline_ZNORM_APPLY.v",
+      "impl\/verilog\/ecg_denoiser_ecg_denoiser_Pipeline_ZNORM_MEAN.v",
+      "impl\/verilog\/ecg_denoiser_ecg_denoiser_Pipeline_ZNORM_VAR.v",
+      "impl\/verilog\/ecg_denoiser_fcmp_32ns_32ns_1_2_no_dsp_1.v",
+      "impl\/verilog\/ecg_denoiser_flow_control_loop_pipe_sequential_init.v",
+      "impl\/verilog\/ecg_denoiser_fpext_32ns_64_2_no_dsp_1.v",
+      "impl\/verilog\/ecg_denoiser_fsqrt_32ns_32ns_32_10_no_dsp_1.v",
+      "impl\/verilog\/ecg_denoiser_hls_deadlock_idx0_monitor.v",
+      "impl\/verilog\/ecg_denoiser_hls_deadlock_kernel_monitor_top.vh",
+      "impl\/verilog\/ecg_denoiser_input_buf_V_RAM_1P_LUTRAM_1R1W.v",
+      "impl\/verilog\/ecg_denoiser_mul_23s_39ns_62_1_1.v",
+      "impl\/verilog\/ecg_denoiser_mul_23s_40s_62_1_1.v",
+      "impl\/verilog\/ecg_denoiser_mul_24s_40s_63_1_1.v",
+      "impl\/verilog\/ecg_denoiser_mul_33s_32s_48_1_1.v",
+      "impl\/verilog\/ecg_denoiser_mul_40s_40s_72_1_1.v",
+      "impl\/verilog\/ecg_denoiser_mul_48s_9ns_56_1_1.v",
+      "impl\/verilog\/ecg_denoiser_mux_21_31_1_1.v",
+      "impl\/verilog\/ecg_denoiser_mux_21_32_1_1.v",
+      "impl\/verilog\/ecg_denoiser_mux_32_31_1_1.v",
+      "impl\/verilog\/ecg_denoiser_mux_53_32_1_1.v",
+      "impl\/verilog\/ecg_denoiser_mux_73_32_1_1.v",
+      "impl\/verilog\/ecg_denoiser_regslice_both.v",
+      "impl\/verilog\/ecg_denoiser_sdiv_34ns_32s_32_38_seq_1.v",
+      "impl\/verilog\/ecg_denoiser.v"
+    ],
+    "IpMisc": ["impl\/misc\/logo.png"],
+    "Subcore": [
+      "impl\/misc\/ecg_denoiser_fcmp_32ns_32ns_1_2_no_dsp_1_ip.tcl",
+      "impl\/misc\/ecg_denoiser_fpext_32ns_64_2_no_dsp_1_ip.tcl",
+      "impl\/misc\/ecg_denoiser_fsqrt_32ns_32ns_32_10_no_dsp_1_ip.tcl"
+    ],
+    "CsynthXml": "syn\/report\/csynth.xml",
+    "DebugDir": ".debug",
+    "KernelXml": ".autopilot\/db\/kernel.internal.xml",
+    "Xo": "",
+    "XoHlsDir": "",
+    "ProtoInst": [".debug\/ecg_denoiser.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "Ip": [
+      {
+        "Name": "ecg_denoiser_fcmp_32ns_32ns_1_2_no_dsp_1_ip",
+        "Vlnv": "xilinx.com:ip:floating_point:7.1",
+        "Params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 1 CONFIG.c_result_fraction_width 0 CONFIG.component_name ecg_denoiser_fcmp_32ns_32ns_1_2_no_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Compare CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "Name": "ecg_denoiser_fpext_32ns_64_2_no_dsp_1_ip",
+        "Vlnv": "xilinx.com:ip:floating_point:7.1",
+        "Params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name ecg_denoiser_fpext_32ns_64_2_no_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Float_to_Float CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
+      },
+      {
+        "Name": "ecg_denoiser_fsqrt_32ns_32ns_32_10_no_dsp_1_ip",
+        "Vlnv": "xilinx.com:ip:floating_point:7.1",
+        "Params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 8 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name ecg_denoiser_fsqrt_32ns_32ns_32_10_no_dsp_1_ip CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Square_Root CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      }
+    ]
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "busTypeName": "clock",
+      "mode": "slave",
+      "busParams": {
+        "ASSOCIATED_BUSIF": "in_stream:out_stream",
+        "ASSOCIATED_RESET": "ap_rst_n"
+      },
+      "portMap": {"ap_clk": "CLK"},
+      "ports": ["ap_clk"]
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "busTypeName": "reset",
+      "mode": "slave",
+      "busParams": {"POLARITY": "ACTIVE_LOW"},
+      "portMap": {"ap_rst_n": "RST"},
+      "ports": ["ap_rst_n"]
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "busTypeName": "acc_handshake",
+      "mode": "slave",
+      "portMap": {
+        "ap_start": "start",
+        "ap_done": "done",
+        "ap_idle": "idle",
+        "ap_ready": "ready"
+      },
+      "ports": [
+        "ap_done",
+        "ap_idle",
+        "ap_ready",
+        "ap_start"
+      ]
+    },
+    "in_stream": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "slave",
+      "dataWidth": "32",
+      "portPrefix": "in_stream_",
+      "ports": [
+        "in_stream_TDATA",
+        "in_stream_TDEST",
+        "in_stream_TID",
+        "in_stream_TKEEP",
+        "in_stream_TLAST",
+        "in_stream_TREADY",
+        "in_stream_TSTRB",
+        "in_stream_TUSER",
+        "in_stream_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "in_stream"
+        }]
+    },
+    "out_stream": {
+      "type": "axi4stream",
+      "busTypeName": "axis",
+      "mode": "master",
+      "dataWidth": "32",
+      "portPrefix": "out_stream_",
+      "ports": [
+        "out_stream_TDATA",
+        "out_stream_TDEST",
+        "out_stream_TID",
+        "out_stream_TKEEP",
+        "out_stream_TLAST",
+        "out_stream_TREADY",
+        "out_stream_TSTRB",
+        "out_stream_TUSER",
+        "out_stream_TVALID"
+      ],
+      "constraints": [{
+          "constraint_type": "pragma interface",
+          "mode": "axis",
+          "register_option": "1",
+          "register_mode": "both",
+          "argName": "out_stream"
+        }]
+    }
+  },
+  "RtlPorts": {
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_stream_TDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "in_stream_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "in_stream_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "in_stream_TDEST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "in_stream_TKEEP": {
+      "dir": "in",
+      "width": "4"
+    },
+    "in_stream_TSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "in_stream_TUSER": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "in_stream_TLAST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "in_stream_TID": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "out_stream_TDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "out_stream_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "out_stream_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "out_stream_TDEST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "out_stream_TKEEP": {
+      "dir": "out",
+      "width": "4"
+    },
+    "out_stream_TSTRB": {
+      "dir": "out",
+      "width": "4"
+    },
+    "out_stream_TUSER": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "out_stream_TLAST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "out_stream_TID": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "ecg_denoiser",
+      "Instances": [
+        {
+          "ModuleName": "ecg_denoiser_Pipeline_READ_INPUT",
+          "InstanceName": "grp_ecg_denoiser_Pipeline_READ_INPUT_fu_228"
+        },
+        {
+          "ModuleName": "ecg_denoiser_Pipeline_ZNORM_MEAN",
+          "InstanceName": "grp_ecg_denoiser_Pipeline_ZNORM_MEAN_fu_248"
+        },
+        {
+          "ModuleName": "ecg_denoiser_Pipeline_ZNORM_VAR",
+          "InstanceName": "grp_ecg_denoiser_Pipeline_ZNORM_VAR_fu_255"
+        },
+        {
+          "ModuleName": "ecg_denoiser_Pipeline_ZNORM_APPLY",
+          "InstanceName": "grp_ecg_denoiser_Pipeline_ZNORM_APPLY_fu_263"
+        },
+        {
+          "ModuleName": "conv_layer01234_fused",
+          "InstanceName": "grp_conv_layer01234_fused_fu_273",
+          "Instances": [
+            {
+              "ModuleName": "conv_layer01234_fused_Pipeline_L0_K",
+              "InstanceName": "grp_conv_layer01234_fused_Pipeline_L0_K_fu_11063"
+            },
+            {
+              "ModuleName": "conv_layer01234_fused_Pipeline_L1_IC_L1_K",
+              "InstanceName": "grp_conv_layer01234_fused_Pipeline_L1_IC_L1_K_fu_11080"
+            },
+            {
+              "ModuleName": "conv_layer01234_fused_Pipeline_L2_IC_L2_K",
+              "InstanceName": "grp_conv_layer01234_fused_Pipeline_L2_IC_L2_K_fu_11097"
+            },
+            {
+              "ModuleName": "conv_layer01234_fused_Pipeline_L3_IC_L3_K",
+              "InstanceName": "grp_conv_layer01234_fused_Pipeline_L3_IC_L3_K_fu_11112"
+            },
+            {
+              "ModuleName": "conv_layer01234_fused_Pipeline_L4_IC_L4_K",
+              "InstanceName": "grp_conv_layer01234_fused_Pipeline_L4_IC_L4_K_fu_11128"
+            }
+          ]
+        },
+        {
+          "ModuleName": "ecg_denoiser_Pipeline_WRITE_OUTPUT",
+          "InstanceName": "grp_ecg_denoiser_Pipeline_WRITE_OUTPUT_fu_298"
+        }
+      ]
+    },
+    "Info": {
+      "ecg_denoiser_Pipeline_READ_INPUT": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "ecg_denoiser_Pipeline_ZNORM_MEAN": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "ecg_denoiser_Pipeline_ZNORM_VAR": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "ecg_denoiser_Pipeline_ZNORM_APPLY": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "conv_layer01234_fused_Pipeline_L0_K": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "conv_layer01234_fused_Pipeline_L1_IC_L1_K": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "conv_layer01234_fused_Pipeline_L2_IC_L2_K": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "conv_layer01234_fused_Pipeline_L3_IC_L3_K": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "conv_layer01234_fused_Pipeline_L4_IC_L4_K": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "conv_layer01234_fused": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "ecg_denoiser_Pipeline_WRITE_OUTPUT": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "ecg_denoiser": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "0",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "ecg_denoiser_Pipeline_READ_INPUT": {
+        "Latency": {
+          "LatencyBest": "362",
+          "LatencyAvg": "362",
+          "LatencyWorst": "362",
+          "PipelineII": "362",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "13.00",
+          "Uncertainty": "3.51",
+          "Estimate": "3.383"
+        },
+        "Loops": [{
+            "Name": "READ_INPUT",
+            "TripCount": "360",
+            "Latency": "360",
+            "PipelineII": "1",
+            "PipelineDepth": "1"
+          }],
+        "Area": {
+          "FF": "11",
+          "AVAIL_FF": "157200",
+          "UTIL_FF": "~0",
+          "LUT": "51",
+          "AVAIL_LUT": "78600",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "530",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "400",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "ecg_denoiser_Pipeline_ZNORM_MEAN": {
+        "Latency": {
+          "LatencyBest": "362",
+          "LatencyAvg": "362",
+          "LatencyWorst": "362",
+          "PipelineII": "362",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "13.00",
+          "Uncertainty": "3.51",
+          "Estimate": "6.648"
+        },
+        "Loops": [{
+            "Name": "ZNORM_MEAN",
+            "TripCount": "360",
+            "Latency": "360",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "61",
+          "AVAIL_FF": "157200",
+          "UTIL_FF": "~0",
+          "LUT": "117",
+          "AVAIL_LUT": "78600",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "530",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "400",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "ecg_denoiser_Pipeline_ZNORM_VAR": {
+        "Latency": {
+          "LatencyBest": "364",
+          "LatencyAvg": "364",
+          "LatencyWorst": "364",
+          "PipelineII": "364",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "13.00",
+          "Uncertainty": "3.51",
+          "Estimate": "7.360"
+        },
+        "Loops": [{
+            "Name": "ZNORM_VAR",
+            "TripCount": "360",
+            "Latency": "362",
+            "PipelineII": "1",
+            "PipelineDepth": "4"
+          }],
+        "Area": {
+          "DSP": "4",
+          "AVAIL_DSP": "400",
+          "UTIL_DSP": "1",
+          "FF": "171",
+          "AVAIL_FF": "157200",
+          "UTIL_FF": "~0",
+          "LUT": "202",
+          "AVAIL_LUT": "78600",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "530",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "ecg_denoiser_Pipeline_ZNORM_APPLY": {
+        "Latency": {
+          "LatencyBest": "363",
+          "LatencyAvg": "363",
+          "LatencyWorst": "363",
+          "PipelineII": "363",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "13.00",
+          "Uncertainty": "3.51",
+          "Estimate": "8.802"
+        },
+        "Loops": [{
+            "Name": "ZNORM_APPLY",
+            "TripCount": "360",
+            "Latency": "361",
+            "PipelineII": "1",
+            "PipelineDepth": "3"
+          }],
+        "Area": {
+          "DSP": "3",
+          "AVAIL_DSP": "400",
+          "UTIL_DSP": "~0",
+          "FF": "162",
+          "AVAIL_FF": "157200",
+          "UTIL_FF": "~0",
+          "LUT": "114",
+          "AVAIL_LUT": "78600",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "530",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "conv_layer01234_fused_Pipeline_L0_K": {
+        "Latency": {
+          "LatencyBest": "15",
+          "LatencyAvg": "15",
+          "LatencyWorst": "15",
+          "PipelineII": "15",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "13.00",
+          "Uncertainty": "3.51",
+          "Estimate": "9.115"
+        },
+        "Loops": [{
+            "Name": "L0_K",
+            "TripCount": "11",
+            "Latency": "13",
+            "PipelineII": "1",
+            "PipelineDepth": "4"
+          }],
+        "Area": {
+          "DSP": "2",
+          "AVAIL_DSP": "400",
+          "UTIL_DSP": "~0",
+          "FF": "208",
+          "AVAIL_FF": "157200",
+          "UTIL_FF": "~0",
+          "LUT": "481",
+          "AVAIL_LUT": "78600",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "530",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "conv_layer01234_fused_Pipeline_L1_IC_L1_K": {
+        "Latency": {
+          "LatencyBest": "453",
+          "LatencyAvg": "453",
+          "LatencyWorst": "453",
+          "PipelineII": "453",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "13.00",
+          "Uncertainty": "3.51",
+          "Estimate": "7.494"
+        },
+        "Loops": [{
+            "Name": "L1_IC_L1_K",
+            "TripCount": "448",
+            "Latency": "451",
+            "PipelineII": "1",
+            "PipelineDepth": "5"
+          }],
+        "Area": {
+          "BRAM_18K": "60",
+          "AVAIL_BRAM": "530",
+          "UTIL_BRAM": "11",
+          "DSP": "4",
+          "AVAIL_DSP": "400",
+          "UTIL_DSP": "1",
+          "FF": "465",
+          "AVAIL_FF": "157200",
+          "UTIL_FF": "~0",
+          "LUT": "615",
+          "AVAIL_LUT": "78600",
+          "UTIL_LUT": "~0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "conv_layer01234_fused_Pipeline_L2_IC_L2_K": {
+        "Latency": {
+          "LatencyBest": "644",
+          "LatencyAvg": "644",
+          "LatencyWorst": "644",
+          "PipelineII": "644",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "13.00",
+          "Uncertainty": "3.51",
+          "Estimate": "9.115"
+        },
+        "Loops": [{
+            "Name": "L2_IC_L2_K",
+            "TripCount": "640",
+            "Latency": "642",
+            "PipelineII": "1",
+            "PipelineDepth": "4"
+          }],
+        "Area": {
+          "DSP": "4",
+          "AVAIL_DSP": "400",
+          "UTIL_DSP": "1",
+          "FF": "400",
+          "AVAIL_FF": "157200",
+          "UTIL_FF": "~0",
+          "LUT": "10179",
+          "AVAIL_LUT": "78600",
+          "UTIL_LUT": "12",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "530",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "conv_layer01234_fused_Pipeline_L3_IC_L3_K": {
+        "Latency": {
+          "LatencyBest": "196",
+          "LatencyAvg": "196",
+          "LatencyWorst": "196",
+          "PipelineII": "196",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "13.00",
+          "Uncertainty": "3.51",
+          "Estimate": "9.090"
+        },
+        "Loops": [{
+            "Name": "L3_IC_L3_K",
+            "TripCount": "192",
+            "Latency": "194",
+            "PipelineII": "1",
+            "PipelineDepth": "4"
+          }],
+        "Area": {
+          "DSP": "4",
+          "AVAIL_DSP": "400",
+          "UTIL_DSP": "1",
+          "FF": "394",
+          "AVAIL_FF": "157200",
+          "UTIL_FF": "~0",
+          "LUT": "2134",
+          "AVAIL_LUT": "78600",
+          "UTIL_LUT": "2",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "530",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "conv_layer01234_fused_Pipeline_L4_IC_L4_K": {
+        "Latency": {
+          "LatencyBest": "228",
+          "LatencyAvg": "228",
+          "LatencyWorst": "228",
+          "PipelineII": "228",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "13.00",
+          "Uncertainty": "3.51",
+          "Estimate": "9.115"
+        },
+        "Loops": [{
+            "Name": "L4_IC_L4_K",
+            "TripCount": "224",
+            "Latency": "226",
+            "PipelineII": "1",
+            "PipelineDepth": "4"
+          }],
+        "Area": {
+          "DSP": "2",
+          "AVAIL_DSP": "400",
+          "UTIL_DSP": "~0",
+          "FF": "229",
+          "AVAIL_FF": "157200",
+          "UTIL_FF": "~0",
+          "LUT": "732",
+          "AVAIL_LUT": "78600",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "530",
+          "UTIL_BRAM": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "conv_layer01234_fused": {
+        "Latency": {
+          "LatencyBest": "19753984",
+          "LatencyAvg": "19753984",
+          "LatencyWorst": "19753984",
+          "PipelineII": "19753984",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "13.00",
+          "Uncertainty": "3.51",
+          "Estimate": "9.115"
+        },
+        "Loops": [{
+            "Name": "FUSED_T",
+            "TripCount": "360",
+            "Latency": "19753920",
+            "PipelineII": "",
+            "PipelineDepth": "54872",
+            "Loops": [
+              {
+                "Name": "L0_OC",
+                "TripCount": "64",
+                "Latency": "1216",
+                "PipelineII": "",
+                "PipelineDepth": "19"
+              },
+              {
+                "Name": "L1_OC_GROUP",
+                "TripCount": "64",
+                "Latency": "29248",
+                "PipelineII": "",
+                "PipelineDepth": "457"
+              },
+              {
+                "Name": "L2_OC_GROUP",
+                "TripCount": "32",
+                "Latency": "20736",
+                "PipelineII": "",
+                "PipelineDepth": "648"
+              },
+              {
+                "Name": "L3_OC_GROUP",
+                "TripCount": "16",
+                "Latency": "3200",
+                "PipelineII": "",
+                "PipelineDepth": "200"
+              }
+            ]
+          }],
+        "Area": {
+          "BRAM_18K": "83",
+          "AVAIL_BRAM": "530",
+          "UTIL_BRAM": "15",
+          "DSP": "16",
+          "AVAIL_DSP": "400",
+          "UTIL_DSP": "4",
+          "FF": "10177",
+          "AVAIL_FF": "157200",
+          "UTIL_FF": "6",
+          "LUT": "29736",
+          "AVAIL_LUT": "78600",
+          "UTIL_LUT": "37",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "ecg_denoiser_Pipeline_WRITE_OUTPUT": {
+        "Latency": {
+          "LatencyBest": "362",
+          "LatencyAvg": "362",
+          "LatencyWorst": "362",
+          "PipelineII": "362",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "13.00",
+          "Uncertainty": "3.51",
+          "Estimate": "2.926"
+        },
+        "Loops": [{
+            "Name": "WRITE_OUTPUT",
+            "TripCount": "360",
+            "Latency": "360",
+            "PipelineII": "1",
+            "PipelineDepth": "2"
+          }],
+        "Area": {
+          "FF": "13",
+          "AVAIL_FF": "157200",
+          "UTIL_FF": "~0",
+          "LUT": "65",
+          "AVAIL_LUT": "78600",
+          "UTIL_LUT": "~0",
+          "BRAM_18K": "0",
+          "AVAIL_BRAM": "530",
+          "UTIL_BRAM": "0",
+          "DSP": "0",
+          "AVAIL_DSP": "400",
+          "UTIL_DSP": "0",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      },
+      "ecg_denoiser": {
+        "Latency": {
+          "LatencyBest": "19755865",
+          "LatencyAvg": "19755865",
+          "LatencyWorst": "19755865",
+          "PipelineII": "19755866",
+          "PipelineDepth": "",
+          "PipelineType": "no"
+        },
+        "Timing": {
+          "Target": "13.00",
+          "Uncertainty": "3.51",
+          "Estimate": "9.154"
+        },
+        "Area": {
+          "BRAM_18K": "84",
+          "AVAIL_BRAM": "530",
+          "UTIL_BRAM": "15",
+          "DSP": "27",
+          "AVAIL_DSP": "400",
+          "UTIL_DSP": "6",
+          "FF": "11618",
+          "AVAIL_FF": "157200",
+          "UTIL_FF": "7",
+          "LUT": "33068",
+          "AVAIL_LUT": "78600",
+          "UTIL_LUT": "42",
+          "URAM": "0",
+          "AVAIL_URAM": "0",
+          "UTIL_URAM": "0"
+        }
+      }
+    }
+  },
+  "GenerateBdFiles": "0",
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2026-04-04 11:17:16 +0530",
+    "ToolName": "vitis_hls",
+    "ToolVersion": "2022.2"
+  }
+}

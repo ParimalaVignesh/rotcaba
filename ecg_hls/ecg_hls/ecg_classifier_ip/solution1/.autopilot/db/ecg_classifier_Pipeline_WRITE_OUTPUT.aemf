@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1775280235665">
+  <ports id="1" name="ea" type="PortType" coreId="1953394531" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="eb" type="PortType" coreId="539767858" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="s_1" type="PortType" coreId="5" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="out_stream_V_data_V" type="PortType" originalName="this" coreId="411" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="5" name="out_stream_V_keep_V" type="PortType" originalName="this" coreId="1667575651" bitwidth="4" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="6" name="out_stream_V_strb_V" type="PortType" originalName="this" coreId="1768713801" bitwidth="4" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="7" name="out_stream_V_user_V" type="PortType" originalName="this" coreId="1629954158" bitwidth="1" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="8" name="out_stream_V_last_V" type="PortType" originalName="this" coreId="741946428" bitwidth="1" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="9" name="out_stream_V_id_V" type="PortType" originalName="this" coreId="539377200" bitwidth="1" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="10" name="out_stream_V_dest_V" type="PortType" originalName="this" coreId="1834970975" bitwidth="1" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="43" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="45" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="47" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="50" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="51" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="52" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="53" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="56" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="59" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="60" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="61" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="62" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="64" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="65" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="66" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="67" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="68" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="70" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="74" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.3"/>
+  <edges id="75" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.4"/>
+  <edges id="76" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.5"/>
+  <edges id="77" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.6"/>
+  <edges id="78" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.7"/>
+  <edges id="79" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.8"/>
+  <edges id="80" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.9"/>
+  <edges id="81" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="87" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="91" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="92" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="152" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="153" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="154" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="155" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="156" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="157" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="158" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <blocks id="19" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>for.body739</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="i" originalName="i" coreId="741875756" bitwidth="2" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="s_1_read" coreId="741487420" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>s_1</dataInputObjs>
+      <dataOutputObjs>fdiv</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="eb_read" coreId="741487420" bitwidth="32" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>eb</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="ea_read" coreId="741946428" bitwidth="32" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>ea</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="i_write_ln0" coreId="741880892" opcode="store" m_display="0" m_delay="1.29" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="br_ln0" coreId="741552956" opcode="br" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <controlInputObjs>for.body739</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="38" name="for.end759.exitStub" type="BlockType">
+    <controlInputObjs>for.body739</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="_ln0" coreId="1604931248" opcode="ret" nodeLabel="9.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="149" pipe_depth="11" RegionName="WRITE_OUTPUT">
+    <basic_blocks id="25" name="for.body739" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>for.body739.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.end759.exitStub</controlOutputObjs>
+      <controlOutputObjs>for.body739.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="i_1" lineNumber="313" originalName="i" fileName="src/ecg_classifier.cpp" fileDirectory=".." coreId="741751100" contextFuncName="ecg_classifier" bitwidth="2" opcode="load" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/ecg_classifier.cpp" linenumber="313" fileDirectory="C:\ecg_hls" functionName="ecg_classifier"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="icmp_ln313" lineNumber="313" fileName="src/ecg_classifier.cpp" fileDirectory=".." rtlName="icmp_ln313_fu_126_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ecg_classifier" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.5" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/ecg_classifier.cpp" linenumber="313" fileDirectory="C:\ecg_hls" functionName="ecg_classifier"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="i_2" lineNumber="313" originalName="i" fileName="src/ecg_classifier.cpp" fileDirectory=".." rtlName="i_2_fu_132_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="ecg_classifier" bitwidth="2" opcode="add" m_display="0" m_delay="0.63" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/ecg_classifier.cpp" linenumber="313" fileDirectory="C:\ecg_hls" functionName="ecg_classifier"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="br_ln313" lineNumber="313" fileName="src/ecg_classifier.cpp" fileDirectory=".." coreId="741684796" contextFuncName="ecg_classifier" opcode="br" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/ecg_classifier.cpp" linenumber="313" fileDirectory="C:\ecg_hls" functionName="ecg_classifier"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.body739.split</controlInputObjs>
+        <controlInputObjs>for.end759.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="src/ecg_classifier.cpp">
+        <validLinenumbers>313</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="36" name="for.body739.split" type="BlockType">
+      <controlInputObjs>for.body739</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.body739</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="icmp_ln315" lineNumber="315" fileName="src/ecg_classifier.cpp" fileDirectory=".." rtlName="icmp_ln315_fu_138_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ecg_classifier" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.5" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/ecg_classifier.cpp" linenumber="315" fileDirectory="C:\ecg_hls" functionName="ecg_classifier"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>select</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="select_ln315" lineNumber="315" fileName="src/ecg_classifier.cpp" fileDirectory=".." rtlName="select_ln315_fu_144_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="ecg_classifier" bitwidth="32" opcode="select" m_display="0" m_delay="0.7" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/ecg_classifier.cpp" linenumber="315" fileDirectory="C:\ecg_hls" functionName="ecg_classifier"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>fdiv</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="val" lineNumber="315" originalName="val" fileName="src/ecg_classifier.cpp" fileDirectory=".." rtlName="fdiv_32ns_32ns_32_10_no_dsp_1_U167" coreName="FDiv" implIndex="fabric" control="no" opType="fdiv" coreId="20" contextFuncName="ecg_classifier" bitwidth="32" opcode="fdiv" nodeLabel="1.0" nodeLatency="9" m_display="0" m_delay="9.28" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/ecg_classifier.cpp" linenumber="315" fileDirectory="C:\ecg_hls" functionName="ecg_classifier"/>
+        <dataInputObjs>select</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>bitcast</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="raw_V" lineNumber="318" originalName="raw.V" fileName="src/ecg_classifier.cpp" fileDirectory=".." rtlName="out_stream_TDATA" coreId="741357628" contextFuncName="ecg_classifier" bitwidth="32" opcode="bitcast" nodeLabel="10.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/ecg_classifier.cpp" linenumber="318" fileDirectory="C:\ecg_hls" functionName="ecg_classifier"/>
+        <dataInputObjs>fdiv</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="pkt_last_V" lineNumber="324" originalName="pkt.last.V" fileName="src/ecg_classifier.cpp" fileDirectory=".." rtlName="pkt_last_V_fu_152_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="ecg_classifier" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.5" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/ecg_classifier.cpp" linenumber="324" fileDirectory="C:\ecg_hls" functionName="ecg_classifier"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="out_stream_V_data_V_write_ln258" lineNumber="258" fileName="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_axi_sdata.h" fileDirectory=".." coreName="axis" implIndex="axi4stream" control="no" opType="adapter" coreId="115" contextFuncName="write" opcode="write" nodeLabel="10.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_axi_sdata.h" linenumber="258" fileDirectory="C:\ecg_hls" functionName="write"/>
+        <dataInputObjs>bitcast</dataInputObjs>
+        <dataInputObjs>icmp</dataInputObjs>
+        <dataOutputObjs>out_stream_V_data_V</dataOutputObjs>
+        <dataOutputObjs>out_stream_V_keep_V</dataOutputObjs>
+        <dataOutputObjs>out_stream_V_strb_V</dataOutputObjs>
+        <dataOutputObjs>out_stream_V_user_V</dataOutputObjs>
+        <dataOutputObjs>out_stream_V_last_V</dataOutputObjs>
+        <dataOutputObjs>out_stream_V_id_V</dataOutputObjs>
+        <dataOutputObjs>out_stream_V_dest_V</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="i_write_ln313" lineNumber="313" fileName="src/ecg_classifier.cpp" fileDirectory=".." coreId="741880892" contextFuncName="ecg_classifier" opcode="store" m_display="0" m_delay="1.29" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/ecg_classifier.cpp" linenumber="313" fileDirectory="C:\ecg_hls" functionName="ecg_classifier"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="br_ln313" lineNumber="313" fileName="src/ecg_classifier.cpp" fileDirectory=".." coreId="1686440552" contextFuncName="ecg_classifier" opcode="br" nodeLabel="10.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="src/ecg_classifier.cpp" linenumber="313" fileDirectory="C:\ecg_hls" functionName="ecg_classifier"/>
+        <controlInputObjs>for.body739</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_axi_sdata.h">
+        <validLinenumbers>258</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="src/ecg_classifier.cpp">
+        <validLinenumbers>315</validLinenumbers>
+        <validLinenumbers>318</validLinenumbers>
+        <validLinenumbers>324</validLinenumbers>
+        <validLinenumbers>313</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <regnodes realName="icmp_ln313_reg_180">
+    <nodeIds>21</nodeIds>
+  </regnodes>
+  <regnodes realName="s_1_read_reg_175">
+    <nodeIds>14</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_168">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <regnodes realName="pkt_last_V_reg_189">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln315_reg_184">
+    <nodeIds>29</nodeIds>
+  </regnodes>
+  <expressionNodes realName="icmp_ln315_fu_138">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="raw_V_fu_163">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln313_fu_126">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_62">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="pkt_last_V_fu_152">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_2_fu_132">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln315_fu_144">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_114">
+    <nodeIds>30</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="eb_read_read_fu_72">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioNodes realName="s_1_read_read_fu_66">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_1_load_fu_123">
+    <nodeIds>20</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_118">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln313_store_fu_158">
+    <nodeIds>34</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln258_write_fu_84">
+    <nodeIds>33</nodeIds>
+  </ioNodes>
+  <ioNodes realName="ea_read_read_fu_78">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioPorts name="ea">
+    <contents name="read">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="eb">
+    <contents name="read">
+      <nodeIds>15</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_stream_V_data_V">
+    <contents name="write">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_stream_V_dest_V">
+    <contents name="write">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_stream_V_id_V">
+    <contents name="write">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_stream_V_keep_V">
+    <contents name="write">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_stream_V_last_V">
+    <contents name="write">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_stream_V_strb_V">
+    <contents name="write">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="out_stream_V_user_V">
+    <contents name="write">
+      <nodeIds>33</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="s_1">
+    <contents name="read">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="30" stage="10" latency="10"/>
+    </states>
+    <states id="3">
+      <operations id="30" stage="9" latency="10"/>
+    </states>
+    <states id="4">
+      <operations id="30" stage="8" latency="10"/>
+    </states>
+    <states id="5">
+      <operations id="30" stage="7" latency="10"/>
+    </states>
+    <states id="6">
+      <operations id="30" stage="6" latency="10"/>
+    </states>
+    <states id="7">
+      <operations id="30" stage="5" latency="10"/>
+    </states>
+    <states id="8">
+      <operations id="30" stage="4" latency="10"/>
+    </states>
+    <states id="9">
+      <operations id="30" stage="3" latency="10"/>
+    </states>
+    <states id="10">
+      <operations id="30" stage="2" latency="10"/>
+      <operations id="37" stage="1" latency="1"/>
+    </states>
+    <states id="11">
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="10"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+    </states>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="ecg_classifier_Pipeline_WRITE_OUTPUT" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="13" mMaxLatency="13">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>19</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="WRITE_OUTPUT" mII="1" mDepth="11" mMinTripCount="2" mMaxTripCount="2" mMinLatency="11" mMaxLatency="11" mType="1">
+      <basicBlocks>25</basicBlocks>
+      <basicBlocks>36</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>38</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

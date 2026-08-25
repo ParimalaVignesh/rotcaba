@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ecg_classifier.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_ecg_classifier_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="HLS Process Summary Group">
+      <obj_property name="label">HLS Process Summary</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier//AESL_inst_ecg_classifier_activity">
+         <obj_property name="label">AESL_inst_ecg_classifier_activity</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="UseFullPath">true</obj_property>
+         <obj_property name="ElementShortName">AESL_inst_ecg_classifier_activity</obj_property>
+         <obj_property name="ObjectShortName">AESL_inst_ecg_classifier_activity</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+         <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="CustomSignalColor">turquoise</obj_property>
+         <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+         <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier//AESL_inst_ecg_classifier_activity.dataflowTxWaveData.Cycles</obj_property>
+         <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier//AESL_inst_ecg_classifier_activity.dataflowTxWaveData.OutStanding</obj_property>
+         <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier//AESL_inst_ecg_classifier_activity.dataflowTxTooltipData</obj_property>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534/grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534/grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534/grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534/grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554/grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554/grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554/grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554/grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561/grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561/grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561/grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561/grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569/grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569/grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569/grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569/grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579/grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579/grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579/grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579/grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585/grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585/grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585/grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585/grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599/grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599/grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599/grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599/grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615/grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615/grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615/grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615/grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635/grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635/grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635/grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635/grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641/grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641/grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641/grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641/grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664/grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664/grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664/grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664/grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D0_IC_fu_15681/grp_ecg_classifier_Pipeline_D0_IC_fu_15681_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_D0_IC_fu_15681_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_D0_IC_fu_15681_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_D0_IC_fu_15681_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D0_IC_fu_15681/grp_ecg_classifier_Pipeline_D0_IC_fu_15681_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D0_IC_fu_15681/grp_ecg_classifier_Pipeline_D0_IC_fu_15681_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D0_IC_fu_15681/grp_ecg_classifier_Pipeline_D0_IC_fu_15681_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D1_IC_fu_15692/grp_ecg_classifier_Pipeline_D1_IC_fu_15692_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_D1_IC_fu_15692_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_D1_IC_fu_15692_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_D1_IC_fu_15692_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D1_IC_fu_15692/grp_ecg_classifier_Pipeline_D1_IC_fu_15692_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D1_IC_fu_15692/grp_ecg_classifier_Pipeline_D1_IC_fu_15692_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D1_IC_fu_15692/grp_ecg_classifier_Pipeline_D1_IC_fu_15692_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703/grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703_activity">
+            <obj_property name="label">grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703_activity</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="UseFullPath">true</obj_property>
+            <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703_activity</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
+            <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+            <obj_property name="CustomSignalColor">turquoise</obj_property>
+            <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
+            <obj_property name="Render_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703/grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703/grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703/grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703_activity.dataflowTxTooltipData</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier//AESL_inst_ecg_classifier_activity">
+      <obj_property name="ElementShortName">AESL_inst_ecg_classifier_activity</obj_property>
+      <obj_property name="ObjectShortName">AESL_inst_ecg_classifier_activity</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="AESL_inst_ecg_classifier_group">
+      <obj_property name="label">AESL_inst_ecg_classifier</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534/grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554/grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561/grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569/grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579/grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585/grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599/grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615/grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635/grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641/grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664/grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D0_IC_fu_15681/grp_ecg_classifier_Pipeline_D0_IC_fu_15681_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_D0_IC_fu_15681_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_D0_IC_fu_15681_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D1_IC_fu_15692/grp_ecg_classifier_Pipeline_D1_IC_fu_15692_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_D1_IC_fu_15692_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_D1_IC_fu_15692_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703/grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703_activity">
+         <obj_property name="ElementShortName">grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="AESL_inst_ecg_classifier_Handshake_group">
+         <obj_property name="label">Block-level handshake</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_READ_INPUT_fu_15534/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_MEAN_fu_15554/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_VAR_fu_15561/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_ZNORM_APPLY_fu_15569/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_INIT_fu_15579/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L0_K_FILL_fu_15585/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L1_IC_L1_K_fu_15599/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L2_IC_L2_K_fu_15615/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_GAP_NORM_fu_15635/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L3_IC_L3_K_fu_15641/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_L4_IC_L4_K_fu_15664/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_D0_IC_fu_15681_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_D0_IC_fu_15681</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_D0_IC_fu_15681_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D0_IC_fu_15681/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D0_IC_fu_15681/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D0_IC_fu_15681/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_D1_IC_fu_15692_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_D1_IC_fu_15692</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_D1_IC_fu_15692_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D1_IC_fu_15692/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D1_IC_fu_15692/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_D1_IC_fu_15692/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703_group">
+         <obj_property name="label">grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_ecg_classifier_top/AESL_inst_ecg_classifier/grp_ecg_classifier_Pipeline_WRITE_OUTPUT_fu_15703/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

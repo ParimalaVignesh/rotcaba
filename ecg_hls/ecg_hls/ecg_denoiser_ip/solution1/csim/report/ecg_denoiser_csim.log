@@ -1,0 +1,18 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb/tb_denoiser.cpp in debug mode
+   Compiling ../../../../src/ecg_denoiser.cpp in debug mode
+   Compiling ../../../../src/weights_denoiser.cpp in debug mode
+   Generating csim.exe
+Loaded 1800 samples = 5 windows.
+Window 1/5 done.
+Window 2/5 done.
+Window 3/5 done.
+Window 4/5 done.
+Window 5/5 done.
+Compared 1755 samples across 5 windows.
+SNR_out=7.39561 dB  MSE=0.172553
+*** TB PASS ***
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 360
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

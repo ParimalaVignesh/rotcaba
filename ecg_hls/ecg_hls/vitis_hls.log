@@ -1,0 +1,120 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'PARIMALA VIGNESH' on host 'desktop-pn7jn6o' (Windows NT_amd64 version 6.2) on Wed Apr 22 10:52:57 +0530 2026
+INFO: [HLS 200-10] In directory 'C:/ecg_hls'
+Sourcing Tcl script 'C:/ecg_hls/ecg_denoiser_ip/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source C:/ecg_hls/ecg_denoiser_ip/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project ecg_denoiser_ip 
+INFO: [HLS 200-10] Opening project 'C:/ecg_hls/ecg_denoiser_ip'.
+INFO: [HLS 200-1510] Running: set_top ecg_denoiser 
+INFO: [HLS 200-1510] Running: add_files src/weights_denoiser.cpp -cflags -IC:/ecg_hls/include 
+INFO: [HLS 200-10] Adding design file 'src/weights_denoiser.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files src/ecg_denoiser.cpp -cflags -IC:/ecg_hls/include 
+INFO: [HLS 200-10] Adding design file 'src/ecg_denoiser.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb/tb_denoiser.cpp -cflags -IC:/ecg_hls/include -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'tb/tb_denoiser.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/ecg_hls/ecg_denoiser_ip/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 13ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z030-sbg485-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -description {ECG Denoiser 1D-CNN}
+INFO: [HLS 200-1464] Running solution command: config_export -display_name=ecg_denoiser
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -library=ECG
+INFO: [HLS 200-1464] Running solution command: config_export -output=C:/ecg_hls/ecg_denoiser_ip
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vendor=MyOrg
+INFO: [HLS 200-1464] Running solution command: config_export -version=1.0
+INFO: [HLS 200-1510] Running: set_part xc7z030-sbg485-2 
+INFO: [HLS 200-1510] Running: create_clock -period 13 -name default 
+INFO: [HLS 200-1510] Running: config_export -description ECG Denoiser 1D-CNN -display_name ecg_denoiser -format ip_catalog -library ECG -output C:/ecg_hls/ecg_denoiser_ip -rtl verilog -vendor MyOrg -version 1.0 
+INFO: [HLS 200-1510] Running: source ./ecg_denoiser_ip/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name ecg_denoiser ecg_denoiser 
+INFO: [HLS 200-1510] Running: csim_design -clean -quiet 
+Running Dispatch Server on port: 59532
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb/tb_denoiser.cpp in debug mode
+   Compiling ../../../../src/ecg_denoiser.cpp in debug mode
+   Compiling ../../../../src/weights_denoiser.cpp in debug mode
+   Generating csim.exe
+In file included from C:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h:9,
+                 from C:/ecg_hls/include/ecg_types.h:2,
+                 from C:/ecg_hls/include/ecg_denoiser.h:4,
+                 from ../../../../tb/tb_denoiser.cpp:4:
+C:/Xilinx/Vitis_HLS/2022.2/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h:9,
+                 from C:/ecg_hls/include/ecg_types.h:2,
+                 from C:/ecg_hls/include/ecg_denoiser.h:4,
+                 from ../../../../tb/tb_denoiser.cpp:4:
+C:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_math.h:41,
+                 from ../../../../src/ecg_denoiser.cpp:1:
+C:/Xilinx/Vitis_HLS/2022.2/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_math.h:41,
+                 from ../../../../src/ecg_denoiser.cpp:1:
+C:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+In file included from C:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h:9,
+                 from C:/ecg_hls/include/weights_denoiser.h:6,
+                 from ../../../../src/weights_denoiser.cpp:2:
+C:/Xilinx/Vitis_HLS/2022.2/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2022.2/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2022.2/include/ap_fixed.h:9,
+                 from C:/ecg_hls/include/weights_denoiser.h:6,
+                 from ../../../../src/weights_denoiser.cpp:2:
+C:/Xilinx/Vitis_HLS/2022.2/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+Loaded 1800 samples = 5 windows.
+Window 1/5 done.
+Window 2/5 done.
+Window 3/5 done.
+Window 4/5 done.
+Window 5/5 done.
+Compared 1755 samples across 5 windows.
+SNR_out=7.39561 dB  MSE=0.172553
+*** TB PASS ***
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 360
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 780.08 seconds; current allocated memory: 0.691 MB.
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 3 seconds. Total elapsed time: 800.363 seconds; peak allocated memory: 115.047 MB.

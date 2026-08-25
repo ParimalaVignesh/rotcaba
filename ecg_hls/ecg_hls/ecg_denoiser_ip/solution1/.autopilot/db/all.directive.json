@@ -1,0 +1,50 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "ecg_denoiser",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "C:\/ecg_hls\/ecg_denoiser_ip\/solution1\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "ecg_denoiser"
+              }]
+          }
+        },
+        {
+          "functionName": "ecg_denoiser",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "C:\/ecg_hls\/ecg_denoiser_ip\/solution1\/csynth.tcl",
+          "sourceLine": "16",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "ecg_denoiser"
+              }]
+          }
+        },
+        {
+          "functionName": "ecg_denoiser",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "C:\/ecg_hls\/ecg_denoiser_ip\/solution1\/csynth.tcl",
+          "sourceLine": "16",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "ecg_denoiser"
+              }]
+          }
+        }
+      ]
+    }]}

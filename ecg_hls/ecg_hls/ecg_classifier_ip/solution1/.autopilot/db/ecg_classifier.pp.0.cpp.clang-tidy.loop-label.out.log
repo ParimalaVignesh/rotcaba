@@ -1,0 +1,740 @@
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:5937:7: warning: Added loop label VITIS_LOOP_1211_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1211_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:5937:7: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:6911:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:6911:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:6925:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:6925:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:6939:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:6939:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:8538:7: warning: Added loop label VITIS_LOOP_1245_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1245_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:8538:7: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12674:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K0 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12675:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K1 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12676:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K2 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12677:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K3 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12678:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K4 type=ROM_1P impl=LUTRAM
+                                                                       ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12708:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K0 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12709:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K1 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12710:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K2 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12711:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K3 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12712:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K4 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12713:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K0 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12714:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K1 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12715:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K2 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12716:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K3 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12717:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K4 type=ROM_1P impl=LUTRAM
+                                                                   ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12767:71: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_cos_K0 type=ROM_1P impl=LUTRAM
+                                                                      ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12768:71: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_cos_K1 type=ROM_1P impl=LUTRAM
+                                                                      ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12769:71: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_cos_K2 type=ROM_1P impl=LUTRAM
+                                                                      ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12796:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::cos_K0 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12797:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::cos_K1 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12798:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::cos_K2 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12799:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_K0 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12800:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_K1 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12801:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_K2 type=ROM_1P impl=LUTRAM
+                                                                  ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12837:73: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=first_order_fixed_16::sin_cos_K0 type=ROM_1P impl=LUTRAM
+                                                                        ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:12838:73: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=first_order_fixed_16::sin_cos_K1 type=ROM_1P impl=LUTRAM
+                                                                        ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13112:5: warning: Added loop label VITIS_LOOP_87_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^~~
+    VITIS_LOOP_87_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13112:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13158:5: warning: Added loop label VITIS_LOOP_143_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^~~
+    VITIS_LOOP_143_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13158:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13321:9: warning: Added loop label VITIS_LOOP_315_1:   [xilinx-label-all-loops]
+        for(int i=0;i<W-1;i++){
+        ^~~
+        VITIS_LOOP_315_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13321:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13473:9: warning: Added loop label VITIS_LOOP_475_1:   [xilinx-label-all-loops]
+        for(int i=0;i<W-1;i++){
+        ^~~
+        VITIS_LOOP_475_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13473:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13653:5: warning: Added loop label VITIS_LOOP_655_1:   [xilinx-label-all-loops]
+    for(int i=0;i<W+1;i++){
+    ^~~
+    VITIS_LOOP_655_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13653:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13657:5: warning: Added loop label VITIS_LOOP_659_2:   [xilinx-label-all-loops]
+    for(int i=0;i<W+1;i++){
+    ^~~
+    VITIS_LOOP_659_2: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13657:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13767:5: warning: Added loop label VITIS_LOOP_769_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^~~
+    VITIS_LOOP_769_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13767:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13857:7: warning: Added loop label VITIS_LOOP_866_1:   [xilinx-label-all-loops]
+      for(int i=0;i<W-1;i++){
+      ^~~
+      VITIS_LOOP_866_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13857:7: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13876:7: warning: Added loop label VITIS_LOOP_885_2:   [xilinx-label-all-loops]
+      for(int i=0;i<W-1;i++){
+      ^~~
+      VITIS_LOOP_885_2: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:13876:7: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14166:5: warning: Added loop label VITIS_LOOP_1199_1:   [xilinx-label-all-loops]
+    for(int i=0; i<Nmax; i++) {
+    ^~~
+    VITIS_LOOP_1199_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14166:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14249:5: warning: Added loop label VITIS_LOOP_1282_1:   [xilinx-label-all-loops]
+    for(int i=0; i<Nmax; i++) {
+    ^~~
+    VITIS_LOOP_1282_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14249:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14655:13: warning: Added loop label VITIS_LOOP_94_1:   [xilinx-label-all-loops]
+            for (int j = 3; j >= I_+1; j--) {
+            ^~~
+            VITIS_LOOP_94_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14655:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14661:17: warning: Added loop label VITIS_LOOP_100_2:   [xilinx-label-all-loops]
+                for (int j = 3; j >= I_+1; j--){
+                ^~~
+                VITIS_LOOP_100_2: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14661:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14665:17: warning: Added loop label VITIS_LOOP_104_3:   [xilinx-label-all-loops]
+                for (int j = I_; j >= 0; j--){
+                ^~~
+                VITIS_LOOP_104_3: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14665:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14713:13: warning: Added loop label VITIS_LOOP_171_4:   [xilinx-label-all-loops]
+            for (int j = 9; j >= I_+4; j--) {
+            ^~~
+            VITIS_LOOP_171_4: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14713:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14719:17: warning: Added loop label VITIS_LOOP_177_5:   [xilinx-label-all-loops]
+                for (int j = 9; j >= I_+4; j--){
+                ^~~
+                VITIS_LOOP_177_5: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14719:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14723:17: warning: Added loop label VITIS_LOOP_181_6:   [xilinx-label-all-loops]
+                for (int j = I_+3; j >= 0; j--){
+                ^~~
+                VITIS_LOOP_181_6: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14723:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14738:9: warning: Added loop label VITIS_LOOP_196_7:   [xilinx-label-all-loops]
+        for (int j = 14; j < 22; j++){
+        ^~~
+        VITIS_LOOP_196_7: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14738:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14746:17: warning: Added loop label VITIS_LOOP_204_8:   [xilinx-label-all-loops]
+                for (int j = 0; j < 22; j++){
+                ^~~
+                VITIS_LOOP_204_8: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14746:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14811:13: warning: Added loop label VITIS_LOOP_269_9:   [xilinx-label-all-loops]
+            for (int j = 21; j >= I_+10; j--) {
+            ^~~
+            VITIS_LOOP_269_9: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14811:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14817:17: warning: Added loop label VITIS_LOOP_275_10:   [xilinx-label-all-loops]
+                for (int j = 21; j >= I_+10; j--) {
+                ^~~
+                VITIS_LOOP_275_10: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14817:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14821:17: warning: Added loop label VITIS_LOOP_279_11:   [xilinx-label-all-loops]
+                for (int j = I_+9; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_279_11: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14821:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14836:9: warning: Added loop label VITIS_LOOP_294_12:   [xilinx-label-all-loops]
+        for (int j = 27; j < 46; j++){
+        ^~~
+        VITIS_LOOP_294_12: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14836:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14844:17: warning: Added loop label VITIS_LOOP_302_13:   [xilinx-label-all-loops]
+                for (int j = 0; j < 46; j++) {
+                ^~~
+                VITIS_LOOP_302_13: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:14844:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15073:13: warning: Added loop label VITIS_LOOP_531_14:   [xilinx-label-all-loops]
+            for (int j = 45; j >= I_+22; j--) {
+            ^~~
+            VITIS_LOOP_531_14: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15073:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15079:17: warning: Added loop label VITIS_LOOP_537_15:   [xilinx-label-all-loops]
+                for (int j = 45; j >= I_+22; j--){
+                ^~~
+                VITIS_LOOP_537_15: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15079:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15083:17: warning: Added loop label VITIS_LOOP_541_16:   [xilinx-label-all-loops]
+                for (int j = I_+21; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_541_16: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15083:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15093:9: warning: Added loop label VITIS_LOOP_551_17:   [xilinx-label-all-loops]
+        for (int j = 32-F_; j < 32+I_; j++){
+        ^~~
+        VITIS_LOOP_551_17: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15093:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15097:9: warning: Added loop label VITIS_LOOP_555_18:   [xilinx-label-all-loops]
+        for (int j = 32+I_; j <= 64; j++){
+        ^~~
+        VITIS_LOOP_555_18: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15097:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15107:9: warning: Added loop label VITIS_LOOP_565_19:   [xilinx-label-all-loops]
+        for (int j = 37; j < 64; j++) {
+        ^~~
+        VITIS_LOOP_565_19: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15107:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15115:17: warning: Added loop label VITIS_LOOP_573_20:   [xilinx-label-all-loops]
+                for (int j = 0; j < 64; j++){
+                ^~~
+                VITIS_LOOP_573_20: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15115:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15476:13: warning: Added loop label VITIS_LOOP_934_21:   [xilinx-label-all-loops]
+            for (int j = 63; j >= I_+31; j--) {
+            ^~~
+            VITIS_LOOP_934_21: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15476:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15482:17: warning: Added loop label VITIS_LOOP_940_22:   [xilinx-label-all-loops]
+                for (int j = 63; j >= I_+31; j--) {
+                ^~~
+                VITIS_LOOP_940_22: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15482:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15486:17: warning: Added loop label VITIS_LOOP_944_23:   [xilinx-label-all-loops]
+                for (int j = I_+30; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_944_23: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15486:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15602:13: warning: Added loop label VITIS_LOOP_1060_1:   [xilinx-label-all-loops]
+            for (int j = 4; j >= I_+1; j--) {
+            ^~~
+            VITIS_LOOP_1060_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15602:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15608:17: warning: Added loop label VITIS_LOOP_1066_2:   [xilinx-label-all-loops]
+                for (int j = 4; j >= I_+1; j--) {
+                ^~~
+                VITIS_LOOP_1066_2: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15608:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15612:17: warning: Added loop label VITIS_LOOP_1070_3:   [xilinx-label-all-loops]
+                for (int j = I_; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1070_3: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15612:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15699:13: warning: Added loop label VITIS_LOOP_1157_4:   [xilinx-label-all-loops]
+            for (int j = 10; j >= I_+4; j--) {
+            ^~~
+            VITIS_LOOP_1157_4: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15699:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15705:17: warning: Added loop label VITIS_LOOP_1163_5:   [xilinx-label-all-loops]
+                for (int j = 10; j >= I_+4; j--) {
+                ^~~
+                VITIS_LOOP_1163_5: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15705:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15709:17: warning: Added loop label VITIS_LOOP_1167_6:   [xilinx-label-all-loops]
+                for (int j = I_+3; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1167_6: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15709:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15728:9: warning: Added loop label VITIS_LOOP_1186_7:   [xilinx-label-all-loops]
+        for (int j = wf+3; j < w-1; j++) {
+        ^~~
+        VITIS_LOOP_1186_7: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15728:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15735:17: warning: Added loop label VITIS_LOOP_1193_8:   [xilinx-label-all-loops]
+                for (int j = 0; j < 22; j++) {
+                ^~~
+                VITIS_LOOP_1193_8: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15735:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15851:13: warning: Added loop label VITIS_LOOP_1309_9:   [xilinx-label-all-loops]
+            for (int j = 22; j >= I_+10; j--) {
+            ^~~
+            VITIS_LOOP_1309_9: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15851:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15857:17: warning: Added loop label VITIS_LOOP_1315_10:   [xilinx-label-all-loops]
+                for (int j = 22; j >= I_+10; j--){
+                ^~~
+                VITIS_LOOP_1315_10: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15857:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15861:17: warning: Added loop label VITIS_LOOP_1319_11:   [xilinx-label-all-loops]
+                for (int j = I_+9; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1319_11: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15861:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15881:9: warning: Added loop label VITIS_LOOP_1339_12:   [xilinx-label-all-loops]
+        for (int j = wf+4; j < w-1; j++){
+        ^~~
+        VITIS_LOOP_1339_12: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15881:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15888:17: warning: Added loop label VITIS_LOOP_1346_13:   [xilinx-label-all-loops]
+                for (int j = 0; j < 46; j++) {
+                ^~~
+                VITIS_LOOP_1346_13: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:15888:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16150:13: warning: Added loop label VITIS_LOOP_1608_14:   [xilinx-label-all-loops]
+            for (int j = 46; j >= I_+22; j--) {
+            ^~~
+            VITIS_LOOP_1608_14: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16150:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16156:17: warning: Added loop label VITIS_LOOP_1614_15:   [xilinx-label-all-loops]
+                for (int j = 46; j >= I_+22; j--) {
+                ^~~
+                VITIS_LOOP_1614_15: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16156:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16160:17: warning: Added loop label VITIS_LOOP_1618_16:   [xilinx-label-all-loops]
+                for (int j = I_+21; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1618_16: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16160:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16184:9: warning: Added loop label VITIS_LOOP_1642_17:   [xilinx-label-all-loops]
+        for (int j = wf+5; j < w-1; j++){
+        ^~~
+        VITIS_LOOP_1642_17: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16184:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16191:17: warning: Added loop label VITIS_LOOP_1649_18:   [xilinx-label-all-loops]
+                for (int j = 0; j < 64; j++) {
+                ^~~
+                VITIS_LOOP_1649_18: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16191:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16621:13: warning: Added loop label VITIS_LOOP_2079_19:   [xilinx-label-all-loops]
+            for (int j = 64; j >= I_+31; j--) {
+            ^~~
+            VITIS_LOOP_2079_19: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16621:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16627:17: warning: Added loop label VITIS_LOOP_2085_20:   [xilinx-label-all-loops]
+                for (int j = 64; j >= I_+31; j--) {
+                ^~~
+                VITIS_LOOP_2085_20: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16627:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16631:17: warning: Added loop label VITIS_LOOP_2089_21:   [xilinx-label-all-loops]
+                for (int j = I_+30; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_2089_21: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16631:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16761:13: warning: Added loop label VITIS_LOOP_2219_1:   [xilinx-label-all-loops]
+            for(int j=3; j>=I+1; j--) {
+            ^~~
+            VITIS_LOOP_2219_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16761:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16768:17: warning: Added loop label VITIS_LOOP_2226_2:   [xilinx-label-all-loops]
+                for(int j=3; j>=I+1; j--) {
+                ^~~
+                VITIS_LOOP_2226_2: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16768:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16772:17: warning: Added loop label VITIS_LOOP_2230_3:   [xilinx-label-all-loops]
+                for(int j=I; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2230_3: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16772:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16819:13: warning: Added loop label VITIS_LOOP_2277_4:   [xilinx-label-all-loops]
+            for(int j=7; j>=3+I; j--) {
+            ^~~
+            VITIS_LOOP_2277_4: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16819:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16826:17: warning: Added loop label VITIS_LOOP_2284_5:   [xilinx-label-all-loops]
+                for(int j=7; j>=3+I; j--) {
+                ^~~
+                VITIS_LOOP_2284_5: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16826:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16830:17: warning: Added loop label VITIS_LOOP_2288_6:   [xilinx-label-all-loops]
+                for(int j=I+2; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2288_6: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16830:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16848:9: warning: Added loop label VITIS_LOOP_2306_7:   [xilinx-label-all-loops]
+        for(int j=11; j<16; j++) {
+        ^~~
+        VITIS_LOOP_2306_7: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16848:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16903:13: warning: Added loop label VITIS_LOOP_2361_8:   [xilinx-label-all-loops]
+            for(int j=15; j>=7+I; j--) {
+            ^~~
+            VITIS_LOOP_2361_8: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16903:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16910:17: warning: Added loop label VITIS_LOOP_2368_9:   [xilinx-label-all-loops]
+                for(int j=15; j>=7+I; j--) {
+                ^~~
+                VITIS_LOOP_2368_9: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16910:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16914:17: warning: Added loop label VITIS_LOOP_2372_10:   [xilinx-label-all-loops]
+                for(int j=6+I; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2372_10: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16914:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16932:9: warning: Added loop label VITIS_LOOP_2390_11:   [xilinx-label-all-loops]
+        for(int j=20; j<32; j++) {
+        ^~~
+        VITIS_LOOP_2390_11: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:16932:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17021:13: warning: Added loop label VITIS_LOOP_2479_12:   [xilinx-label-all-loops]
+            for(int j=31; j>=I+15; j--) {
+            ^~~
+            VITIS_LOOP_2479_12: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17021:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17028:17: warning: Added loop label VITIS_LOOP_2486_13:   [xilinx-label-all-loops]
+                for(int j=31; j>=I+15; j--) {
+                ^~~
+                VITIS_LOOP_2486_13: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17028:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17032:17: warning: Added loop label VITIS_LOOP_2490_14:   [xilinx-label-all-loops]
+                for(int j=I+14; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2490_14: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17032:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17042:9: warning: Added loop label VITIS_LOOP_2500_15:   [xilinx-label-all-loops]
+        for(int j=32-F; j<32+I; j++) {
+        ^~~
+        VITIS_LOOP_2500_15: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17042:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17046:9: warning: Added loop label VITIS_LOOP_2504_16:   [xilinx-label-all-loops]
+        for(int j=32+I; j<=64; j++) {
+        ^~~
+        VITIS_LOOP_2504_16: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17046:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17057:9: warning: Added loop label VITIS_LOOP_2515_17:   [xilinx-label-all-loops]
+        for(int j=37; j<64; j++) {
+        ^~~
+        VITIS_LOOP_2515_17: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17057:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17065:17: warning: Added loop label VITIS_LOOP_2523_18:   [xilinx-label-all-loops]
+                for(int j=0; j<64; j++) {
+                ^~~
+                VITIS_LOOP_2523_18: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17065:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17390:13: warning: Added loop label VITIS_LOOP_2848_19:   [xilinx-label-all-loops]
+            for(int j=63; j>=I+31; j--) {
+            ^~~
+            VITIS_LOOP_2848_19: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17390:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17397:17: warning: Added loop label VITIS_LOOP_2855_20:   [xilinx-label-all-loops]
+                for(int j=63; j>=I+31; j--) {
+                ^~~
+                VITIS_LOOP_2855_20: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17397:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17401:17: warning: Added loop label VITIS_LOOP_2859_21:   [xilinx-label-all-loops]
+                for(int j=I+30; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2859_21: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17401:17: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17489:4: warning: Added loop label VITIS_LOOP_2947_1:   [xilinx-label-all-loops]
+   for(int j = 5; j>=I_+2; j--) {
+   ^~~
+   VITIS_LOOP_2947_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17489:4: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17496:5: warning: Added loop label VITIS_LOOP_2954_2:   [xilinx-label-all-loops]
+    for(int j = 5; j>=I_+2; j--) {
+    ^~~
+    VITIS_LOOP_2954_2: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17496:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17500:5: warning: Added loop label VITIS_LOOP_2958_3:   [xilinx-label-all-loops]
+    for(int j = I_+1; j>=0; j--) {
+    ^~~
+    VITIS_LOOP_2958_3: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17500:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17515:3: warning: Added loop label VITIS_LOOP_2973_4:   [xilinx-label-all-loops]
+  for(int j = 11; j >=7; j--) {
+  ^~~
+  VITIS_LOOP_2973_4: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17515:3: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17547:4: warning: Added loop label VITIS_LOOP_3005_5:   [xilinx-label-all-loops]
+   for(int j = 11; j >= I_+5; j--) {
+   ^~~
+   VITIS_LOOP_3005_5: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17547:4: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17554:5: warning: Added loop label VITIS_LOOP_3012_6:   [xilinx-label-all-loops]
+    for(int j = 11; j>= I_+5; j--) {
+    ^~~
+    VITIS_LOOP_3012_6: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17554:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17558:5: warning: Added loop label VITIS_LOOP_3016_7:   [xilinx-label-all-loops]
+    for(int j = I_+4; j>=0; j--) {
+    ^~~
+    VITIS_LOOP_3016_7: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17558:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17573:3: warning: Added loop label VITIS_LOOP_3031_8:   [xilinx-label-all-loops]
+  for(int j = 25; j>=15; j--) {
+  ^~~
+  VITIS_LOOP_3031_8: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17573:3: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17623:4: warning: Added loop label VITIS_LOOP_3081_9:   [xilinx-label-all-loops]
+   for(int j = 25; j>= I_+12; j--) {
+   ^~~
+   VITIS_LOOP_3081_9: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17623:4: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17630:5: warning: Added loop label VITIS_LOOP_3088_10:   [xilinx-label-all-loops]
+    for(int j = 25; j>=I_+12; j--) {
+    ^~~
+    VITIS_LOOP_3088_10: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17630:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17634:5: warning: Added loop label VITIS_LOOP_3092_11:   [xilinx-label-all-loops]
+    for(int j = I_+11; j>=0; j--) {
+    ^~~
+    VITIS_LOOP_3092_11: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17634:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17649:3: warning: Added loop label VITIS_LOOP_3107_12:   [xilinx-label-all-loops]
+  for(int j = 51; j >= 29; j--) {
+  ^~~
+  VITIS_LOOP_3107_12: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17649:3: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17786:4: warning: Added loop label VITIS_LOOP_3244_13:   [xilinx-label-all-loops]
+   for(int j = 51; j >= 25 + I_; j--) {
+   ^~~
+   VITIS_LOOP_3244_13: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17786:4: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17793:5: warning: Added loop label VITIS_LOOP_3251_14:   [xilinx-label-all-loops]
+    for(int j = 51; j>=25 + I_; j--) {
+    ^~~
+    VITIS_LOOP_3251_14: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17793:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17797:5: warning: Added loop label VITIS_LOOP_3255_15:   [xilinx-label-all-loops]
+    for(int j = 24 + I_; j >= 0; j--) {
+    ^~~
+    VITIS_LOOP_3255_15: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17797:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17812:3: warning: Added loop label VITIS_LOOP_3270_16:   [xilinx-label-all-loops]
+  for(int j = 63; j >= 36; j--) {
+  ^~~
+  VITIS_LOOP_3270_16: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17812:3: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17972:4: warning: Added loop label VITIS_LOOP_3430_17:   [xilinx-label-all-loops]
+   for(int j = 63; j >= 31 + I_; j--) {
+   ^~~
+   VITIS_LOOP_3430_17: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17972:4: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17979:5: warning: Added loop label VITIS_LOOP_3437_18:   [xilinx-label-all-loops]
+    for(int j = 63; j >= 31 + I_; j--) {
+    ^~~
+    VITIS_LOOP_3437_18: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17979:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17983:5: warning: Added loop label VITIS_LOOP_3441_19:   [xilinx-label-all-loops]
+    for(int j = 30 + I_; j >= 0; j--) {
+    ^~~
+    VITIS_LOOP_3441_19: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:17983:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:18698:13: warning: Added loop label VITIS_LOOP_729_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^~~
+            VITIS_LOOP_729_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:18698:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:18916:13: warning: Added loop label VITIS_LOOP_947_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^~~
+            VITIS_LOOP_947_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:18916:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:19333:13: warning: Added loop label VITIS_LOOP_1371_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^~~
+            VITIS_LOOP_1371_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:19333:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:19647:9: warning: Added loop label VITIS_LOOP_266_1:   [xilinx-label-all-loops]
+        for ( int pos = msbr-1; pos >= 0; pos-- ) {
+        ^~~
+        VITIS_LOOP_266_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:19647:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:19675:9: warning: Added loop label VITIS_LOOP_294_2:   [xilinx-label-all-loops]
+        for ( int pos = -1; pos >= -F_-1; pos-- ) {
+        ^~~
+        VITIS_LOOP_294_2: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:19675:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20370:13: warning: Added loop label VITIS_LOOP_74_1:   [xilinx-label-all-loops]
+            for (int j = 0; j < W_-1; j++){
+            ^~~
+            VITIS_LOOP_74_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20370:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20423:5: warning: Added loop label VITIS_LOOP_135_2:   [xilinx-label-all-loops]
+    for (int j = F_l+F_+I_m-1; j < F_l+W_+5; j++){
+    ^~~
+    VITIS_LOOP_135_2: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20423:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20437:13: warning: Added loop label VITIS_LOOP_149_3:   [xilinx-label-all-loops]
+            for (int j = WO_m-1; j >= W_-1; j--) {
+            ^~~
+            VITIS_LOOP_149_3: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20437:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20467:13: warning: Added loop label VITIS_LOOP_179_4:   [xilinx-label-all-loops]
+            for (int j = W_-2; j >= 0; j--){
+            ^~~
+            VITIS_LOOP_179_4: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20467:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20552:12: warning: Added loop label VITIS_LOOP_307_1:   [xilinx-label-all-loops]
+           for(int i = wf_log+we_log-2; i > WI_e - 2; --i) {
+           ^~~
+           VITIS_LOOP_307_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20552:12: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20572:16: warning: Added loop label VITIS_LOOP_327_2:   [xilinx-label-all-loops]
+               for (int j = WO_e-1; j >= W_-1; j--) {
+               ^~~
+               VITIS_LOOP_327_2: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20572:16: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20586:20: warning: Added loop label VITIS_LOOP_341_3:   [xilinx-label-all-loops]
+                   for(int i = 0; i < W_-1; ++i) {
+                   ^~~
+                   VITIS_LOOP_341_3: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20586:20: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20679:12: warning: Added loop label VITIS_LOOP_459_1:   [xilinx-label-all-loops]
+           for (int j =WO_d-1; j >= W_-1; j--) {
+           ^~~
+           VITIS_LOOP_459_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20679:12: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20693:15: warning: Added loop label VITIS_LOOP_473_2:   [xilinx-label-all-loops]
+              for(int i = 0; i < W_-1; ++i) {
+              ^~~
+              VITIS_LOOP_473_2: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20693:15: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20806:13: warning: Added loop label VITIS_LOOP_59_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^~~
+            VITIS_LOOP_59_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20806:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20930:13: warning: Added loop label VITIS_LOOP_209_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^~~
+            VITIS_LOOP_209_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20930:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20985:13: warning: Added loop label VITIS_LOOP_274_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^~~
+            VITIS_LOOP_274_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:20985:13: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21490:2: warning: Added loop label VITIS_LOOP_42_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_42_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21490:2: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21501:2: warning: Added loop label VITIS_LOOP_53_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_53_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21501:2: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21512:2: warning: Added loop label VITIS_LOOP_64_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_64_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21512:2: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21523:2: warning: Added loop label VITIS_LOOP_75_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_75_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21523:2: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21534:2: warning: Added loop label VITIS_LOOP_86_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_86_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21534:2: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21545:2: warning: Added loop label VITIS_LOOP_97_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_97_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21545:2: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21556:2: warning: Added loop label VITIS_LOOP_108_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_108_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21556:2: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21567:2: warning: Added loop label VITIS_LOOP_119_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_119_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:21567:2: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:23868:12: warning: Added loop label VITIS_LOOP_23_1:   [xilinx-label-all-loops]
+           for(int i = 0; i < W_-1; ++i) {
+           ^~~
+           VITIS_LOOP_23_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:23868:12: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:23932:7: warning: Added loop label VITIS_LOOP_66_1:   [xilinx-label-all-loops]
+      for(int pos = msbr - 1 ; pos >= -F-1; pos--) {
+      ^~~
+      VITIS_LOOP_66_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:23932:7: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:24049:9: warning: Added loop label VITIS_LOOP_75_1:   [xilinx-label-all-loops]
+        for(int pos = msbr - 1; pos >= 0; pos--) {
+        ^~~
+        VITIS_LOOP_75_1: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:24049:9: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:24074:5: warning: Added loop label VITIS_LOOP_107_2:   [xilinx-label-all-loops]
+    for(int pos = -1; pos >= -F-1; pos--) {
+    ^~~
+    VITIS_LOOP_107_2: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:24074:5: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:24144:8: warning: Added loop label VITIS_LOOP_195_3:   [xilinx-label-all-loops]
+       for(int i = 0; i < W - 1; ++i) {
+       ^~~
+       VITIS_LOOP_195_3: 
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:24144:8: note: FIX-IT applied suggested code changes
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:26989:50: error: Invalid Directive: for current device, ram_1p + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=input_buf type=ram_1p impl=lutram
+                                                 ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:26990:49: error: Invalid Directive: for current device, ram_1p + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=norm_buf type=ram_1p impl=lutram
+                                                ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:27002:48: error: Invalid Directive: for current device, ram_1p + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=gap_buf type=ram_1p impl=lutram
+                                               ^
+C:\ecg_hls\ecg_classifier_ip\solution1\.autopilot\db\ecg_classifier.pp.0.cpp:27003:51: error: Invalid Directive: for current device, ram_1p + lutram is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=dense0_buf type=ram_1p impl=lutram
+                                                  ^

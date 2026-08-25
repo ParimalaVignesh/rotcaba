@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="ecg_denoiser.cpp" path="C:\ecg_hls\src\ecg_denoiser.cpp"/>
+    <originFiles name="weights_denoiser.cpp" path="C:\ecg_hls\src\weights_denoiser.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_denoiser.cpp" path="C:\ecg_hls\tb\tb_denoiser.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

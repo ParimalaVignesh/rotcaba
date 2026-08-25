@@ -1,0 +1,372 @@
+
+
+================================================================
+== Synthesis Summary Report of 'ecg_classifier'
+================================================================
++ General Information: 
+    * Date:           Sat Apr  4 10:54:16 2026
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        ecg_classifier_ip
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z030-sbg485-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
+    |                 Modules                 | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |          |          |             |             |     |
+    |                 & Loops                 | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP   |      FF     |     LUT     | URAM|
+    +-----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
+    |+ ecg_classifier                         |     -|  0.20|  9120854|  1.186e+08|         -|  9120855|     -|        no|  87 (16%)|  51 (12%)|  57342 (36%)|  44921 (57%)|    -|
+    | + ecg_classifier_Pipeline_READ_INPUT    |     -|  6.42|      189|  2.457e+03|         -|      189|     -|        no|         -|         -|     10 (~0%)|     50 (~0%)|    -|
+    |  o READ_INPUT                           |     -|  9.49|      187|  2.431e+03|         1|        1|   187|       yes|         -|         -|            -|            -|    -|
+    | + ecg_classifier_Pipeline_ZNORM_MEAN    |     -|  2.84|      189|  2.457e+03|         -|      189|     -|        no|         -|         -|     60 (~0%)|    116 (~0%)|    -|
+    |  o ZNORM_MEAN                           |     -|  9.49|      187|  2.431e+03|         2|        1|   187|       yes|         -|         -|            -|            -|    -|
+    | + ecg_classifier_Pipeline_ZNORM_VAR     |     -|  2.13|      191|  2.483e+03|         -|      191|     -|        no|         -|    4 (1%)|    170 (~0%)|    201 (~0%)|    -|
+    |  o ZNORM_VAR                            |     -|  9.49|      189|  2.457e+03|         4|        1|   187|       yes|         -|         -|            -|            -|    -|
+    | + ecg_classifier_Pipeline_ZNORM_APPLY   |     -|  0.69|      190|  2.470e+03|         -|      190|     -|        no|         -|   3 (~0%)|    157 (~0%)|    113 (~0%)|    -|
+    |  o ZNORM_APPLY                          |     -|  9.49|      188|  2.444e+03|         3|        1|   187|       yes|         -|         -|            -|            -|    -|
+    | + ecg_classifier_Pipeline_GAP_INIT      |     -|  6.42|      194|  2.522e+03|         -|      194|     -|        no|         -|         -|     10 (~0%)|     39 (~0%)|    -|
+    |  o GAP_INIT                             |     -|  9.49|      192|  2.496e+03|         1|        1|   192|       yes|         -|         -|            -|            -|    -|
+    | + ecg_classifier_Pipeline_GAP_NORM      |     -|  2.44|      387|  5.031e+03|         -|      387|     -|        no|         -|   2 (~0%)|    104 (~0%)|    132 (~0%)|    -|
+    |  o GAP_NORM                             |    II|  9.49|      385|  5.005e+03|         4|        2|   192|       yes|         -|         -|            -|            -|    -|
+    | + ecg_classifier_Pipeline_WRITE_OUTPUT  |     -|  0.21|       13|    169.000|         -|       13|     -|        no|         -|         -|    120 (~0%)|    119 (~0%)|    -|
+    |  o WRITE_OUTPUT                         |     -|  9.49|       11|    143.000|        11|        1|     2|       yes|         -|         -|            -|            -|    -|
+    | o L012_T                                |     -|  9.49|  5267196|  6.847e+07|     56034|        -|    94|        no|         -|         -|            -|            -|    -|
+    |  o L0_STRIDE_FILL_L0_OC_FILL            |     -|  9.49|     5632|  7.322e+04|        44|        -|   128|        no|         -|         -|            -|            -|    -|
+    |   + ecg_classifier_Pipeline_L0_K_FILL   |     -|  2.13|       11|    143.000|         -|       11|     -|        no|   1 (~0%)|    4 (1%)|    263 (~0%)|    303 (~0%)|    -|
+    |    o L0_K_FILL                          |     -|  9.49|        9|    117.000|         4|        1|     7|       yes|         -|         -|            -|            -|    -|
+    |  o L1_OC                                |     -|  9.49|    29248|  3.802e+05|       457|        -|    64|        no|         -|         -|            -|            -|    -|
+    |   + ecg_classifier_Pipeline_L1_IC_L1_K  |     -|  2.02|      453|  5.889e+03|         -|      453|     -|        no|    6 (1%)|   2 (~0%)|    296 (~0%)|    398 (~0%)|    -|
+    |    o L1_IC_L1_K                         |     -|  9.49|      451|  5.863e+03|         5|        1|   448|       yes|         -|         -|            -|            -|    -|
+    |  o L2_OC_GROUP                          |     -|  9.49|    21056|  2.737e+05|       329|        -|    64|        no|         -|         -|            -|            -|    -|
+    |   + ecg_classifier_Pipeline_L2_IC_L2_K  |     -|  2.00|      325|  4.225e+03|         -|      325|     -|        no|   12 (2%)|    4 (1%)|    536 (~0%)|     939 (1%)|    -|
+    |    o L2_IC_L2_K                         |     -|  9.49|      323|  4.199e+03|         5|        1|   320|       yes|         -|         -|            -|            -|    -|
+    | o L34_T                                 |     -|  9.49|  3826317|  4.974e+07|     81411|        -|    47|        no|         -|         -|            -|            -|    -|
+    |  o L3_OC_GROUP                          |     -|  9.49|    43648|  5.674e+05|       682|        -|    64|        no|         -|         -|            -|            -|    -|
+    |   + ecg_classifier_Pipeline_L3_IC_L3_K  |     -|  0.23|      678|  8.814e+03|         -|      678|     -|        no|   16 (3%)|    4 (1%)|    2941 (1%)|    2525 (3%)|    -|
+    |    o L3_IC_L3_K                         |     -|  9.49|      676|  8.788e+03|        38|        1|   640|       yes|         -|         -|            -|            -|    -|
+    |  o L4_GAP_OC_GROUP                      |     -|  9.49|    37728|  4.905e+05|       393|        -|    96|        no|         -|         -|            -|            -|    -|
+    |   + ecg_classifier_Pipeline_L4_IC_L4_K  |     -|  0.22|      388|  5.044e+03|         -|      388|     -|        no|   16 (3%)|    4 (1%)|    350 (~0%)|    717 (~0%)|    -|
+    |    o L4_IC_L4_K                         |     -|  9.49|      386|  5.018e+03|         4|        1|   384|       yes|         -|         -|            -|            -|    -|
+    | o D0_OC                                 |     -|  9.49|    25600|  3.328e+05|       200|        -|   128|        no|         -|         -|            -|            -|    -|
+    |  + ecg_classifier_Pipeline_D0_IC        |     -|  2.13|      196|  2.548e+03|         -|      196|     -|        no|    8 (1%)|   2 (~0%)|    197 (~0%)|    257 (~0%)|    -|
+    |   o D0_IC                               |     -|  9.49|      194|  2.522e+03|         4|        1|   192|       yes|         -|         -|            -|            -|    -|
+    | o D1_OC                                 |     -|  9.49|      276|  3.588e+03|       138|        -|     2|        no|         -|         -|            -|            -|    -|
+    |  + ecg_classifier_Pipeline_D1_IC        |     -|  2.16|      132|  1.716e+03|         -|      132|     -|        no|   1 (~0%)|   2 (~0%)|    164 (~0%)|    176 (~0%)|    -|
+    |   o D1_IC                               |     -|  9.49|      130|  1.690e+03|         4|        1|   128|       yes|         -|         -|            -|            -|    -|
+    +-----------------------------------------+------+------+---------+-----------+----------+---------+------+----------+----------+----------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AXIS
++------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| Interface  | Register Mode | TDATA | TDEST | TID | TKEEP | TLAST | TREADY | TSTRB | TUSER | TVALID |
++------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+| in_stream  | both          | 32    | 1     | 1   | 4     | 1     | 1      | 4     | 1     | 1      |
+| out_stream | both          | 32    | 1     | 1   | 4     | 1     | 1      | 4     | 1     | 1      |
++------------+---------------+-------+-------+-----+-------+-------+--------+-------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+---------------------------------------------+
+| Argument   | Direction | Datatype                                    |
++------------+-----------+---------------------------------------------+
+| in_stream  | in        | stream<hls::axis<ap_uint<32>, 1, 1, 1>, 0>& |
+| out_stream | out       | stream<hls::axis<ap_uint<32>, 1, 1, 1>, 0>& |
++------------+-----------+---------------------------------------------+
+
+* SW-to-HW Mapping
++------------+--------------+-----------+
+| Argument   | HW Interface | HW Type   |
++------------+--------------+-----------+
+| in_stream  | in_stream    | interface |
+| out_stream | out_stream   | interface |
++------------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------+-----+--------+--------------+-------+---------+---------+
+| Name                                    | DSP | Pragma | Variable     | Op    | Impl    | Latency |
++-----------------------------------------+-----+--------+--------------+-------+---------+---------+
+| + ecg_classifier                        | 51  |        |              |       |         |         |
+|   mul_48s_10ns_56_1_1_U185              | 2   |        | r_V          | mul   | auto    | 0       |
+|   mul_48s_10ns_56_1_1_U186              | 2   |        | r_V_14       | mul   | auto    | 0       |
+|   tmp_V_fu_16173_p2                     | -   |        | tmp_V        | sub   | fabric  | 0       |
+|   sub_ln1099_fu_16202_p2                | -   |        | sub_ln1099   | sub   | fabric  | 0       |
+|   lsb_index_fu_16208_p2                 | -   |        | lsb_index    | add   | fabric  | 0       |
+|   sub_ln1102_fu_16234_p2                | -   |        | sub_ln1102   | sub   | fabric  | 0       |
+|   add_ln1113_fu_16323_p2                | -   |        | add_ln1113   | add   | fabric  | 0       |
+|   sub_ln1114_fu_16338_p2                | -   |        | sub_ln1114   | sub   | fabric  | 0       |
+|   m_3_fu_16363_p2                       | -   |        | m_3          | add   | fabric  | 0       |
+|   fsqrt_32ns_32ns_32_10_no_dsp_1_U182   | -   |        | d_assign     | fsqrt | fabric  | 9       |
+|   man_V_1_fu_16538_p2                   | -   |        | man_V_1      | sub   | fabric  | 0       |
+|   F2_fu_16558_p2                        | -   |        | F2           | sub   | fabric  | 0       |
+|   add_ln570_fu_16570_p2                 | -   |        | add_ln570    | add   | fabric  | 0       |
+|   sub_ln570_fu_16576_p2                 | -   |        | sub_ln570    | sub   | fabric  | 0       |
+|   add_ln813_2_fu_16716_p2               | -   |        | add_ln813_2  | add   | fabric  | 0       |
+|   add_ln110_fu_16752_p2                 | -   |        | add_ln110    | add   | fabric  | 0       |
+|   add_ln113_2_fu_17416_p2               | -   |        | add_ln113_2  | add   | fabric  | 0       |
+|   add_ln113_fu_17422_p2                 | -   |        | add_ln113    | add   | fabric  | 0       |
+|   add_ln113_1_fu_17450_p2               | -   |        | add_ln113_1  | add   | fabric  | 0       |
+|   sub_ln837_fu_20681_p2                 | -   |        | sub_ln837    | sub   | fabric  | 0       |
+|   add_ln127_fu_20687_p2                 | -   |        | add_ln127    | add   | fabric  | 0       |
+|   add_ln145_fu_20796_p2                 | -   |        | add_ln145    | add   | fabric  | 0       |
+|   add_ln176_fu_21542_p2                 | -   |        | add_ln176    | add   | fabric  | 0       |
+|   add_ln110_1_fu_21155_p2               | -   |        | add_ln110_1  | add   | fabric  | 0       |
+|   add_ln218_fu_21557_p2                 | -   |        | add_ln218    | add   | fabric  | 0       |
+|   add_ln233_fu_21575_p2                 | -   |        | add_ln233    | add   | fabric  | 0       |
+|   add_ln224_fu_21624_p2                 | -   |        | add_ln224    | add   | fabric  | 0       |
+|   add_ln813_fu_22828_p2                 | -   |        | add_ln813    | add   | fabric  | 0       |
+|   add_ln813_1_fu_22857_p2               | -   |        | add_ln813_1  | add   | fabric  | 0       |
+|   add_ln260_fu_22239_p2                 | -   |        | add_ln260    | add   | fabric  | 0       |
+|   add_ln288_fu_22877_p2                 | -   |        | add_ln288    | add   | fabric  | 0       |
+|   sub_ln837_2_fu_22911_p2               | -   |        | sub_ln837_2  | sub   | fabric  | 0       |
+|   add_ln299_fu_22984_p2                 | -   |        | add_ln299    | add   | fabric  | 0       |
+|   tmp_V_2_fu_23032_p2                   | -   |        | tmp_V_2      | sub   | fabric  | 0       |
+|   sub_ln1099_1_fu_23082_p2              | -   |        | sub_ln1099_1 | sub   | fabric  | 0       |
+|   lsb_index_1_fu_23088_p2               | -   |        | lsb_index_1  | add   | fabric  | 0       |
+|   sub_ln1102_1_fu_23114_p2              | -   |        | sub_ln1102_1 | sub   | fabric  | 0       |
+|   add_ln1109_fu_23196_p2                | -   |        | add_ln1109   | add   | fabric  | 0       |
+|   sub_ln1110_fu_23202_p2                | -   |        | sub_ln1110   | sub   | fabric  | 0       |
+|   m_5_fu_23242_p2                       | -   |        | m_5          | add   | fabric  | 0       |
+|   fexp_32ns_32ns_32_8_full_dsp_1_U183   | 7   |        | ea           | fexp  | fulldsp | 7       |
+|   fexp_32ns_32ns_32_8_full_dsp_1_U184   | 7   |        | eb           | fexp  | fulldsp | 7       |
+|   fadd_32ns_32ns_32_4_full_dsp_1_U179   | 2   |        | s_1          | fadd  | fulldsp | 3       |
+|  + ecg_classifier_Pipeline_READ_INPUT   | 0   |        |              |       |         |         |
+|    add_ln43_fu_130_p2                   | -   |        | add_ln43     | add   | fabric  | 0       |
+|  + ecg_classifier_Pipeline_ZNORM_MEAN   | 0   |        |              |       |         |         |
+|    add_ln54_fu_110_p2                   | -   |        | add_ln54     | add   | fabric  | 0       |
+|    mean_acc_V_1_fu_165_p2               | -   |        | mean_acc_V_1 | add   | fabric  | 0       |
+|  + ecg_classifier_Pipeline_ZNORM_VAR    | 4   |        |              |       |         |         |
+|    add_ln62_fu_130_p2                   | -   |        | add_ln62     | add   | fabric  | 0       |
+|    d_fu_170_p2                          | -   |        | d            | sub   | fabric  | 0       |
+|    mul_40s_40s_72_1_1_U16               | 4   |        | r_V_1        | mul   | auto    | 0       |
+|    ret_V_fu_203_p2                      | -   |        | ret_V        | add   | fabric  | 0       |
+|  + ecg_classifier_Pipeline_ZNORM_APPLY  | 3   |        |              |       |         |         |
+|    add_ln74_fu_146_p2                   | -   |        | add_ln74     | add   | fabric  | 0       |
+|    ret_V_fu_192_p2                      | -   |        | ret_V        | sub   | fabric  | 0       |
+|    mul_33s_32s_48_1_1_U23               | 3   |        | r_V_2        | mul   | auto    | 0       |
+|  + ecg_classifier_Pipeline_GAP_INIT     | 0   |        |              |       |         |         |
+|    add_ln197_fu_86_p2                   | -   |        | add_ln197    | add   | fabric  | 0       |
+|  + ecg_classifier_Pipeline_L0_K_FILL    | 4   |        |              |       |         |         |
+|    add_ln130_fu_216_p2                  | -   |        | add_ln130    | add   | fabric  | 0       |
+|    add_ln837_fu_226_p2                  | -   |        | add_ln837    | add   | fabric  | 0       |
+|    add_ln132_fu_241_p2                  | -   |        | add_ln132    | add   | fabric  | 0       |
+|    add_ln132_1_fu_251_p2                | -   |        | add_ln132_1  | add   | fabric  | 0       |
+|    add_ln133_fu_273_p2                  | -   |        | add_ln133    | add   | fabric  | 0       |
+|    mul_27s_40s_66_1_1_U32               | 4   |        | r_V          | mul   | auto    | 0       |
+|    ret_V_fu_386_p2                      | -   |        | ret_V        | add   | fabric  | 0       |
+|    add_ln1347_1_fu_392_p2               | -   |        | add_ln1347_1 | add   | fabric  | 0       |
+|  + ecg_classifier_Pipeline_L1_IC_L1_K   | 2   |        |              |       |         |         |
+|    add_ln148_1_fu_279_p2                | -   |        | add_ln148_1  | add   | fabric  | 0       |
+|    add_ln148_fu_291_p2                  | -   |        | add_ln148    | add   | fabric  | 0       |
+|    add_ln837_1_fu_353_p2                | -   |        | add_ln837_1  | add   | fabric  | 0       |
+|    mul_23s_40s_62_1_1_U44               | 2   |        | r_V_10       | mul   | auto    | 0       |
+|    add_ln150_1_fu_474_p2                | -   |        | add_ln150_1  | add   | fabric  | 0       |
+|    add_ln1347_fu_480_p2                 | -   |        | add_ln1347   | add   | fabric  | 0       |
+|    add_ln150_fu_319_p2                  | -   |        | add_ln150    | add   | fabric  | 0       |
+|  + ecg_classifier_Pipeline_L2_IC_L2_K   | 4   |        |              |       |         |         |
+|    add_ln180_1_fu_456_p2                | -   |        | add_ln180_1  | add   | fabric  | 0       |
+|    add_ln180_fu_465_p2                  | -   |        | add_ln180    | add   | fabric  | 0       |
+|    add_ln837_7_fu_581_p2                | -   |        | add_ln837_7  | add   | fabric  | 0       |
+|    add_ln184_fu_507_p2                  | -   |        | add_ln184    | add   | fabric  | 0       |
+|    mul_23s_39ns_62_1_1_U69              | 2   |        | r_V          | mul   | auto    | 0       |
+|    add_ln182_fu_862_p2                  | -   |        | add_ln182    | add   | fabric  | 0       |
+|    add_ln1347_fu_867_p2                 | -   |        | add_ln1347   | add   | fabric  | 0       |
+|    mul_23s_39ns_62_1_1_U70              | 2   |        | r_V_8        | mul   | auto    | 0       |
+|    add_ln182_1_fu_906_p2                | -   |        | add_ln182_1  | add   | fabric  | 0       |
+|    add_ln1347_3_fu_911_p2               | -   |        | add_ln1347_3 | add   | fabric  | 0       |
+|  + ecg_classifier_Pipeline_GAP_NORM     | 2   |        |              |       |         |         |
+|    add_ln280_fu_94_p2                   | -   |        | add_ln280    | add   | fabric  | 0       |
+|    mul_32s_12ns_44_1_1_U145             | 2   |        | r_V_11       | mul   | auto    | 0       |
+|  + ecg_classifier_Pipeline_L3_IC_L3_K   | 4   |        |              |       |         |         |
+|    add_ln228_1_fu_419_p2                | -   |        | add_ln228_1  | add   | fabric  | 0       |
+|    add_ln228_fu_505_p2                  | -   |        | add_ln228    | add   | fabric  | 0       |
+|    add_ln837_3_fu_563_p2                | -   |        | add_ln837_3  | add   | fabric  | 0       |
+|    add_ln233_fu_446_p2                  | -   |        | add_ln233    | add   | fabric  | 0       |
+|    mul_22s_31ns_53_1_1_U98              | 2   |        | r_V_6        | mul   | auto    | 0       |
+|    add_ln230_1_fu_818_p2                | -   |        | add_ln230_1  | add   | fabric  | 0       |
+|    add_ln1347_fu_824_p2                 | -   |        | add_ln1347   | add   | fabric  | 0       |
+|    mul_22s_31ns_53_1_1_U99              | 2   |        | r_V_7        | mul   | auto    | 0       |
+|    add_ln230_2_fu_866_p2                | -   |        | add_ln230_2  | add   | fabric  | 0       |
+|    add_ln1347_2_fu_872_p2               | -   |        | add_ln1347_2 | add   | fabric  | 0       |
+|    add_ln230_fu_486_p2                  | -   |        | add_ln230    | add   | fabric  | 0       |
+|  + ecg_classifier_Pipeline_L4_IC_L4_K   | 4   |        |              |       |         |         |
+|    add_ln264_1_fu_382_p2                | -   |        | add_ln264_1  | add   | fabric  | 0       |
+|    add_ln264_fu_391_p2                  | -   |        | add_ln264    | add   | fabric  | 0       |
+|    add_ln837_fu_461_p2                  | -   |        | add_ln837    | add   | fabric  | 0       |
+|    add_ln268_fu_537_p2                  | -   |        | add_ln268    | add   | fabric  | 0       |
+|    mul_22s_39ns_61_1_1_U129             | 2   |        | r_V          | mul   | auto    | 0       |
+|    add_ln266_fu_721_p2                  | -   |        | add_ln266    | add   | fabric  | 0       |
+|    add_ln1347_fu_727_p2                 | -   |        | add_ln1347   | add   | fabric  | 0       |
+|    mul_22s_39ns_61_1_1_U130             | 2   |        | r_V_3        | mul   | auto    | 0       |
+|    add_ln266_1_fu_769_p2                | -   |        | add_ln266_1  | add   | fabric  | 0       |
+|    add_ln1347_1_fu_775_p2               | -   |        | add_ln1347_1 | add   | fabric  | 0       |
+|  + ecg_classifier_Pipeline_D0_IC        | 2   |        |              |       |         |         |
+|    add_ln291_fu_178_p2                  | -   |        | add_ln291    | add   | fabric  | 0       |
+|    add_ln837_fu_188_p2                  | -   |        | add_ln837    | add   | fabric  | 0       |
+|    mul_24s_40s_63_1_1_U150              | 2   |        | r_V_13       | mul   | auto    | 0       |
+|    ret_V_fu_290_p2                      | -   |        | ret_V        | add   | fabric  | 0       |
+|    add_ln1347_3_fu_296_p2               | -   |        | add_ln1347_3 | add   | fabric  | 0       |
+|  + ecg_classifier_Pipeline_D1_IC        | 2   |        |              |       |         |         |
+|    add_ln302_fu_161_p2                  | -   |        | add_ln302    | add   | fabric  | 0       |
+|    add_ln837_fu_167_p2                  | -   |        | add_ln837    | add   | fabric  | 0       |
+|    mul_24s_39ns_63_1_1_U159             | 2   |        | r_V          | mul   | auto    | 0       |
+|    ret_V_fu_254_p2                      | -   |        | ret_V        | add   | fabric  | 0       |
+|  + ecg_classifier_Pipeline_WRITE_OUTPUT | 0   |        |              |       |         |         |
+|    i_2_fu_132_p2                        | -   |        | i_2          | add   | fabric  | 0       |
+|    fdiv_32ns_32ns_32_10_no_dsp_1_U167   | -   |        | val          | fdiv  | fabric  | 9       |
++-----------------------------------------+-----+--------+--------------+-------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++---------------------------------------+------+------+--------+----------------+---------+--------+---------+
+| Name                                  | BRAM | URAM | Pragma | Variable       | Storage | Impl   | Latency |
++---------------------------------------+------+------+--------+----------------+---------+--------+---------+
+| + ecg_classifier                      | 87   | 0    |        |                |         |        |         |
+|   input_buf_V_U                       | -    | -    | yes    | input_buf_V    | ram_1p  | lutram | 1       |
+|   input_buf_V_1_U                     | -    | -    | yes    | input_buf_V_1  | ram_1p  | lutram | 1       |
+|   norm_buf_V_U                        | -    | -    | yes    | norm_buf_V     | ram_1p  | lutram | 1       |
+|   norm_buf_V_1_U                      | -    | -    | yes    | norm_buf_V_1   | ram_1p  | lutram | 1       |
+|   buf2_circ_V_U                       | -    | -    |        | buf2_circ_V    | ram_1p  | auto   | 1       |
+|   buf2_circ_V_1_U                     | -    | -    |        | buf2_circ_V_1  | ram_1p  | auto   | 1       |
+|   buf2_circ_V_2_U                     | -    | -    |        | buf2_circ_V_2  | ram_1p  | auto   | 1       |
+|   buf2_circ_V_3_U                     | -    | -    |        | buf2_circ_V_3  | ram_1p  | auto   | 1       |
+|   buf2_circ_V_4_U                     | -    | -    |        | buf2_circ_V_4  | ram_1p  | auto   | 1       |
+|   buf2_circ_V_5_U                     | -    | -    |        | buf2_circ_V_5  | ram_1p  | auto   | 1       |
+|   buf2_circ_V_6_U                     | -    | -    |        | buf2_circ_V_6  | ram_1p  | auto   | 1       |
+|   buf2_circ_V_7_U                     | -    | -    |        | buf2_circ_V_7  | ram_1p  | auto   | 1       |
+|   buf2_circ_V_8_U                     | -    | -    |        | buf2_circ_V_8  | ram_1p  | auto   | 1       |
+|   buf2_circ_V_9_U                     | -    | -    |        | buf2_circ_V_9  | ram_1p  | auto   | 1       |
+|   gap_buf_V_U                         | -    | -    | yes    | gap_buf_V      | ram_1p  | lutram | 1       |
+|   gap_buf_V_1_U                       | -    | -    | yes    | gap_buf_V_1    | ram_1p  | lutram | 1       |
+|   dense0_buf_V_U                      | -    | -    | yes    | dense0_buf_V   | ram_1p  | lutram | 1       |
+|   dense0_buf_V_1_U                    | -    | -    | yes    | dense0_buf_V_1 | ram_1p  | lutram | 1       |
+|   win0_V_U                            | 2    | -    |        | win0_V         | ram_t2p | auto   | 1       |
+|   win0_V_1_U                          | 2    | -    |        | win0_V_1       | ram_t2p | auto   | 1       |
+|   win0_V_2_U                          | 2    | -    |        | win0_V_2       | ram_t2p | auto   | 1       |
+|   win0_V_3_U                          | 2    | -    |        | win0_V_3       | ram_t2p | auto   | 1       |
+|   win0_V_4_U                          | 2    | -    |        | win0_V_4       | ram_t2p | auto   | 1       |
+|   win0_V_5_U                          | 2    | -    |        | win0_V_5       | ram_t2p | auto   | 1       |
+|   win0_V_6_U                          | 2    | -    |        | win0_V_6       | ram_t2p | auto   | 1       |
+|   win01_V_U                           | -    | -    |        | win01_V        | ram_t2p | auto   | 1       |
+|   win01_V_1_U                         | -    | -    |        | win01_V_1      | ram_t2p | auto   | 1       |
+|   win01_V_2_U                         | -    | -    |        | win01_V_2      | ram_t2p | auto   | 1       |
+|   win01_V_3_U                         | -    | -    |        | win01_V_3      | ram_t2p | auto   | 1       |
+|   win01_V_4_U                         | -    | -    |        | win01_V_4      | ram_t2p | auto   | 1       |
+|   win01_V_5_U                         | -    | -    |        | win01_V_5      | ram_t2p | auto   | 1       |
+|   win01_V_6_U                         | -    | -    |        | win01_V_6      | ram_t2p | auto   | 1       |
+|   win01_V_7_U                         | -    | -    |        | win01_V_7      | ram_t2p | auto   | 1       |
+|   l1_out_V_U                          | -    | -    |        | l1_out_V       | ram_s2p | auto   | 1       |
+|   l1_out_V_1_U                        | -    | -    |        | l1_out_V_1     | ram_s2p | auto   | 1       |
+|   win23_V_U                           | 2    | -    |        | win23_V        | ram_t2p | auto   | 1       |
+|   win23_V_1_U                         | 2    | -    |        | win23_V_1      | ram_t2p | auto   | 1       |
+|   win23_V_2_U                         | 2    | -    |        | win23_V_2      | ram_t2p | auto   | 1       |
+|   win23_V_3_U                         | 2    | -    |        | win23_V_3      | ram_t2p | auto   | 1       |
+|   l3_out_V_U                          | 2    | -    |        | l3_out_V       | ram_s2p | auto   | 1       |
+|   l3_out_V_1_U                        | 2    | -    |        | l3_out_V_1     | ram_s2p | auto   | 1       |
+|   clf_w_L0_b_V_U                      | -    | -    |        | clf_w_L0_b_V   | rom_1p  | auto   | 1       |
+|   clf_w_L1_b_V_U                      | -    | -    |        | clf_w_L1_b_V   | rom_1p  | auto   | 1       |
+|   clf_w_L2_b_V_U                      | -    | -    |        | clf_w_L2_b_V   | rom_2p  | auto   | 1       |
+|   clf_w_L3_b_V_U                      | -    | -    |        | clf_w_L3_b_V   | rom_2p  | auto   | 1       |
+|   clf_w_L4_b_V_U                      | 1    | -    |        | clf_w_L4_b_V   | rom_2p  | auto   | 1       |
+|   clf_w_L5_b_V_U                      | -    | -    |        | clf_w_L5_b_V   | rom_1p  | auto   | 1       |
+|   clf_w_L6_b_V_U                      | -    | -    |        | clf_w_L6_b_V   | rom_1p  | auto   | 1       |
+|  + ecg_classifier_Pipeline_L0_K_FILL  | 1    | 0    |        |                |         |        |         |
+|    L0_W_V_0_U                         | 1    | -    |        | L0_W_V_0       | rom_1p  | auto   | 1       |
+|  + ecg_classifier_Pipeline_L1_IC_L1_K | 6    | 0    |        |                |         |        |         |
+|    clf_w_L1_W_V_U                     | 6    | -    |        | clf_w_L1_W_V   | rom_1p  | auto   | 1       |
+|  + ecg_classifier_Pipeline_L2_IC_L2_K | 12   | 0    |        |                |         |        |         |
+|    clf_w_L2_W_V_U                     | 12   | -    |        | clf_w_L2_W_V   | rom_2p  | auto   | 1       |
+|  + ecg_classifier_Pipeline_L3_IC_L3_K | 16   | 0    |        |                |         |        |         |
+|    clf_w_L3_W_V_U                     | 16   | -    |        | clf_w_L3_W_V   | rom_2p  | auto   | 1       |
+|  + ecg_classifier_Pipeline_L4_IC_L4_K | 16   | 0    |        |                |         |        |         |
+|    clf_w_L4_W_V_U                     | 16   | -    |        | clf_w_L4_W_V   | rom_2p  | auto   | 1       |
+|  + ecg_classifier_Pipeline_D0_IC      | 8    | 0    |        |                |         |        |         |
+|    clf_w_L5_W_V_U                     | 8    | -    |        | clf_w_L5_W_V   | rom_1p  | auto   | 1       |
+|  + ecg_classifier_Pipeline_D1_IC      | 1    | 0    |        |                |         |        |         |
+|    clf_w_L6_W_V_U                     | 1    | -    |        | clf_w_L6_W_V   | rom_1p  | auto   | 1       |
++---------------------------------------+------+------+--------+----------------+---------+--------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+------------------------------------------------+---------------------------------------------------------+
+| Type            | Options                                        | Location                                                |
++-----------------+------------------------------------------------+---------------------------------------------------------+
+| interface       | axis port=in_stream register                   | src/ecg_classifier.cpp:18 in ecg_classifier, in_stream  |
+| interface       | axis port=out_stream register                  | src/ecg_classifier.cpp:19 in ecg_classifier, out_stream |
+| interface       | ap_ctrl_hs port=return                         | src/ecg_classifier.cpp:20 in ecg_classifier, return     |
+| bind_storage    | variable=input_buf type=ram_1p impl=lutram     | src/ecg_classifier.cpp:24 in ecg_classifier, input_buf  |
+| bind_storage    | variable=norm_buf type=ram_1p impl=lutram      | src/ecg_classifier.cpp:25 in ecg_classifier, norm_buf   |
+| array_partition | variable=input_buf dim=1 type=cyclic factor=2  | src/ecg_classifier.cpp:26 in ecg_classifier, input_buf  |
+| array_partition | variable=norm_buf dim=1 type=cyclic factor=2   | src/ecg_classifier.cpp:27 in ecg_classifier, norm_buf   |
+| array_partition | variable=buf2_circ dim=1 type=complete         | src/ecg_classifier.cpp:30 in ecg_classifier, buf2_circ  |
+| array_partition | variable=buf2_circ dim=2 type=cyclic factor=2  | src/ecg_classifier.cpp:31 in ecg_classifier, buf2_circ  |
+| bind_storage    | variable=gap_buf type=ram_1p impl=lutram       | src/ecg_classifier.cpp:37 in ecg_classifier, gap_buf    |
+| bind_storage    | variable=dense0_buf type=ram_1p impl=lutram    | src/ecg_classifier.cpp:38 in ecg_classifier, dense0_buf |
+| array_partition | variable=gap_buf dim=1 type=cyclic factor=2    | src/ecg_classifier.cpp:39 in ecg_classifier, gap_buf    |
+| array_partition | variable=dense0_buf dim=1 type=cyclic factor=2 | src/ecg_classifier.cpp:40 in ecg_classifier, dense0_buf |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:44 in ecg_classifier             |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:55 in ecg_classifier             |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:63 in ecg_classifier             |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:75 in ecg_classifier             |
+| array_partition | variable=win0 dim=1 type=complete              | src/ecg_classifier.cpp:82 in ecg_classifier, win0       |
+| array_partition | variable=win0 dim=2 type=cyclic factor=1       | src/ecg_classifier.cpp:83 in ecg_classifier, win0       |
+| unroll          |                                                | src/ecg_classifier.cpp:87 in ecg_classifier             |
+| unroll          |                                                | src/ecg_classifier.cpp:90 in ecg_classifier             |
+| array_partition | variable=win01 dim=1 type=complete             | src/ecg_classifier.cpp:96 in ecg_classifier, win01      |
+| array_partition | variable=win01 dim=2 type=cyclic factor=2      | src/ecg_classifier.cpp:97 in ecg_classifier, win01      |
+| unroll          |                                                | src/ecg_classifier.cpp:101 in ecg_classifier            |
+| unroll          |                                                | src/ecg_classifier.cpp:104 in ecg_classifier            |
+| unroll          |                                                | src/ecg_classifier.cpp:118 in ecg_classifier            |
+| unroll          |                                                | src/ecg_classifier.cpp:121 in ecg_classifier            |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:131 in ecg_classifier            |
+| array_partition | variable=l1_out type=cyclic factor=2           | src/ecg_classifier.cpp:142 in ecg_classifier, l1_out    |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:151 in ecg_classifier            |
+| unroll          |                                                | src/ecg_classifier.cpp:161 in ecg_classifier            |
+| unroll          |                                                | src/ecg_classifier.cpp:164 in ecg_classifier            |
+| unroll          |                                                | src/ecg_classifier.cpp:170 in ecg_classifier            |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:183 in ecg_classifier            |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:198 in ecg_classifier            |
+| array_partition | variable=win23 dim=1 type=complete             | src/ecg_classifier.cpp:204 in ecg_classifier, win23     |
+| array_partition | variable=win23 dim=2 type=cyclic factor=2      | src/ecg_classifier.cpp:205 in ecg_classifier, win23     |
+| unroll          |                                                | src/ecg_classifier.cpp:209 in ecg_classifier            |
+| unroll          |                                                | src/ecg_classifier.cpp:212 in ecg_classifier            |
+| array_partition | variable=l3_out type=cyclic factor=2           | src/ecg_classifier.cpp:221 in ecg_classifier, l3_out    |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:231 in ecg_classifier            |
+| unroll          |                                                | src/ecg_classifier.cpp:246 in ecg_classifier            |
+| unroll          |                                                | src/ecg_classifier.cpp:249 in ecg_classifier            |
+| unroll          |                                                | src/ecg_classifier.cpp:255 in ecg_classifier            |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:267 in ecg_classifier            |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:281 in ecg_classifier            |
+| dependence      | variable=gap_buf intra false                   | src/ecg_classifier.cpp:282 in ecg_classifier, gap_buf   |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:292 in ecg_classifier            |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:303 in ecg_classifier            |
+| pipeline        | II=1                                           | src/ecg_classifier.cpp:314 in ecg_classifier            |
++-----------------+------------------------------------------------+---------------------------------------------------------+
+
+
